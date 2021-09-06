@@ -1,0 +1,40 @@
+<html>
+  <head>
+    <title>Max49 test</title>
+    <link rel="icon" href="https://i.imgur.com/wQxv5zm.png" type="image/gif" sizes="16x16">
+  </head>
+  <body>
+    <script>
+      function changeImage() {
+          if (document.getElementById("imgClickAndChange").src == "https://www.starpng.com/public/uploads/preview/creative-heart-png-image-free-download-0-11577986759nlcalws0jo.jpg") 
+          {
+              document.getElementById("imgClickAndChange").src = "https://www.freeiconspng.com/thumbs/heart-png/heart-png-15.png";
+              localStorage.setItem('like', '1');
+          }
+          else 
+          { 
+              document.getElementById("imgClickAndChange").src = "https://www.starpng.com/public/uploads/preview/creative-heart-png-image-free-download-0-11577986759nlcalws0jo.jpg";
+              localStorage.setItem('like', '0');
+          }
+      }
+
+      function correctLike() {
+        const cat = localStorage.getItem('like');
+        if (!cat) {
+          localStorage.setItem('like', '0');
+          const cat = localStorage.getItem('like');
+        }
+        if (cat == 0) {
+          document.getElementById("imgClickAndChange").src = "https://www.starpng.com/public/uploads/preview/creative-heart-png-image-free-download-0-11577986759nlcalws0jo.jpg"
+        } else {
+          document.getElementById("imgClickAndChange").src = "https://www.freeiconspng.com/thumbs/heart-png/heart-png-15.png";
+        }
+      }
+
+      window.onload = function() {
+        correctLike();
+      };
+    </script>
+    <img style="padding: 20px;" id="imgClickAndChange" height="100px" width="auto" src="https://www.starpng.com/public/uploads/preview/creative-heart-png-image-free-download-0-11577986759nlcalws0jo.jpg" onclick="changeImage()" alt="" draggable="false"/>
+  </body>
+</html>

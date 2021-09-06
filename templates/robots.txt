@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /good_directory/
+
+User-agent: *
+Disallow: /writeups.html

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="icon" href="https://i.imgur.com/wQxv5zm.png" type="image/gif" sizes="16x16">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>ChemBot | Max49's Projects</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <link href="/static/style.css?q={{ num }}" rel="stylesheet" type="text/css" />
+    <link href="/static/writeups.css" rel="stylesheet" type="text/css">
+    <meta name="description" content="ChemBot | Max49's Projects" />
+  </head>
+  <body style="padding: 2.5%"><center>
+    <h1>ChemBot</h1>
+    <hr />
+    <h3>Description:</h3></center>
+    <div style="text-align: center;">
+      <p><a href="https://github.com/max-49/chembot/" target="_blank">ChemBot</a> is a discord.py bot "backend" that I've been developing since March of 2021. This bot started as a project called "Schlooth Bot", which was named after my chemistry teacher. This bot started out as a very basic Discord bot, since it was my first time ever developing one. Schlooth Bot was originally built using a <a href="https://github.com/agubelu/discord-bot-template" target="_blank">template</a>, as I needed an easy way of starting, since I had no idea what I was doing. This bot started by having a few basic commands, most of them inside jokes with a server with my friends, but later grew massively in the number of commands - to the point where that bot template's help command couldn't handle the number of commands. I was also limited in the types of commands I could create because of how the bot was set up. So at a certain point, I decided to scrap the bot template entirely and transfer all the commands over to my own bot, this time developing it all in one python file. Originally, it was working great, as I no longer had any limitations, but as I added more commands, the file started to get very long - reaching into the thousands of lines. At this point, the bot contained a bunch of review commands for classes my friends and I were taking, as well as some fun and general commands that I had wanted to work on. At this point, I decided to look into cogs and after figuring out how they work, I turned Schlooth Bot into a bot with cogs and continued developing from there. It was around this time that I joined <a href="http://teamlessctf.org" target="_blank">TeamlessCTF</a>, a CTF team. I wanted to add Schlooth Bot to this server just for the fun commands, but didn't want all of the inside jokes. Before I added the cogs, I did add a version of the bot, called Chemistry Bot, to the TeamlessCTF server, but managing two bots running off different code was a little tedious and difficult to manage. When I added cogs, the inside jokes had their own cog, so I set up a GitHub repo for the bot and decided to get to work to make it so that I could run Schlooth Bot and Chemistry Bot off the same backend, called ChemBot. I eventually was able to get it to work through some config (Both bots have different prefixes) and I'm still working on adding commands today.</p>
+    </div>
+    <h3 class="text-center">Bots currently using ChemBot:</h3>
+    <div class="flex-container">
+      <div class="flex-child">
+        <h5 class="text-center">Schlooth Bot</h5>
+      </div>
+      <div class="flex-child">
+        <h5 class="text-center">Chemistry Bot</h5>
+      </div>
+      <div class="flex-child">
+        <h5 class="text-center">BagelBot (unrealeased CTF chall)</h5>
+        <p class="text-center"><i>Note: BagelBot uses a heavily adapted version of the backend to make it fit to be a CTF chall. Exploitations that work on BagelBot may not work on other bots.</i></p>
+      </div>
+    </div>
+  </body>
+</html>

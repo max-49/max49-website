@@ -145,4 +145,4 @@ def yolol():
 def custom_static(filename):
     return send_from_directory(app.root_path + '/cdn/', filename, as_attachment=True)
 
-app.run(host='0.0.0.0', port=8080)
+app.run(host='0.0.0.0', port=5000)

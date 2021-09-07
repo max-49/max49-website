@@ -58,16 +58,13 @@ body {
     display: inline-block;
     /* position: relative; */
     border-top-left-radius: 10px;
-    padding: 0px;
-    float: left;
-    margin-top: -3%;
+    float: right;
     margin-left: 5%;
     margin-right: 0px;
     height: calc( 100vh - 130px );
     width: 94.5%;
     background-color: #37393e;
     z-index: 950;
-    top: 0;
   }
 
   .links {

@@ -1,0 +1,236 @@
+@font-face{
+  font-family:Whitney;
+  src:url(https://discordapp.com/assets/6c6374bad0b0b6d204d8d6dc4a18d820.woff);font-weight:300
+}
+
+body {
+  /*font-family:Whitney,"Helvetica Neue",Helvetica,Arial,sans-serif;*/
+  background-color: #37393e;
+  color: white;
+}
+
+h3 {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.description{
+  color:rgba(255,255,255,.6)
+}
+
+.pfp {
+  padding: 20px;
+  pointer-events: none;
+}
+
+.easy {
+  border-left: 10px solid #2ECC71;
+}
+
+.easy-medium {
+  border-left: 10px solid #F1C40F;
+}
+
+.medium {
+  border-left: 10px solid #E67E22;
+}
+
+.medium-hard {
+  border-left: 10px solid #E74C3C;
+}
+
+.hard {
+  border-left: 10px solid #9B59B6;
+}
+
+.really-hard {
+  border-left: 10px solid #3498DB;
+}
+
+.stats {
+  border-left: 10px solid #3498DB;
+  margin-left: 25%;
+  padding: 20px;
+  margin-right: 25%;
+  border-radius: 10px;
+  background-color: #2f3037;
+  color: white;
+  text-align: left;
+  position: relative;
+}
+
+.stats > .img {
+  top: 5%;
+  right: 5%;
+  position: absolute;
+}
+
+.pre{
+  background-color: rgb(30,30,30);
+  border-radius: 3px;
+  padding: 2px;
+  /*display: inline-block;*/
+  font-family: Consolas,"Courier New",Courier,monospace;
+  word-wrap: break-word;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+a:active {
+  text-decoration: underline;
+}
+
+@media screen and (min-width: 961px) {
+
+    .chall {
+      margin-left: 40px;
+      padding: 20px;
+      margin-right: 5%;
+      border-radius: 10px;
+      background-color: #2f3037;
+      color: white;
+    }
+
+    .flag {
+      padding-top: 20px;
+      display: flex;
+      word-break: break-all;
+      overflow-wrap: anywhere;
+    }
+
+    .inline {
+      display: flex;
+      /*justify-content: space-between;*/
+    }
+
+    .inline-right {
+      padding-left: 30%;
+    }
+
+    .inline-bottom {
+      padding-left: 202px;
+    }
+
+    .flex-container {
+      display: flex;
+      padding-top: 20px;
+      padding-bottom: 20px;
+    }
+
+    .flex-child {
+      flex: 1;
+    }  
+
+    pre { 
+      white-space: pre-wrap; 
+      word-break: break-all;
+      overflow-wrap: anywhere;
+      text-align: left;
+    }
+
+    .biglink {
+      word-break: break-all;
+      overflow-wrap: anywhere;
+    }
+
+    .flex-child:first-child {
+      margin-right: 20px;
+    } 
+
+    .flex-child:last-child {
+      margin-right: 40px;
+    } 
+
+    .inline-container {
+      display: flex;
+    }
+
+    .inline-child {
+      flex: 1;
+    }  
+
+    .inline-child:first-child {
+      margin-right: 20px;
+    } 
+
+    .inline-child:last-child {
+      margin-right: 40px;
+    }
+
+    .code {
+      word-wrap: break-word;
+    }
+}
+
+@media only screen and (max-width: 960px) { 
+
+    body {
+      tab-size: 0px;
+    }
+
+    .chall {
+      padding: 20px;
+      border-radius: 10px;
+      background-color: #2f3037;
+      color: white;
+    }
+
+    .inline {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .inline-right {
+      padding-left: 70%;
+    }
+  
+    .test{
+      padding-top: 20px;
+      padding-bottom: 20px;
+    }
+
+    .flex-container {
+      text-align: center;
+      word-wrap: break-word;
+    }
+
+    .code {
+      text-align: left;
+    }
+
+    .flex-child {
+      padding-left: 10%;
+      padding-right: 10%;
+      padding-bottom: 10%;
+    } 
+
+    .inline-container {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .inline-child {
+      flex: 1;
+    }  
+
+    .flag {
+      padding-top: 20px;
+      text-align: center;
+      word-wrap: break-word;
+    }
+
+    pre { 
+      text-align: left;
+    }
+
+}

@@ -1,0 +1,43 @@
+.header {
+  padding: 20px;
+}
+
+.button {
+  font: bold 11px Arial;
+  text-decoration: none;
+  background-color: #EEEEEE;
+  color: #333333;
+  padding: 2px 6px 2px 6px;
+  border-top: 1px solid #CCCCCC;
+  border-right: 1px solid #333333;
+  border-bottom: 1px solid #333333;
+  border-left: 1px solid #CCCCCC;
+}
+
+.servericon {
+  border-radius: 12px;
+  float: left;
+  margin-left: 10px;
+}
+
+.selected {
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  float: left;
+  padding: 0px;
+  margin-left: 0px;
+  height: 55px;
+  width: 5px;
+  background-color: white;
+}
+
+.unclickable {
+  cursor: not-allowed; 
+  color: red;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}

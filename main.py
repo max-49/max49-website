@@ -117,7 +117,7 @@ def custom_static(filename):
 
 @app.route('/robots.txt')
 def robots():
-    return open('flag.txt').read()
+    return open('robots.txt').read()
 
 
 app.run(host='0.0.0.0', port=5000)

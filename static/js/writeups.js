@@ -68,8 +68,8 @@ function changeFrame13() {
   document.getElementById("round-14-writeups").style.display = "none";
 }
 
-function changeFrame13() {
-  document.getElementById("channel-title").innerHTML = "<a href=\"/round-14-writeups.html\" target=\"_blank\" style=\"color: white;\">round-13-writeups</a>";
+function changeFrame14() {
+  document.getElementById("channel-title").innerHTML = "<a href=\"/round-14-writeups.html\" target=\"_blank\" style=\"color: white;\">round-14-writeups</a>";
   document.getElementById("server-info").style.display = "none";
   document.getElementById("round-9-writeups").style.display = "none";
   document.getElementById("round-10-writeups").style.display = "none";

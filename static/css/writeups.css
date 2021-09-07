@@ -49,6 +49,7 @@ h3 {
   color: white;
   text-align: left;
   position: relative;
+  max-width: 500px;
 }
 
 .stats > .img {
@@ -207,13 +208,17 @@ a:active {
     } 
 
     .inline-container {
-      display: flex;
-      justify-content: space-between;
+      display: inline;
+      /* justify-content: space-between; */
     }
 
-    .inline-child {
+    /* .inline-child {
       flex: 1;
-    }  
+    }   */
+
+    .img {
+      display: none;
+    }
 
     .flag {
       padding-top: 20px;

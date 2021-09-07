@@ -20,18 +20,22 @@
       <h5>Score</h5>
       <p>{{ score }}</p>
       <div class="inline-container">
-        <div class="inline-child">
-          <h5>Solved Challenges</h5>
-          {% autoescape false %}
-            <p>{{ solved }}</p>
-          {% endautoescape %}
-        </div> 
-        <div class="inline-child">
-          <h5>Unsolved Challenges</h5>
-          {% autoescape false %}
-            <p>{{ unsolved }}</p>
-          {% endautoescape %}
-        </div>
+        {% if solved|length > 0 %}
+          <div class="inline-child">
+            <h5>Solved Challenges</h5>
+            {% autoescape false %}
+              <p>{{ solved }}</p>
+            {% endautoescape %}
+          </div>
+        {% endif %}
+        {% if unsolved|length > 0 %}
+          <div class="inline-child">
+            <h5>Unsolved Challenges</h5>
+            {% autoescape false %}
+              <p>{{ unsolved }}</p>
+            {% endautoescape %}
+          </div>
+        {% endif %}
       </div>
     </div>
     <br /><br /><br /><hr />

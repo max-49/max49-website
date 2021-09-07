@@ -10,6 +10,7 @@ function changeFrameInfo() {
   document.getElementById("round-11-writeups").style.display = "none";
   document.getElementById("round-12-writeups").style.display = "none";
   document.getElementById("round-13-writeups").style.display = "none";
+  document.getElementById("round-14-writeups").style.display = "none";
 }
 
 function changeFrame9() {
@@ -20,6 +21,7 @@ function changeFrame9() {
   document.getElementById("round-11-writeups").style.display = "none";
   document.getElementById("round-12-writeups").style.display = "none";
   document.getElementById("round-13-writeups").style.display = "none";
+  document.getElementById("round-14-writeups").style.display = "none";
 }
 
 function changeFrame10() {
@@ -30,6 +32,7 @@ function changeFrame10() {
   document.getElementById("round-11-writeups").style.display = "none";
   document.getElementById("round-12-writeups").style.display = "none";
   document.getElementById("round-13-writeups").style.display = "none";
+  document.getElementById("round-14-writeups").style.display = "none";
 }
 
 function changeFrame11() {
@@ -40,6 +43,7 @@ function changeFrame11() {
   document.getElementById("round-11-writeups").style.display = "block";
   document.getElementById("round-12-writeups").style.display = "none";
   document.getElementById("round-13-writeups").style.display = "none";
+  document.getElementById("round-14-writeups").style.display = "none";
 }
 
 function changeFrame12() {
@@ -50,14 +54,27 @@ function changeFrame12() {
   document.getElementById("round-11-writeups").style.display = "none";
   document.getElementById("round-12-writeups").style.display = "block";
   document.getElementById("round-13-writeups").style.display = "none";
+  document.getElementById("round-14-writeups").style.display = "none";
 }
 
 function changeFrame13() {
-  document.getElementById("channel-title").innerHTML = "<a href=\"/round-12-writeups.html\" target=\"_blank\" style=\"color: white;\">round-13-writeups</a>";
+  document.getElementById("channel-title").innerHTML = "<a href=\"/round-13-writeups.html\" target=\"_blank\" style=\"color: white;\">round-13-writeups</a>";
   document.getElementById("server-info").style.display = "none";
   document.getElementById("round-9-writeups").style.display = "none";
   document.getElementById("round-10-writeups").style.display = "none";
   document.getElementById("round-11-writeups").style.display = "none";
   document.getElementById("round-12-writeups").style.display = "none";
   document.getElementById("round-13-writeups").style.display = "block";
+  document.getElementById("round-14-writeups").style.display = "none";
+}
+
+function changeFrame13() {
+  document.getElementById("channel-title").innerHTML = "<a href=\"/round-14-writeups.html\" target=\"_blank\" style=\"color: white;\">round-13-writeups</a>";
+  document.getElementById("server-info").style.display = "none";
+  document.getElementById("round-9-writeups").style.display = "none";
+  document.getElementById("round-10-writeups").style.display = "none";
+  document.getElementById("round-11-writeups").style.display = "none";
+  document.getElementById("round-12-writeups").style.display = "none";
+  document.getElementById("round-13-writeups").style.display = "none";
+  document.getElementById("round-14-writeups").style.display = "block";
 }

@@ -190,6 +190,7 @@ body {
   .discord {
     text-align: center;
     height: 100%;
+    width: 100vh;
   }
 
   body {
@@ -232,8 +233,8 @@ body {
   .servertitle {
     position: fixed; 
     margin-left: 25%;
-    margin-top: 2.5%;
-    margin-bottom: 5%;
+    padding-top: 2.5%;
+    margin-bottom: 2.5%;
     text-align: center;
     padding: 2.5%;
     height: 100%;

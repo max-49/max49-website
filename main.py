@@ -12,7 +12,7 @@ def homepage():
     return render_template("index-pages/index.html", num=random.randint(1, 2500))
 
 
-@app.route('/ctf.html')
+@app.route('/ctf')
 def ctf():
     return render_template("index-pages/ctf.html", num=random.randint(1, 2500))
 
@@ -22,37 +22,37 @@ def projects():
     return render_template("index-pages/projects.html", num=random.randint(1, 2500))
 
 
-@app.route('/projects/chembot.html')
+@app.route('/projects/chembot')
 def chembot():
     return render_template("index-pages/chembot.html", num=random.randint(1, 2500))
 
 
-@app.route('/round-9-writeups.html')
+@app.route('/round-9-writeups')
 def round_9_writeups():
     return render_template("writeups/round-9-writeups.html", num=random.randint(1, 2500))
 
 
-@app.route('/round-10-writeups.html')
+@app.route('/round-10-writeups')
 def round_10_writeups():
     return render_template('writeups/round-10-writeups.html', num=random.randint(1, 2500))
 
 
-@app.route('/round-11-writeups.html')
+@app.route('/round-11-writeups')
 def round_11_writeups():
     return render_template('writeups/round-11-writeups.html', num=random.randint(1, 2500))
 
 
-@app.route('/round-12-writeups.html')
+@app.route('/round-12-writeups')
 def round_12_writeups():
     return render_template('writeups/round-12-writeups.html', num=random.randint(1, 2500))
 
 
-@app.route('/round-13-writeups.html')
+@app.route('/round-13-writeups')
 def round_13_writeups():
     return render_template('writeups/round-13-writeups.html', num=random.randint(1, 2500))
 
 
-@app.route('/writeups.html')
+@app.route('/writeups')
 def writeups():
     return render_template("writeups/writeups.html")
 
@@ -72,7 +72,7 @@ def internal_server_error(e):
     return render_template('status-codes/500.html'), 500
 
 
-@app.route('/ictf-server-info.html')
+@app.route('/ictf-server-info')
 def ictf_server():
     all_challs = (requests.get(
         'https://imaginaryctf.org/api/challenges/released')).json()
@@ -96,7 +96,7 @@ def ictf_server():
     return render_template('index-pages/ictf-server-info.html', num=random.randint(1, 2500), solved=solved, unsolved=unsolved, score=score)
 
 
-@app.route('/password.html')
+@app.route('/password')
 def password():
     return render_template('password.html', num=random.randint(1, 2500))
 

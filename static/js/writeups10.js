@@ -1,7 +1,6 @@
 function changeImage() {
 
-    if (document.getElementById("imgClickAndChange").src == "https://www.jing.fm/clipimg/full/132-1327227_moon-clipart-moon-clipart-black-and-white-half.png") 
-    {
+    if (document.getElementById("imgClickAndChange").src == "https://www.jing.fm/clipimg/full/132-1327227_moon-clipart-moon-clipart-black-and-white-half.png") {
         document.getElementById("imgClickAndChange").src = "https://www.jing.fm/clipimg/full/63-631481_rays-clipart-black-grey-sun-sun-cartoon-png.png";
         document.body.style.background = "#ffffff";
         document.body.style.color = "#37393e";
@@ -24,8 +23,7 @@ function changeImage() {
 
         document.getElementsByTagName("head").item(0).replaceChild(newlink, oldlink);
     }
-    else 
-    { 
+    else {
         document.getElementById("imgClickAndChange").src = "https://www.jing.fm/clipimg/full/132-1327227_moon-clipart-moon-clipart-black-and-white-half.png";
         document.body.style.background = "#37393e";
         document.body.style.color = "#ffffff";
@@ -50,9 +48,9 @@ function changeImage() {
     }
 }
 function showCode() {
-  if (document.getElementById("icicle-beginner").style.display == "inline") {
-    document.getElementById("icicle-beginner").style.display = "none";
-  } else {
-    document.getElementById("icicle-beginner").style.display = "inline";
-  }
+    if (document.getElementById("icicle-beginner").style.display == "inline") {
+        document.getElementById("icicle-beginner").style.display = "none";
+    } else {
+        document.getElementById("icicle-beginner").style.display = "inline";
+    }
 }

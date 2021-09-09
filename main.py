@@ -9,22 +9,22 @@ ext = Sitemap(app=app)
 
 @app.route('/')
 def homepage():
-    return render_template("index-pages/index.html", num=random.randint(1, 2500))
+    return render_template("index-pages/index.html", navbar="shared/navbar.html", num=random.randint(1, 2500))
 
 
 @app.route('/ctf')
 def ctf():
-    return render_template("index-pages/ctf.html", num=random.randint(1, 2500))
+    return render_template("index-pages/ctf.html", navbar="shared/navbar.html", num=random.randint(1, 2500))
 
 
 @app.route('/projects')
 def projects():
-    return render_template("index-pages/projects.html", page="index-pages/project-list.html", num=random.randint(1, 2500))
+    return render_template("index-pages/projects.html", page="index-pages/project-list.html", navbar="shared/navbar.html", num=random.randint(1, 2500))
 
 
 @app.route('/projects/chembot')
 def chembot():
-    return render_template("index-pages/projects.html", page="index-pages/chembot.html", num=random.randint(1, 2500))
+    return render_template("index-pages/projects.html", page="index-pages/chembot.html", navbar="shared/navbar.html", num=random.randint(1, 2500))
 
 
 @app.route('/round-9-writeups')

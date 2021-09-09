@@ -41,3 +41,7 @@
   -ms-user-select: none;
   user-select: none;
 }
+
+.content-padding {
+  padding: 1%;
+}

@@ -106,7 +106,9 @@ def password():
 def submit():
     password = request.form['pass']
     if(password == "^P8rv^Y3J}&sz(;dcJRA"):
-        return render_template('writeups/round-14-writeups.html', num=random.randint(1, 2500))
+        with open('writeups.json') as j:
+            writeups = json.load(j)
+        return render_template('writeups/round-14-writeups.html', writeups=writeups, num=random.randint(1, 2500))
     else:
         return render_template("password.html", error="Incorrect Password.")
 
@@ -163,9 +165,11 @@ def addwriteup():
     difficulty = request.form['difficulty']
     writeup = request.form['writeup']
     flag = request.form['flag']
+    rating = request.form['rating']
+    guessy = request.form['guessy']
     with open('writeups.json') as j:
         writeups = json.load(j)
-    writeups.append({'id': int(chall_id), 'title': title, 'category': category, 'description': description, 'attachments': attachments, 'author': author, 'points': points, 'difficulty': difficulty, 'writeup': writeup, 'flag': flag})
+    writeups.append({'id': int(chall_id), 'title': title, 'category': category, 'description': description, 'attachments': attachments, 'author': author, 'points': points, 'difficulty': difficulty, 'writeup': writeup, 'flag': flag, 'rating': rating, 'guessy': guessy})
     with open('writeups.json', 'w') as j:
         json.dump(writeups, j)
     

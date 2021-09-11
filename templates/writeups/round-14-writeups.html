@@ -27,40 +27,44 @@
     </div>
     <img style="position: fixed; bottom: 0; right: 0; border: 0; padding: 20px;" id="imgClickAndChange" height="100px" width="auto" src="https://www.jing.fm/clipimg/full/132-1327227_moon-clipart-moon-clipart-black-and-white-half.png" onclick="changeImage()" alt="" draggable="false"/>
     <hr />
-    <div class="flex-container">
-      <div class="flex-child">
-        <div class="easy chall">
-          <h3>Sanity Check Round 13</h3>
-          <p>Thanks to everyone who participated in ImaginaryCTF 2021 last weekend! I hope y'all are ready for some daily challenges!</p>
-          <h5>Attachments</h5>
-          <p><span class="pre">ictf{unpuzzled_1_was_a_bad_challenge_sorry}</span></p>
-          <h5>Category</h5>
-          <p>Misc</p>
-          <div class="inline-container">
-            <div class="inline-child">
-              <h5>Author</h5>
-              <p>Board</p>
-            </div> 
-            <div class="inline-child">
-              <h5>Points</h5>
-              <p>15</p>
+    {% for writeup in writeups %}
+      <div class="flex-container">
+        <div class="flex-child">
+          <div class="{{ writeup['difficulty'] }} chall">
+            <h3>{{ writeup['title'] }}</h3>
+            <p>{{ writeup['description'] }}</p>
+            <h5>Attachments</h5>
+            <p>{{ writeup['attachments'] }}</p>
+            <h5>Category</h5>
+            <p>{{ writeup['category'] }}</p>
+            <div class="inline-container">
+              <div class="inline-child">
+                <h5>Author</h5>
+                <p>{{ writeup['author'] }}</p>
+              </div> 
+              <div class="inline-child">
+                <h5>Points</h5>
+                <p>{{ writeup['points'] }}</p>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-      <div class="flex-child">
-        <div class="solve">
-          <h3>Solve:</h3>
-          <p>Just submit the flag that's given in the Attachments</p>
-          <p><b>Difficulty rating:</b> 0/10</p>
-          <p><b>Guessy rating:</b> 0/10</p>
+        <div class="flex-child">
+          <div class="solve">
+            <h3>Solve:</h3>
+            {% autoescape false %}
+              <p>{{ writeup['writeup'] }}</p>
+            {% endautoescape %}
+            <p><b>Difficulty rating:</b> {{ writeup['rating'] }}/10</p>
+            <p><b>Guessy rating:</b> {{ writeup['guessy'] }}/10</p>
+          </div>
+          <div class="flag">
+            <h5>Flag:&nbsp;&nbsp;</h5><br />
+            <p>{{ writeup['flag'] }}</p>
+          </div>
         </div>
-        <div class="flag">
-          <h5>Flag:&nbsp;&nbsp;</h5><br />
-          <p>ictf{unpuzzled_1_was_a_bad_challenge_sorry}</p>
-        </div>
       </div>
-    </div>
-    <hr />
+      <hr />
+    {% endfor %}
   </body>
 </html>

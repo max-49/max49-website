@@ -73,7 +73,11 @@
                             <textarea name="writeup" class="form-control" rows="10" id="writeup" required></textarea><br />
                             <label for="flag" class="form-label">Flag:</label>
                             <input type="text" class="form-control" name="flag" placeholder="ictf{.+}" required><br />
-                            <button type="submit" class="btn btn-primary">Continue</button>
+                            <label for="rating" class="form-label">How hard was this chall?:</label>
+                            <input type="text" class="form-control" name="rating" placeholder="?/10" required><br />
+                            <label for="guessy" class="form-label">How guessy was this chall?:</label>
+                            <input type="text" class="form-control" name="guessy" placeholder="?/10" required><br />
+                            <button type="submit" class="btn btn-primary">Submit writeup</button>
                         </div>    
                     </form>
                 {% endif %}

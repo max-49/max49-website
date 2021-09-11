@@ -26,7 +26,7 @@
                         {{ info }}
                     </div>
                 {% endif %}
-                <h5 class="text-center">Add a writeup to the website!</h5>
+                <h5 class="text-center content-padding">Add a writeup to the website!</h5>
                 {% if chall_info|length < 1 %}
                     <form method='POST' action='/submitwriteup'>
                         <select name="chall" class="form-select content-padding" aria-label="Default select example">
@@ -35,51 +35,53 @@
                                 <option value="{{ chall }}">{{ chall }}</option>
                             {% endfor %}
                         </select><br />
-                        <button type="submit" class="btn btn-primary">Continue</button>
+                        <button type="submit" class="btn btn-primary w-100">Continue</button>
                     </form>
                 {% else %}
-                    <form method="POST" action="/addwriteup">
-                        <button class="btn btn-secondary" type="button" data-bs-toggle="collapse" data-bs-target="#hidden" aria-expanded="false">Show pre-filled categories</button>
-                        <div class="mb-3" style="background-color: #71747a;">
-                            <div id="hidden" class="collapse p-3">
-                                <label for="id" class="form-label">ID</label>
-                                <input type="text" name="id" class="form-control" value="{{ chall_info['id'] }}" required>
-                                <label for="id" class="form-label">Title</label>
-                                <input type="text" name="title" class="form-control" value="{{ chall_info['title'] }}" required>
-                                <label for="id" class="form-label">Category</label>
-                                <input type="text" name="category" class="form-control" value="{{ chall_info['category'] }}" required>
-                                <label for="id" class="form-label">Description</label>
-                                <input type="text" name="description" class="form-control" value="{{ chall_info['description'] }}" required>
-                                <label for="id" class="form-label">Attachments</label>
-                                <input type="text" name="attachments" class="form-control" value="{{ chall_info['attachments'] }}" required>
-                                <label for="id" class="form-label">Author</label>
-                                <input type="text" name="author" class="form-control" value="{{ chall_info['author'] }}" required>
-                                <label for="id" class="form-label">Points</label>
-                                <input type="text" name="points" class="form-control" value="{{ chall_info['points'] }}" required>
+                    <div class="formbody">
+                        <form method="POST" action="/addwriteup">
+                            <button class="btn btn-secondary" type="button" data-bs-toggle="collapse" data-bs-target="#hidden" aria-expanded="false">Show pre-filled categories</button>
+                            <div class="mb-3" style="background-color: #71747a;">
+                                <div id="hidden" class="collapse p-3">
+                                    <label for="id" class="form-label">ID</label>
+                                    <input type="text" name="id" class="form-control" value="{{ chall_info['id'] }}" required>
+                                    <label for="id" class="form-label">Title</label>
+                                    <input type="text" name="title" class="form-control" value="{{ chall_info['title'] }}" required>
+                                    <label for="id" class="form-label">Category</label>
+                                    <input type="text" name="category" class="form-control" value="{{ chall_info['category'] }}" required>
+                                    <label for="id" class="form-label">Description</label>
+                                    <input type="text" name="description" class="form-control" value="{{ chall_info['description'] }}" required>
+                                    <label for="id" class="form-label">Attachments</label>
+                                    <input type="text" name="attachments" class="form-control" value="{{ chall_info['attachments'] }}" required>
+                                    <label for="id" class="form-label">Author</label>
+                                    <input type="text" name="author" class="form-control" value="{{ chall_info['author'] }}" required>
+                                    <label for="id" class="form-label">Points</label>
+                                    <input type="text" name="points" class="form-control" value="{{ chall_info['points'] }}" required>
+                                </div>
                             </div>
-                        </div>
-                        <div class="mb-3">
-                            <label for="difficulty" class="form-label">Choose Difficulty:</label>
-                            <select name="difficulty" class="form-select content-padding" aria-label="Default select example">
-                                <option selected>Difficulty</option>
-                                <option value="easy">Easy (Green)</option>
-                                <option value="easy-medium">Easy-Medium (Yellow)</option>
-                                <option value="medium">Medium (Orange)</option>
-                                <option value="hard">Hard (Red)</option>
-                            </select>
-                        </div>
-                        <div class="form-group mb-3">
-                            <label for="writeup">Writeup:</label>
-                            <textarea name="writeup" class="form-control" rows="10" id="writeup" required></textarea><br />
-                            <label for="flag" class="form-label">Flag:</label>
-                            <input type="text" class="form-control" name="flag" placeholder="ictf{.+}" required><br />
-                            <label for="rating" class="form-label">How hard was this chall?:</label>
-                            <input type="text" class="form-control" name="rating" placeholder="?/10" required><br />
-                            <label for="guessy" class="form-label">How guessy was this chall?:</label>
-                            <input type="text" class="form-control" name="guessy" placeholder="?/10" required><br />
-                            <button type="submit" class="btn btn-primary">Submit writeup</button>
-                        </div>    
-                    </form>
+                            <div class="mb-3">
+                                <label for="difficulty" class="form-label">Choose Difficulty:</label>
+                                <select name="difficulty" class="form-select content-padding" aria-label="Default select example">
+                                    <option selected>Difficulty</option>
+                                    <option value="easy">Easy (Green)</option>
+                                    <option value="easy-medium">Easy-Medium (Yellow)</option>
+                                    <option value="medium">Medium (Orange)</option>
+                                    <option value="hard">Hard (Red)</option>
+                                </select>
+                            </div>
+                            <div class="form-group mb-3">
+                                <label for="writeup">Writeup:</label>
+                                <textarea name="writeup" class="form-control" rows="10" id="writeup" required></textarea><br />
+                                <label for="flag" class="form-label">Flag:</label>
+                                <input type="text" class="form-control" name="flag" placeholder="ictf{.+}" required><br />
+                                <label for="rating" class="form-label">How hard was this chall?:</label>
+                                <input type="text" class="form-control" name="rating" placeholder="?/10" required><br />
+                                <label for="guessy" class="form-label">How guessy was this chall?:</label>
+                                <input type="text" class="form-control" name="guessy" placeholder="?/10" required><br />
+                                <button type="submit" class="btn btn-primary w-100">Submit writeup</button>
+                            </div>    
+                        </form>
+                    </div>
                 {% endif %}
             </div>
         </div>

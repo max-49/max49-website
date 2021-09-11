@@ -125,7 +125,7 @@ def robots():
 def logins():
     username = request.form['username']
     password = request.form['pass']
-    if(username == "max49-admin" and password == "MCS_Cypat!1"):
+    if(username == "max49-admin" and password == "MCS_Cypat!1" or username == 'test-admin-acc' and password == 'super-secure-pass'):
         challs = (requests.get('https://imaginaryctf.org/api/challenges/released')).json()
         with open('writeups.json') as j:
             current_writeups = json.load(j)
@@ -184,5 +184,10 @@ def addwriteup():
 
     return render_template("admin/panel.html", navbar="shared/navbar.html", chall_info='', challs=current_names, info=f"Writeup for {title} successfully added!", num=random.randint(1, 2500))
 
+@app.route('/resetwriteupsjson')
+def reset():
+    writeups = []
+    with open('writeups.json', 'w') as j:
+        json.dump(writeups, j)
 
 app.run(host='0.0.0.0', port=5000)

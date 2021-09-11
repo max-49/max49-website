@@ -1,3 +1,4 @@
+import json
 import random
 import requests
 from flask_sitemap import Sitemap
@@ -9,22 +10,22 @@ ext = Sitemap(app=app)
 
 @app.route('/')
 def homepage():
-    return render_template("index-pages/index.html", navbar="shared/navbar.html", num=random.randint(1, 2500))
+    return render_template("index-pages/index.html", navbar="shared/navbar.html", home="active", num=random.randint(1, 2500))
 
 
 @app.route('/ctf')
 def ctf():
-    return render_template("index-pages/ctf.html", navbar="shared/navbar.html", num=random.randint(1, 2500))
+    return render_template("index-pages/ctf.html", navbar="shared/navbar.html", ctf="active", num=random.randint(1, 2500))
 
 
 @app.route('/projects')
 def projects():
-    return render_template("index-pages/projects.html", page="index-pages/project-list.html", navbar="shared/navbar.html", num=random.randint(1, 2500))
+    return render_template("index-pages/projects.html", page="index-pages/project-list.html", projects="active", navbar="shared/navbar.html", num=random.randint(1, 2500))
 
 
 @app.route('/projects/chembot')
 def chembot():
-    return render_template("index-pages/projects.html", page="index-pages/chembot.html", navbar="shared/navbar.html", num=random.randint(1, 2500))
+    return render_template("index-pages/projects.html", page="index-pages/chembot.html", projects="active", navbar="shared/navbar.html", num=random.randint(1, 2500))
 
 
 @app.route('/round-9-writeups')
@@ -118,6 +119,70 @@ def custom_static(filename):
 @app.route('/robots.txt')
 def robots():
     return open('robots.txt').read()
+
+
+@app.route('/login', methods=["POST"])
+def logins():
+    username = request.form['username']
+    password = request.form['pass']
+    if(username == "max49-admin" and password == "MCS_Cypat!1"):
+        challs = (requests.get('https://imaginaryctf.org/api/challenges/released')).json()
+        with open('writeups.json') as j:
+            current_writeups = json.load(j)
+        current_names = []
+        solved_names = []
+        for chall in challs:
+            current_names.append(chall['title'])
+        for writeup in current_writeups:
+            solved_names.append(writeup['title'])
+        for name in solved_names:
+            if(name in current_names):
+                current_names.remove(name)
+        return render_template("admin/panel.html", navbar="shared/navbar.html", chall_info='', challs=current_names, num=random.randint(1, 2500))
+    else:
+        return render_template("index-pages/index.html", navbar="shared/navbar.html", home="active", num=random.randint(1, 2500))
+
+@app.route('/submitwriteup', methods=["POST"])
+def submitwriteup():
+    selected_chall = request.form['chall']
+    challs = (requests.get('https://imaginaryctf.org/api/challenges/released')).json()
+    for chall in challs:
+        if(selected_chall == chall['title']):
+            info_chall = chall
+    return render_template("admin/panel.html", navbar='shared/navbar.html', chall_info=info_chall, num=random.randint(1,2500))
+
+@app.route('/addwriteup', methods=["POST"])
+def addwriteup():
+    chall_id = request.form['id']
+    title = request.form['title']
+    category = request.form['category']
+    description = request.form['description']
+    attachments = request.form['attachments']
+    author = request.form['author']
+    points = request.form['points']
+    difficulty = request.form['difficulty']
+    writeup = request.form['writeup']
+    flag = request.form['flag']
+    with open('writeups.json') as j:
+        writeups = json.load(j)
+    writeups.append({'id': int(chall_id), 'title': title, 'category': category, 'description': description, 'attachments': attachments, 'author': author, 'points': points, 'difficulty': difficulty, 'writeup': writeup, 'flag': flag})
+    with open('writeups.json', 'w') as j:
+        json.dump(writeups, j)
+    
+    challs = (requests.get('https://imaginaryctf.org/api/challenges/released')).json()
+    with open('writeups.json') as j:
+        current_writeups = json.load(j)
+    current_names = []
+    solved_names = []
+    for chall in challs:
+        current_names.append(chall['title'])
+    for writeup in current_writeups:
+        solved_names.append(writeup['title'])
+    for name in solved_names:
+        if(name in current_names):
+            current_names.remove(name)
+
+    return render_template("admin/panel.html", navbar="shared/navbar.html", chall_info='', challs=current_names, info=f"Writeup for {title} successfully added!", num=random.randint(1, 2500))
 
 
 app.run(host='0.0.0.0', port=5000)

@@ -1,136 +1,108 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <link rel="icon" href="https://i.imgur.com/wQxv5zm.png" type="image/gif" sizes="16x16">
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
-    <title>Max49's CTF Challenge Info</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
-    <link href="/static/css/writeups.css?q={{ num }}" rel="stylesheet" type="text/css">
-    <link href="/static/css/ctf.css?q={{ num }}" rel="stylesheet" type="text/css" />
-  </head>
-  <body>
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container-fluid">
-            <div class="container">
-            <a class="navbar-brand" href="/">
-                <img src="https://i.imgur.com/wQxv5zm.png" alt="" width="30" height="30">
-            </a>
-            </div>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                <a class="nav-link" href="/">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="/ctf">CTF</a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="/ctf" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        ImaginaryCTF
-                    </a>
-                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="/ictf-server-info">Info</a></li>
-                        <li><hr class="dropdown-divider"></li>
-                        <li><a class="dropdown-item" href="/round-9-writeups">Round 9 Writeups</a></li>
-                        <li><a class="dropdown-item" href="/round-10-writeups">Round 10 Writeups</a></li>
-                        <li><a class="dropdown-item" href="/round-11-writeups">Round 11 Writeups</a></li>
-                        <li><a class="dropdown-item" href="/round-12-writeups">Round 12 Writeups</a></li>
-                        <li><a class="dropdown-item" href="/round-13-writeups">Round 13 Writeups</a></li>
-                        <li><a class="dropdown-item disabled" aria-disabled="true" href="/round-14-writeups">Round 14 Writeups</a></li>
-                    </ul>
-                </li>
-                <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="/projects" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                      Projects
-                  </a>
-                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                      <li><a class="dropdown-item" href="/projects">Current Projects</a></li>
-                      <li><a class="dropdown-item" href="/projects/chembot">ChemBot</a></li>
-                  </ul>
-              </li>
-            </ul>
-            </div>
-        </div>
-    </nav>
-    <script src="/static/js/writeups.js?q={{ num }}"></script>
-    <div class="logo">
-      <a href="/"><img src="https://i.imgur.com/j9tprL9.png" alt="Old Discord Logo" /></a>
-    </div>
-    <div class="discord">
-      <div class="sidebar"></div>
-      <div class="main">
-        <!-- <div class="header" style="margin-left: 225px; text-align: center;" id="server-info"> -->
-        <div class="inchannel">
-          <img class="pound" draggable="false" src="https://i.imgur.com/CrZfxFX.png" width="40px" height="auto" />
-          <h5 class="channel" id="channel-title">server-info</h5><br /><br />
-          <hr />
-        </div><br /><br /><br />
-        <div class="header" id="server-info">
-          <div id="channel-body">
-            <iframe src="/ictf-server-info" title="description"></iframe>
-          </div>
-        </div>
-        <div class="header" id="round-9-writeups">
-          <div id="channel-body">
-            <iframe src="/round-9-writeups" title="description"></iframe>
-          </div>
-        </div>
-        <div class="header" id="round-10-writeups">
-          <div id="channel-body">
-            <iframe src="/round-10-writeups" title="description"></iframe>
-          </div>
-        </div>
-        <div class="header" id="round-11-writeups">
-          <div id="channel-body">
-            <iframe src="/round-11-writeups" title="description"></iframe>
-          </div>
-        </div>
-        <div class="header" id="round-12-writeups">
-          <div id="channel-body">
-            <iframe src="/round-12-writeups" title="description"></iframe>
-          </div>
-        </div>
-        <div class="header" id="round-13-writeups">
-          <div id="channel-body">
-            <iframe src="/round-13-writeups" title="description"></iframe>
-          </div>
-        </div>
-        <div class="header" id="round-14-writeups">
-          <div id="channel-body">
-            <iframe src="/password" title="description"></iframe>
-          </div>
-        </div>
-      </div>
-      <div class="selected"></div>
-      <img class="servericon" src="https://i.imgur.com/dFMRzOB.png" width="40px" height="auto" />
-      <div class="servertitle">
-        <h5>ImaginaryCTF</h5>
+
+<head>
+  <link rel="icon" href="https://i.imgur.com/wQxv5zm.png" type="image/gif" sizes="16x16">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Max49's CTF Challenge Info</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+  <link href="/static/css/writeups.css?q={{ num }}" rel="stylesheet" type="text/css">
+  <link href="/static/css/style.css?q={{ num }}" rel="stylesheet" type="text/css" />
+  <link href="/static/css/ctf.css?q={{ num }}" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  {% include navbar %}
+  <script src="/static/js/writeups.js?q={{ num }}"></script>
+  <div class="logo">
+    <a href="/"><img src="https://i.imgur.com/j9tprL9.png" alt="Old Discord Logo" /></a>
+  </div>
+  <div class="discord">
+    <div class="sidebar"></div>
+    <div class="main">
+      <div class="inchannel">
+        <img class="pound" draggable="false" src="https://i.imgur.com/CrZfxFX.png" width="40px" height="auto" />
+        <h5 class="channel" id="channel-title">server-info</h5><br /><br />
         <hr />
-        <p>WRITEUPS</p>
-        <div class="links fw-bold">
-          <p class="channel"><img src="https://i.imgur.com/JjgfsLA.png" class="pound" draggable="false" width="20px" height="auto" /><a href="/ictf-server-info">server-info</a></p>
-          <p class="channel"><img src="https://i.imgur.com/JjgfsLA.png" class="pound" draggable="false" width="20px" height="auto" /><a href="/round-9-writeups">round-9-writeups</a></p>
-          <p class="channel"><img src="https://i.imgur.com/JjgfsLA.png" class="pound" draggable="false" width="20px" height="auto" /><a href="/round-10-writeups">round-10-writeups</a></p>
-          <p class="channel"><img src="https://i.imgur.com/JjgfsLA.png" class="pound" draggable="false" width="20px" height="auto" /><a href="/round-11-writeups">round-11-writeups</a></p>
-          <p class="channel"><img src="https://i.imgur.com/JjgfsLA.png" class="pound" draggable="false" width="20px" height="auto" /><a href="/round-12-writeups">round-12-writeups</a></p>
-          <p class="channel"><img src="https://i.imgur.com/JjgfsLA.png" class="pound" draggable="false" width="20px" height="auto" /><a href="/round-13-writeups">round-13-writeups</a></p>
-          <p class="channel"><img src="https://i.imgur.com/JjgfsLA.png" class="pound" draggable="false" width="20px" height="auto" /><a href="/password">round-14-writeups</a></p>
+      </div><br /><br /><br />
+      <div class="header" id="server-info">
+        <div id="channel-body">
+          <iframe src="/ictf-server-info" title="description"></iframe>
         </div>
-        <div class="iframes fw-bold">
-            <p class="channel"><img src="https://i.imgur.com/JjgfsLA.png" class="pound" draggable="false" width="20px" height="auto" /><a href="/ctf#server-info" onclick="changeFrameInfo()">server-info</a></p>
-            <p class="channel"><img src="https://i.imgur.com/JjgfsLA.png" class="pound" draggable="false" width="20px" height="auto" /><a href="/ctf#round-9-writeups" onclick="changeFrame9()">round-9-writeups</a></p>
-            <p class="channel"><img src="https://i.imgur.com/JjgfsLA.png" class="pound" draggable="false" width="20px" height="auto" /><a href="/ctf#round-10-writeups" onclick="changeFrame10()">round-10-writeups</a></p>
-            <p class="channel"><img src="https://i.imgur.com/JjgfsLA.png" class="pound" draggable="false" width="20px" height="auto" /><a href="/ctf#round-11-writeups" onclick="changeFrame11()">round-11-writeups</a></p>
-            <p class="channel"><img src="https://i.imgur.com/JjgfsLA.png" class="pound" draggable="false" width="20px" height="auto" /><a href="/ctf#round-12-writeups" onclick="changeFrame12()">round-12-writeups</a></p>
-            <p class="channel"><img src="https://i.imgur.com/JjgfsLA.png" class="pound" draggable="false" width="20px" height="auto" /><a href="/ctf#round-13-writeups" onclick="changeFrame13()">round-13-writeups</a></p>
-            <p class="channel"><img src="https://i.imgur.com/JjgfsLA.png" class="pound" draggable="false" width="20px" height="auto" /><a href="/ctf#round-14-writeups" onclick="changeFrame14()">round-14-writeups</a></p>
+      </div>
+      <div class="header" id="round-9-writeups">
+        <div id="channel-body">
+          <iframe src="/round-9-writeups" title="description"></iframe>
+        </div>
+      </div>
+      <div class="header" id="round-10-writeups">
+        <div id="channel-body">
+          <iframe src="/round-10-writeups" title="description"></iframe>
+        </div>
+      </div>
+      <div class="header" id="round-11-writeups">
+        <div id="channel-body">
+          <iframe src="/round-11-writeups" title="description"></iframe>
+        </div>
+      </div>
+      <div class="header" id="round-12-writeups">
+        <div id="channel-body">
+          <iframe src="/round-12-writeups" title="description"></iframe>
+        </div>
+      </div>
+      <div class="header" id="round-13-writeups">
+        <div id="channel-body">
+          <iframe src="/round-13-writeups" title="description"></iframe>
+        </div>
+      </div>
+      <div class="header" id="round-14-writeups">
+        <div id="channel-body">
+          <iframe src="/password" title="description"></iframe>
         </div>
       </div>
     </div>
-  </body>
+    <div class="selected"></div>
+    <img class="servericon" src="https://i.imgur.com/dFMRzOB.png" width="40px" height="auto" />
+    <div class="servertitle">
+      <h5>ImaginaryCTF</h5>
+      <hr />
+      <p>WRITEUPS</p>
+      <div class="links fw-bold">
+        <p class="channel"><img src="https://i.imgur.com/JjgfsLA.png" class="pound" draggable="false" width="20px"
+            height="auto" /><a href="/ictf-server-info">server-info</a></p>
+        <p class="channel"><img src="https://i.imgur.com/JjgfsLA.png" class="pound" draggable="false" width="20px"
+            height="auto" /><a href="/round-9-writeups">round-9-writeups</a></p>
+        <p class="channel"><img src="https://i.imgur.com/JjgfsLA.png" class="pound" draggable="false" width="20px"
+            height="auto" /><a href="/round-10-writeups">round-10-writeups</a></p>
+        <p class="channel"><img src="https://i.imgur.com/JjgfsLA.png" class="pound" draggable="false" width="20px"
+            height="auto" /><a href="/round-11-writeups">round-11-writeups</a></p>
+        <p class="channel"><img src="https://i.imgur.com/JjgfsLA.png" class="pound" draggable="false" width="20px"
+            height="auto" /><a href="/round-12-writeups">round-12-writeups</a></p>
+        <p class="channel"><img src="https://i.imgur.com/JjgfsLA.png" class="pound" draggable="false" width="20px"
+            height="auto" /><a href="/round-13-writeups">round-13-writeups</a></p>
+        <p class="channel"><img src="https://i.imgur.com/JjgfsLA.png" class="pound" draggable="false" width="20px"
+            height="auto" /><a href="/password">round-14-writeups</a></p>
+      </div>
+      <div class="iframes fw-bold">
+        <p class="channel"><img src="https://i.imgur.com/JjgfsLA.png" class="pound" draggable="false" width="20px"
+            height="auto" /><a href="/ctf#server-info" onclick="changeFrameInfo()">server-info</a></p>
+        <p class="channel"><img src="https://i.imgur.com/JjgfsLA.png" class="pound" draggable="false" width="20px"
+            height="auto" /><a href="/ctf#round-9-writeups" onclick="changeFrame9()">round-9-writeups</a></p>
+        <p class="channel"><img src="https://i.imgur.com/JjgfsLA.png" class="pound" draggable="false" width="20px"
+            height="auto" /><a href="/ctf#round-10-writeups" onclick="changeFrame10()">round-10-writeups</a></p>
+        <p class="channel"><img src="https://i.imgur.com/JjgfsLA.png" class="pound" draggable="false" width="20px"
+            height="auto" /><a href="/ctf#round-11-writeups" onclick="changeFrame11()">round-11-writeups</a></p>
+        <p class="channel"><img src="https://i.imgur.com/JjgfsLA.png" class="pound" draggable="false" width="20px"
+            height="auto" /><a href="/ctf#round-12-writeups" onclick="changeFrame12()">round-12-writeups</a></p>
+        <p class="channel"><img src="https://i.imgur.com/JjgfsLA.png" class="pound" draggable="false" width="20px"
+            height="auto" /><a href="/ctf#round-13-writeups" onclick="changeFrame13()">round-13-writeups</a></p>
+        <p class="channel"><img src="https://i.imgur.com/JjgfsLA.png" class="pound" draggable="false" width="20px"
+            height="auto" /><a href="/ctf#round-14-writeups" onclick="changeFrame14()">round-14-writeups</a></p>
+      </div>
+    </div>
+  </div>
+</body>
+
 </html>

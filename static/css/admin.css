@@ -1,0 +1,156 @@
+body, html {
+    background-color: #37393e;
+    height: 100%
+}
+
+.info {
+    background-color: #37393e;
+}
+
+.button {
+    font: bold 11px Arial;
+    text-decoration: none;
+    background-color: #EEEEEE;
+    color: #333333;
+    padding: 2px 6px 2px 6px;
+    border-top: 1px solid #CCCCCC;
+    border-right: 1px solid #333333;
+    border-bottom: 1px solid #333333;
+    border-left: 1px solid #CCCCCC;
+}
+
+.unclickable > a:active {
+    text-decoration: none;
+}
+
+.pound {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.discord {
+    background-color: #212325;
+    height: 100%;
+}
+
+.header {
+    padding: 20px;
+    height: 100%;
+}
+
+.main {
+    display: inline;
+    min-height: 100%;
+    float: right;
+    padding: 0px;
+    width: 50%;
+    background-color: #2e3137;
+    z-index: 990;
+}
+
+.writeups {
+    margin-left: 20%;
+}
+
+#channel-body {
+    text-align: right;
+    margin: auto;
+    margin-right: -10px;
+    height: 100%;
+    width: 100%;
+    display: block;
+}
+
+iframe {
+    width: 81%;
+    max-width: 100%; 
+    height: 100%
+}
+
+.servertitle {
+    position: absolute;
+    display: inline;
+    min-height: 100%;
+    float: left;
+    padding: 0px;
+    padding-top: 15px;
+    height: 100%;
+    width: 17%;
+    background-color: #2e3137;
+    z-index: 990;
+}
+
+.servertitle > hr {
+    padding: 0px;
+    margin-left: 0px;
+    color: black;
+}
+
+.servertitle > p {
+    color: #71747a;
+    font-weight: bold;
+}
+
+.channel {
+    text-align: center;
+    display: inline;
+    padding-top: 2px;
+}
+
+.inchannel {
+    text-align: left;
+    float: left;
+    width: 50%;
+    font-weight: bold;
+    margin-left: 19%;
+    /* margin-top: 10px; */
+    /* margin-bottom: -15; */
+    top: 0;
+}
+
+.inchannel > img {
+    float: left;
+}
+
+.inchannel > hr {
+    color: black;
+    padding-top: 0px;
+    margin: 2px;
+}
+
+.inchannel > h5 {
+    padding-top: 10px;
+    padding-left: 10px;
+    float: left;
+}
+
+a {
+    color: #71747a;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+a:link {
+    color: #71747a;
+    text-decoration: none;
+}
+
+a:visited {
+    color: #71747a;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #71747a;
+    background-color: #393c43;
+    text-decoration: none;
+}
+
+a:active {
+    color: #71747a;
+    text-decoration: underline;
+}

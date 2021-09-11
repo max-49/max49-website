@@ -2,7 +2,7 @@ import json
 import random
 import requests
 from flask_sitemap import Sitemap
-from flask import Flask, render_template, request, send_from_directory
+from flask import Flask, render_template, request, send_from_directory, render_template_string
 
 app = Flask(__name__)
 ext = Sitemap(app=app)
@@ -189,5 +189,6 @@ def reset():
     writeups = []
     with open('writeups.json', 'w') as j:
         json.dump(writeups, j)
+    return render_template_string("writeups.json reset!")
 
 app.run(host='0.0.0.0', port=5000)

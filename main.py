@@ -140,7 +140,8 @@ def logins():
         for name in solved_names:
             if(name in current_names):
                 current_names.remove(name)
-        return render_template("admin/panel.html", navbar="shared/navbar.html", chall_info='', challs=current_names.reverse(), num=random.randint(1, 2500))
+        current_names.reverse()
+        return render_template("admin/panel.html", navbar="shared/navbar.html", chall_info='', challs=current_names, num=random.randint(1, 2500))
     else:
         return render_template("index-pages/index.html", navbar="shared/navbar.html", home="active", num=random.randint(1, 2500))
 
@@ -185,8 +186,8 @@ def addwriteup():
     for name in solved_names:
         if(name in current_names):
             current_names.remove(name)
-
-    return render_template("admin/panel.html", navbar="shared/navbar.html", chall_info='', challs=current_names.reverse(), info=f"Writeup for {title} successfully added!", num=random.randint(1, 2500))
+    current_names.reverse()
+    return render_template("admin/panel.html", navbar="shared/navbar.html", chall_info='', challs=current_names, info=f"Writeup for {title} successfully added!", num=random.randint(1, 2500))
 
 @app.route('/resetwriteupsjson')
 def reset():

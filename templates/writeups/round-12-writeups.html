@@ -14,10 +14,15 @@
     crossorigin="anonymous">
     <meta name="viewport" content="width=device-width">
     <link href="/static/css/writeups.css?q={{ num }}" rel="stylesheet" type="text/css">
+    <link href="/static/css/writeup-nav.css?q={{ num }}" rel="stylesheet" type="text/css">
+    <link href="/static/css/style.css?q={{ num }}" rel="stylesheet" type="text/css" />
   </head>
   <body>
     <script src="/static/js/writeups10.js?q={{ num }}"></script>
     <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.7.2/build/highlight.min.js"></script>
+    <div class="writeup-nav">
+      {% include navbar %}
+    </div>
     <script>hljs.highlightAll();</script>
 
     <div class="jumbotron text-center">

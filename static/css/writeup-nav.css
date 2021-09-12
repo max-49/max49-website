@@ -1,0 +1,15 @@
+.writeup-nav {
+    display: none;
+}
+
+@media screen and (min-width: 1300px) {
+    .writeup-nav {
+        display: inline;
+    }
+}
+
+@media only screen and (max-width: 540px) {
+    .writeup-nav {
+        display: inline;
+    }
+}

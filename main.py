@@ -30,27 +30,27 @@ def chembot():
 
 @app.route('/round-9-writeups')
 def round_9_writeups():
-    return render_template("writeups/round-9-writeups.html", num=random.randint(1, 2500))
+    return render_template("writeups/round-9-writeups.html", navbar="shared/navbar.html", ictf="active", num=random.randint(1, 2500))
 
 
 @app.route('/round-10-writeups')
 def round_10_writeups():
-    return render_template('writeups/round-10-writeups.html', num=random.randint(1, 2500))
+    return render_template('writeups/round-10-writeups.html', navbar="shared/navbar.html", ictf="active", num=random.randint(1, 2500))
 
 
 @app.route('/round-11-writeups')
 def round_11_writeups():
-    return render_template('writeups/round-11-writeups.html', num=random.randint(1, 2500))
+    return render_template('writeups/round-11-writeups.html', navbar="shared/navbar.html", ictf="active", num=random.randint(1, 2500))
 
 
 @app.route('/round-12-writeups')
 def round_12_writeups():
-    return render_template('writeups/round-12-writeups.html', num=random.randint(1, 2500))
+    return render_template('writeups/round-12-writeups.html', navbar="shared/navbar.html", ictf="active", num=random.randint(1, 2500))
 
 
 @app.route('/round-13-writeups')
 def round_13_writeups():
-    return render_template('writeups/round-13-writeups.html', num=random.randint(1, 2500))
+    return render_template('writeups/round-13-writeups.html', navbar="shared/navbar.html", ictf="active", num=random.randint(1, 2500))
 
 
 @app.route('/writeups')
@@ -94,7 +94,7 @@ def ictf_server():
     score = my_challs[0]["user"]["score"]
     solved = '<br>'.join(all_solves)
     unsolved = '<br>'.join(all_list)
-    return render_template('index-pages/ictf-server-info.html', num=random.randint(1, 2500), solved=solved, unsolved=unsolved, score=score)
+    return render_template('index-pages/ictf-server-info.html', ictf="active", num=random.randint(1, 2500), navbar="shared/navbar.html", solved=solved, unsolved=unsolved, score=score)
 
 
 @app.route('/password')
@@ -108,7 +108,7 @@ def submit():
     if(password == "^P8rv^Y3J}&sz(;dcJRA"):
         with open('writeups.json') as j:
             writeups = json.load(j)
-        return render_template('writeups/round-14-writeups.html', writeups=writeups, num=random.randint(1, 2500))
+        return render_template('writeups/round-14-writeups.html', navbar="shared/navbar.html", writeups=writeups, ictf="active", num=random.randint(1, 2500))
     else:
         return render_template("password.html", error="Incorrect Password.")
 

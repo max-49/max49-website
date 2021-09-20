@@ -6,6 +6,10 @@
   color: #212529;
 }
 
+.login-modal > h5 {
+  color: #333333;
+}
+
 #username, #password {
   border-radius: 8px;
   border: 1px solid black;

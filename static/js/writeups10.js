@@ -54,3 +54,9 @@ function showCode() {
         document.getElementById("icicle-beginner").style.display = "inline";
     }
 }
+function showSpoiler(event, element) {
+    if (element && element.classList.contains('spoiler--hidden')) {
+        event.preventDefault();
+        element.classList.remove('spoiler--hidden');
+    }
+}

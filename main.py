@@ -27,6 +27,11 @@ def projects():
 def chembot():
     return render_template("index-pages/projects.html", page="index-pages/chembot.html", projects="active", navbar="shared/navbar.html", num=random.randint(1, 2500))
 
+@app.route('/projects/challenges')
+def challenges():
+    with open('mychalls.json') as j:
+        writeups = json.load(j)
+    return render_template("index-pages/projects.html", page="index-pages/challenges.html", writeups=writeups, projects="active", navbar="shared/navbar.html", num=random.randint(1, 2500))
 
 @app.route('/round-9-writeups')
 def round_9_writeups():
@@ -152,7 +157,7 @@ def submitwriteup():
     for chall in challs:
         if(selected_chall == chall['title']):
             info_chall = chall
-    return render_template("admin/panel.html", navbar='shared/navbar.html', chall_info=info_chall, num=random.randint(1,2500))
+    return render_template("admin/panel.html", navbar='shared/navbar.html', iswriteup="yes", chall_info=info_chall, num=random.randint(1,2500))
 
 @app.route('/addwriteup', methods=["POST"])
 def addwriteup():
@@ -189,11 +194,57 @@ def addwriteup():
     current_names.reverse()
     return render_template("admin/panel.html", navbar="shared/navbar.html", chall_info='', challs=current_names, info=f"Writeup for {title} successfully added!", num=random.randint(1, 2500))
 
+
+@app.route('/addmychall', methods=["POST"])
+def addmychall():
+    selected_chall = request.form['chall']
+    return render_template("admin/panel.html", navbar='shared/navbar.html', chall_info=selected_chall, num=random.randint(1,2500))
+
+@app.route('/addchall', methods=["POST"])
+def addchall():
+    title = request.form['title']
+    category = request.form['category']
+    description = request.form['description']
+    attachments = request.form['attachments']
+    author = request.form['author']
+    points = request.form['points']
+    difficulty = request.form['difficulty']
+    topics = request.form['topics']
+    flag = request.form['flag']
+    released = request.form['released']
+    with open('mychalls.json') as j:
+        challs = json.load(j)
+    challs.append({'title': title, 'category': category, 'description': description, 'attachments': attachments, 'author': author, 'points': points, 'difficulty': difficulty, 'topics': topics, 'flag': flag, 'released': released})
+    with open('mychalls.json', 'w') as j:
+        json.dump(challs, j)
+    
+    challs = (requests.get('https://imaginaryctf.org/api/challenges/released')).json()
+    with open('writeups.json') as j:
+        current_writeups = json.load(j)
+    current_names = []
+    solved_names = []
+    for chall in challs:
+        current_names.append(chall['title'])
+    for writeup in current_writeups:
+        solved_names.append(writeup['title'])
+    for name in solved_names:
+        if(name in current_names):
+            current_names.remove(name)
+    current_names.reverse()
+    return render_template("admin/panel.html", navbar="shared/navbar.html", chall_info='', challs=current_names, info=f"{title} successfully added!", num=random.randint(1, 2500))
+
 @app.route('/resetwriteupsjson')
 def reset():
     writeups = []
     with open('writeups.json', 'w') as j:
         json.dump(writeups, j)
     return render_template_string("writeups.json reset!")
+
+@app.route('/resetmychalls')
+def restmychall():
+    writeups = []
+    with open('mychalls.json', 'w') as j:
+        json.dump(writeups, j)
+    return render_template_string("mychalls.json reset!")
 
 app.run(host='0.0.0.0', port=5000)

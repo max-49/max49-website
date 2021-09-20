@@ -1,0 +1,52 @@
+<div class="text-center content-padding">
+    <h3>CTF Challenges:</h3>
+    <p>
+        Since around March 2021, I've developed a number of CTF (Capture the Flag)
+        Challenges for
+        <a href="https://imaginaryctf.org/" target="_blank">ImaginaryCTF</a>.
+        Here's a list of all currently released challenges along with some
+        information about them. Try them out if you want! The flag is under the spoiler tag.
+    </p>
+</div>
+<hr />
+{% autoescape false %}
+{% for writeup in writeups %}
+<div class="flex-container">
+    <div class="flex-child">
+        <div class="{{ writeup['difficulty'] }} chall">
+            <h3>{{ writeup['title'] }}</h3>
+            <p>{{ writeup['description'] }}</p>
+            <h5>Attachments</h5>
+            <p>{{ writeup['attachments'] }}</p>
+            <h5>Category</h5>
+            <p>{{ writeup['category'] }}</p>
+            <div class="inline-container">
+                <div class="inline-child">
+                    <h5>Author</h5>
+                    <p>{{ writeup['author'] }}</p>
+                </div>
+                <div class="inline-child">
+                    <h5>Points</h5>
+                    <p>{{ writeup['points'] }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="flex-child">
+        <div class="solve">
+            <h3>Topics Covered:</h3>
+            <p>{{ writeup['topics'] }}</p>
+        </div>
+        <div class="solve">
+            <h3>Released During:</h3>
+            <p>{{ writeup['released'] }}</p>
+        </div>
+        <div>
+            <h3>Flag:</h3>
+            <span class="spoiler spoiler--hidden" onclick="showSpoiler(event, this)"><span class="spoiler-text">{{ writeup['flag'] }}</span></span>
+        </div>
+    </div>
+</div>
+<hr />
+{% endfor %}
+{% endautoescape %}

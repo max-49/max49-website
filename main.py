@@ -27,6 +27,10 @@ def projects():
 def chembot():
     return render_template("index-pages/projects.html", page="index-pages/chembot.html", projects="active", navbar="shared/navbar.html", num=random.randint(1, 2500))
 
+@app.route('/projects/chembot/jsongenerator')
+def gen():
+    return render_template("index-pages/generator.html", projects="active", navbar="shared/navbar.html", num=random.randint(1, 2500))
+
 @app.route('/projects/challenges')
 def challenges():
     with open('mychalls.json') as j:
@@ -36,7 +40,6 @@ def challenges():
 @app.route('/round-9-writeups')
 def round_9_writeups():
     return render_template("writeups/round-9-writeups.html", navbar="shared/navbar.html", ictf="active", num=random.randint(1, 2500))
-
 
 @app.route('/round-10-writeups')
 def round_10_writeups():
@@ -246,5 +249,30 @@ def restmychall():
     with open('mychalls.json', 'w') as j:
         json.dump(writeups, j)
     return render_template_string("mychalls.json reset!")
+
+@app.route('/projects/chembot/jsongenerator', methods=["POST"])
+def addjson():
+    category = request.form['category']
+    question = request.form['question']
+    choice_a = request.form['choice-a']
+    choice_b = request.form['choice-b']
+    choice_c = request.form['choice-c']
+    choice_d = request.form['choice-d']
+    choice_e = request.form['choice-e']
+    answer = request.form['answer']
+    image = request.form['image']
+    table = request.form['table']
+    calc = request.form['calc']
+    form_json = request.form['json']
+    table = True if table == "1" else False
+    calc = True if calc == "1" else False
+    image = 0 if image == "" else image
+    form_json = '[]' if form_json == "" else form_json
+    real_json = json.loads(form_json)
+    next_num = 0 if len(real_json) == 0 else (real_json[-1]['number'] + 1)
+    real_json.append({"number": next_num, "category": category, "question": question, "choices": [choice_a, choice_b, choice_c, choice_d, choice_e], "answer": answer, "image": image, "Calc": calc, "Table": table})
+    sub_json = json.dumps(real_json)
+    print(sub_json)
+    return render_template("index-pages/generator.html", projects="active", navbar="shared/navbar.html", sub_json=sub_json, num=random.randint(1, 2500))
 
 app.run(host='0.0.0.0', port=5000)

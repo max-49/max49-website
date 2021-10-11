@@ -2,6 +2,19 @@ window.onload = function() {
   changeFrameInfo();
 };
 
+function selectText(containerid) {
+  if (document.selection) { // IE
+      var range = document.body.createTextRange();
+      range.moveToElementText(document.getElementById(containerid));
+      range.select();
+  } else if (window.getSelection) {
+      var range = document.createRange();
+      range.selectNode(document.getElementById(containerid));
+      window.getSelection().removeAllRanges();
+      window.getSelection().addRange(range);
+  }
+}
+
 function changeFrameInfo() {
   document.getElementById("channel-title").innerHTML = "server-info";
   document.getElementById("server-info").style.display = "block";

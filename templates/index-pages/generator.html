@@ -18,6 +18,8 @@
         <div class="formbody">
             <div class="mb-3 w-100 content-padding">
                 <form method="POST" action="/projects/chembot/jsongenerator">
+                    <label for="old_json" class="form-label">Do you already have JSON?</label>
+                    <input type="text" name="old_json" class="form-control">
                     <label for="category" class="form-label">Category</label>
                     <input type="text" name="category" class="form-control" required>
                     <label for="question" class="form-label">Question</label>

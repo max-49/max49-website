@@ -252,6 +252,7 @@ def restmychall():
 
 @app.route('/projects/chembot/jsongenerator', methods=["POST"])
 def addjson():
+    old_json = request.form['old_json']
     category = request.form['category']
     question = request.form['question']
     choice_a = request.form['choice-a']
@@ -268,6 +269,7 @@ def addjson():
     calc = True if calc == "1" else False
     image = 0 if image == "" else image
     form_json = '[]' if form_json == "" else form_json
+    form_json = old_json if old_json != "" else form_json
     real_json = json.loads(form_json)
     next_num = 0 if len(real_json) == 0 else (real_json[-1]['number'] + 1)
     real_json.append({"number": next_num, "category": category, "question": question, "choices": [choice_a, choice_b, choice_c, choice_d, choice_e], "answer": answer, "image": image, "Calc": calc, "Table": table})

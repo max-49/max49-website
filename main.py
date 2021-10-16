@@ -1,7 +1,9 @@
+import os
 import json
 import random
 import requests
 from flask_sitemap import Sitemap
+from werkzeug.utils import secure_filename
 from flask import Flask, render_template, request, send_from_directory, render_template_string
 
 app = Flask(__name__)
@@ -276,5 +278,40 @@ def addjson():
     sub_json = json.dumps(real_json)
     print(sub_json)
     return render_template("index-pages/generator.html", projects="active", navbar="shared/navbar.html", sub_json=sub_json, num=random.randint(1, 2500))
+
+@app.route('/uploader', methods=['POST'])
+def upload_file():
+    f = request.files['file']
+    i = 0
+    file_name = secure_filename(f.filename)
+    while True:
+        if os.path.exists(f'cdn/{file_name}'):
+            split_file = file_name.split('.')
+            if(i == 0):
+                split_file[0] += '-0'
+            else:
+                split_file[0] = split_file[0][:-1]
+                split_file[0] += str(i)
+            i += 1
+            file_name = '.'.join(split_file)
+            continue
+        else:
+            break
+            
+    f.save(f"cdn/{file_name}")
+    challs = (requests.get('https://imaginaryctf.org/api/challenges/released')).json()
+    with open('writeups.json') as j:
+        current_writeups = json.load(j)
+    current_names = []
+    solved_names = []
+    for chall in challs:
+        current_names.append(chall['title'])
+    for writeup in current_writeups:
+        solved_names.append(writeup['title'])
+    for name in solved_names:
+        if(name in current_names):
+            current_names.remove(name)
+    current_names.reverse()
+    return render_template("admin/panel.html", navbar="shared/navbar.html", chall_info='', challs=current_names, info=f"Successfully uploaded {file_name}!<br/>Here's a link: <a href='https://www.max49.cf/cdn/{file_name}'>https://www.max49.cf/cdn/{file_name}</a>", num=random.randint(1, 2500))
 
 app.run(host='0.0.0.0', port=5000)

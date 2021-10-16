@@ -22,9 +22,11 @@
             </div>
             <div class="writeups content-padding">
                 {% if info|length > 1 %}
+                    {% autoescape false %}
                     <div class="alert alert-success" role="alert">
                         {{ info }}
                     </div>
+                    {% endautoescape %}
                 {% endif %}
                 {% if chall_info|length < 1 %}
                     <div class="content-padding">
@@ -46,6 +48,25 @@
                             <button type="submit" class="btn btn-primary w-100">Continue</button>
                         </form>
                     </div>  
+                    <div class="content-padding">
+                        <h5 class="text-center content-padding">Upload a file to the cdn</h5>
+                        <form action="/uploader" method="POST" enctype="multipart/form-data" id="docuploader" >
+                            <input type="file" name="file" id="doc" />
+                            <input type="submit" value="Submit" />
+                        </form>
+                    </div>  
+                    <script lang='javascript'>
+                        const form = document.getElementById("docuploader");
+                        const fileInput = document.getElementById("doc");
+            
+                        fileInput.addEventListener('change', () => {
+                            form.submit();
+                        });
+            
+                        window.addEventListener('paste', e => {
+                            fileInput.files = e.clipboardData.files;
+                        });
+                    </script>
                 {% elif iswriteup|length > 2 %}
                     <h5 class="text-center content-padding">Add a writeup to the website!</h5>
                     <div class="formbody">

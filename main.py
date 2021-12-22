@@ -101,10 +101,9 @@ def ictf_server():
     for thing in all_list_alt:
         if(thing in all_solves):
             all_list.remove(thing)
-    score = my_challs[0]["user"]["score"]
     solved = '<br>'.join(all_solves)
     unsolved = '<br>'.join(all_list)
-    return render_template('index-pages/ictf-server-info.html', ictf="active", num=random.randint(1, 2500), navbar="shared/navbar.html", solved=solved, unsolved=unsolved, score=score)
+    return render_template('index-pages/ictf-server-info.html', ictf="active", num=random.randint(1, 2500), navbar="shared/navbar.html", solved=solved, unsolved=unsolved)
 
 
 @app.route('/password')

@@ -19,6 +19,13 @@ def homepage():
 def ctf():
     return render_template("index-pages/ctf.html", navbar="shared/navbar.html", ctf="active", num=random.randint(1, 2500))
 
+@app.route('/ap-schlooth-history')
+def history():
+    return render_template("ap/history.html", num=random.randint(1,2500))
+
+@app.route('/ap-schlooth-history/assessment')
+def history_test():
+    return render_template("ap/test.html")
 
 @app.route('/projects')
 def projects():

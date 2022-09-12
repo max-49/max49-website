@@ -1,3 +1,14 @@
+@font-face{
+  font-family:Whitney;
+  src:url(https://discordapp.com/assets/6c6374bad0b0b6d204d8d6dc4a18d820.woff);font-weight:300
+}
+
+body {
+  /*font-family:Whitney,"Helvetica Neue",Helvetica,Arial,sans-serif;*/
+  background-color: #37393e;
+  color: white;
+}
+
 .content-padding {
   padding: 1%;
 }
@@ -24,6 +35,52 @@
   margin-bottom: 10px;
 }
 
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInFromBottom {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.mainTitle {  
+  animation: 1s ease-out 0s 1 slideInFromLeft;
+}
+
+.description {  
+  padding-top: 5%;
+  animation: 1s ease-out 0s 1 slideInFromBottom;
+}
+
+.main-desc {
+  padding: 25%;
+  padding-top: 5%;
+  padding-bottom: 10%;
+}
+
 a {
   text-decoration: none !important;
   border-radius: 10px;
@@ -31,4 +88,60 @@ a {
 
 a:hover {
   background-color: #393c43;
+}
+
+@media screen and (min-width: 1100px) {
+
+  .flex-container {
+    display: flex;
+  }
+
+  .flex-child {
+    flex: 1;
+  }  
+
+  .headshot {
+    animation: 2s ease-out 0s 1 fadeIn;
+    border-radius: 50%;
+    width: 35%;
+    height: auto;
+  }
+
+}
+
+@media only screen and (max-width: 1101px) { 
+
+  .flex-container {
+    text-align: center;
+    word-wrap: break-word;
+  }
+
+  .flex-child {
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-bottom: 10%;
+  }
+  
+  .headshot {
+    animation: 2s ease-out 0s 1 fadeIn;
+    border-radius: 50%;
+    width: 100%;
+    height: auto;
+  }
+
+}
+
+.unclickable { 
+  cursor: not-allowed; 
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  text-decoration: none;
+}
+
+.unclickable > a:active {
+  text-decoration: none;
 }

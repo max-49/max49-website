@@ -39,29 +39,9 @@ def challenges():
         writeups = json.load(j)
     return render_template("index-pages/projects.html", page="index-pages/challenges.html", writeups=writeups, projects="active", navbar="shared/navbar.html", num=random.randint(1, 2500))
 
-@app.route('/round-9-writeups')
-def round_9_writeups():
-    return render_template("writeups/round-9-writeups.html", navbar="shared/navbar.html", ictf="active", num=random.randint(1, 2500))
-
-@app.route('/round-10-writeups')
-def round_10_writeups():
-    return render_template('writeups/round-10-writeups.html', navbar="shared/navbar.html", ictf="active", num=random.randint(1, 2500))
-
-
-@app.route('/round-11-writeups')
-def round_11_writeups():
-    return render_template('writeups/round-11-writeups.html', navbar="shared/navbar.html", ictf="active", num=random.randint(1, 2500))
-
-
-@app.route('/round-12-writeups')
-def round_12_writeups():
-    return render_template('writeups/round-12-writeups.html', navbar="shared/navbar.html", ictf="active", num=random.randint(1, 2500))
-
-
-@app.route('/round-13-writeups')
-def round_13_writeups():
-    return render_template('writeups/round-13-writeups.html', navbar="shared/navbar.html", ictf="active", num=random.randint(1, 2500))
-
+@app.route('/round-<path:number>-writeups')
+def round_9_writeups(number):
+    return render_template(f"writeups/round-{number}-writeups.html", navbar="shared/navbar.html", ictf="active", num=random.randint(1, 2500))
 
 @app.route('/writeups')
 def writeups():
@@ -114,7 +94,7 @@ def password():
 @app.route('/submit', methods=['POST'])
 def submit():
     password = request.form['pass']
-    if(password == "^P8rv^Y3J}&sz(;dcJRA"):
+    if(password == open("password.txt").read().strip().split(':')[1]):
         with open('writeups.json') as j:
             writeups = json.load(j)
         return render_template('writeups/round-14-writeups.html', navbar="shared/navbar.html", writeups=writeups, ictf="active", num=random.randint(1, 2500))
@@ -136,7 +116,7 @@ def robots():
 def logins():
     username = request.form['username']
     password = request.form['pass']
-    if(username == "max49-admin" and password == "MCS_Cypat!1" or username == 'test-admin-acc' and password == 'super-secure-pass'):
+    if(username == open("password.txt").read().strip().split(':')[0] and password == open("password.txt").read().strip().split(':')[1]):
         challs = (requests.get('https://imaginaryctf.org/api/challenges/released')).json()
         with open('writeups.json') as j:
             current_writeups = json.load(j)
@@ -313,4 +293,5 @@ def upload_file():
     current_names.reverse()
     return render_template("admin/panel.html", navbar="shared/navbar.html", chall_info='', challs=current_names, info=f"Successfully uploaded {file_name}!<br/>Here's a link: <a href='https://www.max49.cf/cdn/{file_name}'>https://www.max49.cf/cdn/{file_name}</a>", num=random.randint(1, 2500))
 
-app.run(host='0.0.0.0', port=5000)
+if __name__ == '__main__':
+    app.run(host='0.0.0.0', port=5000)
